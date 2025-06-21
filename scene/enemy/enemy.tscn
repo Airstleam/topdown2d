@@ -559,9 +559,9 @@ libraries = {
 [node name="hp_bar" type="TextureProgressBar" parent="."]
 visible = false
 z_index = 101
-offset_left = -13.0
+offset_left = -9.0
 offset_top = -11.0
-offset_right = 27.0
+offset_right = 31.0
 offset_bottom = 29.0
 scale = Vector2(0.447223, 0.162742)
 value = 50.0

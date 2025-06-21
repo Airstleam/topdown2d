@@ -27,9 +27,10 @@ func _physics_process(delta):
 		hp_damage.visible = true
 		hp_bar.visible = true
 		hp_animation.play("take_damage")
-	if health <= 0:
-		death = true
-		die()
+	if health <= 0:	
+		if not death:
+			death = true
+			die()
 		return
 		
 	if death:
@@ -64,6 +65,7 @@ func update_slime_data():
 		})
 
 func die():
+	Global.damage = false
 	can_move = false
 	hp_bar.visible = false
 	health = 0
@@ -84,7 +86,6 @@ func remove_slime_data():
 func _on_detector_body_entered(body):
 	if body.name == "player":
 		player = body
-
 
 func _on_detector_body_exited(body):
 	if body.name == "player":

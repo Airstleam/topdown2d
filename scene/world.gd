@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var animP = $AnimationPlayer
 @onready var days = $CanvasLayer/days
-@onready var money_text = $CanvasLayer/Money
 
 var last_position = 0
 var house = false
@@ -18,7 +17,6 @@ func _ready():
 	
 
 func _process(delta):
-	money_text.text = str(Global.player_money) + "$"
 
 	if Global.player_health <= 0:
 		animP.stop()

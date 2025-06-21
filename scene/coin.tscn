@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://c01mbwhwxfl6r"]
+[gd_scene load_steps=19 format=3 uid="uid://c01mbwhwxfl6r"]
 
-[ext_resource type="Script" uid="uid://xw3ud1xjec4j" path="res://coin.gd" id="1_ya73g"]
+[ext_resource type="Script" uid="uid://c47epb3e0pmbu" path="res://scene/coin.gd" id="1_ya73g"]
 [ext_resource type="Texture2D" uid="uid://b1uyvqekvqhf6" path="res://assets/MonedaD.png" id="2_leebs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ldxs"]
@@ -20,6 +20,26 @@ atlas = ExtResource("2_leebs")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06t5v"]
+atlas = ExtResource("2_leebs")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya73g"]
+atlas = ExtResource("2_leebs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leebs"]
+atlas = ExtResource("2_leebs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxr33"]
+atlas = ExtResource("2_leebs")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80mnp"]
+atlas = ExtResource("2_leebs")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ms77"]
 atlas = ExtResource("2_leebs")
 region = Rect2(64, 0, 16, 16)
 
@@ -44,10 +64,141 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya73g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leebs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxr33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80mnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ms77")
+}],
+"loop": false,
+"name": &"Up",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_80mnp"]
 radius = 5.0
+
+[sub_resource type="Animation" id="Animation_40nag"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_ikptm"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Up"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -27)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uisq4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcy81"]
+_data = {
+&"Idle": SubResource("Animation_40nag"),
+&"RESET": SubResource("Animation_uisq4"),
+&"Up": SubResource("Animation_ikptm")
+}
 
 [node name="Coin" type="Node2D"]
 script = ExtResource("1_ya73g")
@@ -55,7 +206,7 @@ script = ExtResource("1_ya73g")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.520003, 0.6)
 sprite_frames = SubResource("SpriteFrames_bxr33")
-animation = &"Idle"
+animation = &"Up"
 autoplay = "Idle"
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -64,5 +215,10 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_80mnp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tcy81")
+}
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

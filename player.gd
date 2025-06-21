@@ -11,6 +11,7 @@ enum{
 @onready var animP = $AnimationPlayer
 @onready var stamina_bar = $CanvasLayer/stamina_bar
 @onready var hp_bar = $CanvasLayer/hp_bar
+@onready var money_text = $CanvasLayer/MoneyText
 
 
 var idle_dir = DOWN
@@ -33,6 +34,7 @@ func _ready():
 	$CanvasLayer/PauseMenu.visible = false
 
 func _physics_process(delta):
+	money_text.text = str(Global.player_money) + "$"
 	#buttons
 	if Input.is_action_just_pressed("exit"):
 		is_pause = !is_pause
@@ -172,7 +174,7 @@ func attack():
 			UP:
 				animP.play("Attack_up")
 			RIGHT:
-				anim.flip_h = false
+				
 				animP.play("Attack_right")
 			LEFT:
 				anim.flip_h = true
