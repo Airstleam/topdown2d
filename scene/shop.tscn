@@ -1,0 +1,118 @@
+[gd_scene load_steps=14 format=3 uid="uid://blm560rgtq60a"]
+
+[ext_resource type="Script" uid="uid://1wnnv8b4pnjx" path="res://scene/shop.gd" id="1_4p3p6"]
+[ext_resource type="Texture2D" uid="uid://cjvtpmwgustad" path="res://assets/Idle Working.png" id="1_iuafe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p3p6"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phbgv"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyq3k"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wha2"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brg4d"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd0vs"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prb2b"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tartn"]
+atlas = ExtResource("1_iuafe")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08gde"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4p3p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phbgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyq3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wha2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brg4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pd0vs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prb2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tartn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p3p6"]
+size = Vector2(14, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4p3p6"]
+radius = 39.0128
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_4p3p6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_08gde")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.121327
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_4p3p6")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Button_health" type="Button" parent="Node2D"]
+offset_left = -8.0
+offset_top = -27.0
+offset_right = 114.0
+offset_bottom = 118.0
+scale = Vector2(0.133575, 0.103135)
+theme_override_font_sizes/font_size = 100
+text = "2$"
+
+[node name="Health" type="Label" parent="Node2D"]
+offset_left = -9.0
+offset_top = -34.0
+offset_right = 382.0
+offset_bottom = 103.0
+scale = Vector2(0.06, 0.06)
+theme_override_font_sizes/font_size = 100
+text = "health"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4p3p6")
+
+[connection signal="pressed" from="Node2D/Button_health" to="." method="_on_button_health_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

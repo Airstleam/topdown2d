@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cex1dor1b5ub3"]
+
+[ext_resource type="Texture2D" uid="uid://bx1ppy2xajysv" path="res://assets/Rain.png" id="1_nkmk6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vqwq"]
+atlas = ExtResource("1_nkmk6")
+region = Rect2(8, 0, 8, 8)
+
+[node name="Rain" type="Node2D"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.2
+blend_mode = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0.262745, 0.105882, 1, 1)
+self_modulate = Color(1, 1, 1, 0.329412)
+position = Vector2(764, -29)
+amount = 300
+texture = SubResource("AtlasTexture_7vqwq")
+lifetime = 1.3
+speed_scale = 0.7
+emission_shape = 3
+emission_rect_extents = Vector2(750, 0)
+gravity = Vector2(-500, 980)
