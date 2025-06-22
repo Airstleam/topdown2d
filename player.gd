@@ -21,10 +21,10 @@ var speed = 100
 var max_stamina = 100
 var stamina_minus = 30
 var stamina_regen = 10
-
 var heal_amount = 2
 var heal_interval = 1
-var max_health = Global.max_health
+var stamina_have = true
+
 var is_healing = false
 var is_pause
 
@@ -34,6 +34,7 @@ func _ready():
 	$CanvasLayer/PauseMenu.visible = false
 
 func _physics_process(delta):
+	
 	money_text.text = str(Global.player_money) + "$"
 	#buttons
 	if Input.is_action_just_pressed("exit"):
@@ -59,7 +60,6 @@ func _physics_process(delta):
 	hp_bar.value = Global.player_health
 	stamina_bar.value = Global.player_stamina
 	stats()
-	run(delta)
 	if Global.player_health <= 0:
 		die()
 	
@@ -70,6 +70,8 @@ func _physics_process(delta):
 		
 	if !can_move:
 		return
+	
+	
 
 	
 	if Input.is_action_just_pressed("attack"):
@@ -84,6 +86,13 @@ func _physics_process(delta):
 		right_move()
 	else:
 		idle()
+		
+	if Input.is_action_pressed("run"):
+		if Global.player_stamina > 0:
+			run(delta)		
+	else:
+		speed = 100
+		stamina_regeniration(delta)
 		
 	move_and_slide()
 	Global.player_position = position
@@ -105,10 +114,6 @@ func run(delta):
 			speed = 100
 	else:
 		speed = 100
-		Global.player_stamina += stamina_regen * delta
-		if Global.player_stamina >= max_stamina:
-			Global.player_stamina = max_stamina
-		
 
 func healing():
 	if is_healing:
@@ -116,15 +121,20 @@ func healing():
 		
 	is_healing = true
 	
-	while Global.player_health < max_health:
+	if Global.player_health < Global.max_health:
 		$Node2D/AnimationHeal.play("heal_animation")
 		await get_tree().create_timer(heal_interval).timeout
 		Global.player_health += heal_amount
-		if Global.player_health > max_health:
-			Global.player_health = max_health
-		hp_bar.value = Global.player_health
+	else:
+		Global.player_health = Global.max_health
 		
 	is_healing = false
+
+func stamina_regeniration(delta):
+	if Global.player_stamina < Global.max_stamina:
+		Global.player_stamina += stamina_regen * delta
+	else:
+		Global.player_stamina = Global.max_stamina
 
 func up_move():
 	animP.play("Up")

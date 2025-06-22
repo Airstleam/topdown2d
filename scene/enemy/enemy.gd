@@ -9,6 +9,7 @@ class_name Enemy
 
 @export var speed = 50
 @export var health = 100
+@export var damage = 40
 
 var player = null
 var can_move = true
@@ -93,7 +94,7 @@ func _on_detector_body_exited(body):
 
 func _on_hitbox_body_entered(body):
 	if body.name == "player":
-		Global.player_health -= 40
+		Global.player_health -= damage
 
 func _on_zone_body_entered(body):
 	player_in = true

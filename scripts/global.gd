@@ -2,10 +2,11 @@ extends Node
 
 var player_health = 100
 var max_health = 100
-var player_money = 0
+var player_money = 100
 var player_damage = 20
 var player_position = Vector2(368.0, 308.0)
 var player_stamina = 100
+var max_stamina = 100
 var resume = false
 var save = false
 var load = false
