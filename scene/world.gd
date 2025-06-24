@@ -18,8 +18,9 @@ func _ready():
 
 func _process(delta):
 
-	if Global.player_health <= 0:
-		animP.stop()
+	if Global.end:
+		get_tree().change_scene_to_file("res://scene/death_scene.tscn")
+		Global.player_position = Vector2(997.0, 571.0)
 	else:
 		animP.play("day-night")
 		

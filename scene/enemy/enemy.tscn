@@ -520,6 +520,7 @@ script = ExtResource("1_nytjq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o535o")
 animation = &"Attack"
+frame = 5
 
 [node name="detector" type="Area2D" parent="."]
 visible = false
@@ -535,7 +536,6 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_tu2m7")
 
 [node name="Hitbox" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 2
 
@@ -559,9 +559,9 @@ libraries = {
 [node name="hp_bar" type="TextureProgressBar" parent="."]
 visible = false
 z_index = 101
-offset_left = -9.0
+offset_left = -13.0
 offset_top = -11.0
-offset_right = 31.0
+offset_right = 27.0
 offset_bottom = 29.0
 scale = Vector2(0.447223, 0.162742)
 value = 50.0

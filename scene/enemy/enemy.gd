@@ -112,6 +112,7 @@ func attack():
 		animP.play("Attack")
 		await animP.animation_finished
 	can_move = true
+	Global.damage = false
 	
 func take_damage():
 	health -= Global.player_damage

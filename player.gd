@@ -28,6 +28,7 @@ var stamina_have = true
 var is_healing = false
 var is_pause
 
+
 func _ready():
 	Engine.time_scale = 1
 	position = Global.player_position
@@ -53,7 +54,7 @@ func _physics_process(delta):
 	if Global.load:
 		load_game()
 	
-	healing()
+	
 	$CanvasLayer/speed.text = "speed: " + str(speed)
 	$CanvasLayer/stamina.text = "stamina: " + str(roundi(Global.player_stamina))
 	$CanvasLayer/health.text = "health: " + str(Global.player_health)
@@ -61,7 +62,14 @@ func _physics_process(delta):
 	stamina_bar.value = Global.player_stamina
 	stats()
 	if Global.player_health <= 0:
-		die()
+		if Global.is_dead == false:
+			is_healing = false
+			die()
+			$Node2D/health_plus.visible = false
+			Global.is_dead = true
+		return
+		
+	healing()
 	
 	if is_healing:
 		$Node2D/health_plus.visible = true
@@ -102,7 +110,6 @@ func die():
 	can_move = false
 	animP.play("Death")
 	await animP.animation_finished
-	self.queue_free()
 	Global.end = true
 
 func run(delta):
@@ -187,7 +194,6 @@ func attack():
 				
 				animP.play("Attack_right")
 			LEFT:
-				anim.flip_h = true
 				animP.play("Attack_left")
 				
 	await animP.animation_finished
@@ -224,13 +230,9 @@ var save_path = "user://savegame.save"
 func save_game():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(Global.days_count)
-	file.store_var(position.x)
-	file.store_var(position.y)
 	Global.save = false
 	
 func load_game():
 	var file = FileAccess.open(save_path, FileAccess.READ)
 	Global.days_count = file.get_var(Global.days_count)
-	position.x = file.get_var(position.x)
-	position.y = file.get_var(position.y)
 	Global.load = false
