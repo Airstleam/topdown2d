@@ -123,7 +123,10 @@ func take_damage():
 		Global.slime_count -= 1
 	
 func shaking_true():
-	Global.damage = true
+	if Global.player_is_dead == false:
+		Global.damage = true
+	else:
+		Global.damage = false
 	
 func shaking_false():
 	Global.damage = false

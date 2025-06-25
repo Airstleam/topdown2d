@@ -10,7 +10,7 @@ var max_stamina = 100
 var resume = false
 var save = false
 var load = false
-var is_dead = false
+var player_is_dead = false
 
 var slime_count = 0
 var slime_data = []

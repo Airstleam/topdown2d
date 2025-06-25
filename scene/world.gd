@@ -36,18 +36,21 @@ func _process(delta):
 	if house and Input.is_action_just_pressed("E"):
 		get_tree().change_scene_to_file("res://scene/house.tscn")
 		Global.player_position = Vector2(175.0, 69.0)
+		
 	
 
 	
 func slime_spawn():
-	if Global.slime_count >= 3:
+	var max_slimes = 5 * Global.days_count
+	
+	if Global.slime_count >= max_slimes:
 		return
 	
-	var spawn_amount = min(3 - Global.slime_count, 3)
+	var spawn_amount = min(max_slimes - Global.slime_count, 5)
 	
 	for i in range(spawn_amount):
 		var slime = slime_preload.instantiate()
-		slime.position = Vector2(randf_range(700, 1100), randf_range(200, 450))
+		slime.position = Vector2(randf_range(0, 1100), randf_range(600, 50))
 		$Enemies.add_child(slime)
 		Global.slime_count += 1
 		

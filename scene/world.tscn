@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=44 format=4 uid="uid://dxfxfrva3gtlg"]
 
 [ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/romario-tileMap/decor_16x16.png" id="1_7ghph"]
 [ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
@@ -11,9 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://grcfe5qmekeu" path="res://assets/romario-tileMap/objects.png" id="7_tmyho"]
 [ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/romario-tileMap/Outdoor_Decor_Free.png" id="8_hnm4a"]
 [ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/romario-tileMap/plains.png" id="9_e4vd1"]
-[ext_resource type="Texture2D" uid="uid://dxebnulicn77j" path="res://assets/circle.png" id="13_f345f"]
+[ext_resource type="Texture2D" uid="uid://dxebnulicn77j" path="res://assets/used-png/circle.png" id="13_f345f"]
 [ext_resource type="PackedScene" uid="uid://dcx6b4mpg64cq" path="res://scene/enemy/fast_enemy.tscn" id="14_bqa5m"]
 [ext_resource type="PackedScene" uid="uid://cex1dor1b5ub3" path="res://scene/rain.tscn" id="15_a0bac"]
+[ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://inventory/inv_ui.tscn" id="16_hnm4a"]
 [ext_resource type="PackedScene" uid="uid://blm560rgtq60a" path="res://scene/shop.tscn" id="16_tmyho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0bac"]
@@ -1872,6 +1873,15 @@ offset_right = 716.0
 offset_bottom = 135.0
 theme_override_font_sizes/font_size = 100
 text = "1 DAY"
+metadata/_edit_use_anchors_ = true
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("16_hnm4a")]
+z_index = 100
+offset_left = 382.0
+offset_top = 587.0
+offset_right = 422.0
+offset_bottom = 627.0
+scale = Vector2(2.77917, 2.75542)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(441, 336)
@@ -1910,6 +1920,7 @@ position = Vector2(130, 212)
 [node name="Rain" parent="." instance=ExtResource("15_a0bac")]
 
 [node name="Shop" parent="." instance=ExtResource("16_tmyho")]
+z_index = 6
 position = Vector2(441, 290)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

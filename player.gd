@@ -13,6 +13,8 @@ enum{
 @onready var hp_bar = $CanvasLayer/hp_bar
 @onready var money_text = $CanvasLayer/MoneyText
 
+@export var inv: Inv
+
 
 var idle_dir = DOWN
 var can_move = true
@@ -20,7 +22,7 @@ var can_move = true
 var speed = 100
 var max_stamina = 100
 var stamina_minus = 30
-var stamina_regen = 10
+var stamina_regen = 0.1
 var heal_amount = 2
 var heal_interval = 1
 var stamina_have = true
@@ -62,25 +64,18 @@ func _physics_process(delta):
 	stamina_bar.value = Global.player_stamina
 	stats()
 	if Global.player_health <= 0:
-		if Global.is_dead == false:
+		if Global.player_is_dead == false:
 			is_healing = false
 			die()
 			$Node2D/health_plus.visible = false
-			Global.is_dead = true
+			Global.player_is_dead = true
 		return
-		
-	healing()
 	
-	if is_healing:
-		$Node2D/health_plus.visible = true
-	else:
-		$Node2D/health_plus.visible = false
+	
+	healing()
 		
 	if !can_move:
 		return
-	
-	
-
 	
 	if Input.is_action_just_pressed("attack"):
 		attack()
@@ -129,9 +124,9 @@ func healing():
 	is_healing = true
 	
 	if Global.player_health < Global.max_health:
-		$Node2D/AnimationHeal.play("heal_animation")
-		await get_tree().create_timer(heal_interval).timeout
-		Global.player_health += heal_amount
+		if Global.player_stamina >= 70:
+			await get_tree().create_timer(heal_interval).timeout
+			Global.player_health += heal_amount
 	else:
 		Global.player_health = Global.max_health
 		
@@ -166,6 +161,7 @@ func right_move():
 	idle_dir = RIGHT
 	
 func idle():
+	Global.player_is_dead = false
 	velocity = Vector2.ZERO
 	if velocity == Vector2.ZERO:
 		match idle_dir:
