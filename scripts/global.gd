@@ -12,6 +12,7 @@ var save = false
 var load = false
 var player_is_dead = false
 
+
 var slime_count = 0
 var slime_data = []
 

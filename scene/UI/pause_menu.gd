@@ -6,7 +6,7 @@ func _on_resume_pressed():
 
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://scene/menu.tscn")
+	get_tree().change_scene_to_file("res://scene/other scn/menu.tscn")
 
 
 func _on_save_pressed():

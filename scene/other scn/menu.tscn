@@ -1,24 +1,19 @@
-[gd_scene load_steps=44 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=95 format=4 uid="uid://bjv8qrusrro6i"]
 
-[ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/tile_map and sprites/decor_16x16.png" id="1_7ghph"]
-[ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
-[ext_resource type="PackedScene" uid="uid://c8ai6matr17hc" path="res://scene/player/player.tscn" id="1_pjass"]
-[ext_resource type="Texture2D" uid="uid://rpux5geekd8w" path="res://assets/tile_map and sprites/Fences.png" id="2_na5tu"]
-[ext_resource type="Texture2D" uid="uid://wm0j5w4ccsao" path="res://assets/tile_map and sprites/grass.png" id="3_jsnws"]
-[ext_resource type="Texture2D" uid="uid://ctnphrxalwg7j" path="res://assets/tile_map and sprites/House.png" id="4_f345f"]
-[ext_resource type="Texture2D" uid="uid://jvk17c18u7op" path="res://assets/tile_map and sprites/Oak_Tree.png" id="5_bqa5m"]
-[ext_resource type="Texture2D" uid="uid://bvoq0k2sejrx1" path="res://assets/tile_map and sprites/Oak_Tree_Small.png" id="6_a0bac"]
-[ext_resource type="Texture2D" uid="uid://grcfe5qmekeu" path="res://assets/tile_map and sprites/objects.png" id="7_tmyho"]
-[ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="8_hnm4a"]
-[ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/tile_map and sprites/plains.png" id="9_e4vd1"]
-[ext_resource type="Texture2D" uid="uid://dxebnulicn77j" path="res://assets/used-png/circle.png" id="13_f345f"]
-[ext_resource type="PackedScene" uid="uid://dcx6b4mpg64cq" path="res://scene/enemy/fast_enemy.tscn" id="14_bqa5m"]
-[ext_resource type="PackedScene" uid="uid://cex1dor1b5ub3" path="res://scene/rain.tscn" id="15_a0bac"]
-[ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://scene/player/inventory/inv_ui.tscn" id="16_hnm4a"]
-[ext_resource type="PackedScene" uid="uid://blm560rgtq60a" path="res://scene/shop.tscn" id="16_tmyho"]
+[ext_resource type="Script" uid="uid://dpb7dhcor8ey8" path="res://scene/other scn/menu.gd" id="1_6fejx"]
+[ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/tile_map and sprites/decor_16x16.png" id="2_akoio"]
+[ext_resource type="Texture2D" uid="uid://rpux5geekd8w" path="res://assets/tile_map and sprites/Fences.png" id="3_ho73k"]
+[ext_resource type="Texture2D" uid="uid://wm0j5w4ccsao" path="res://assets/tile_map and sprites/grass.png" id="4_dyuxe"]
+[ext_resource type="Texture2D" uid="uid://ctnphrxalwg7j" path="res://assets/tile_map and sprites/House.png" id="5_8of67"]
+[ext_resource type="Texture2D" uid="uid://jvk17c18u7op" path="res://assets/tile_map and sprites/Oak_Tree.png" id="6_pgh6j"]
+[ext_resource type="Texture2D" uid="uid://bvoq0k2sejrx1" path="res://assets/tile_map and sprites/Oak_Tree_Small.png" id="7_wmmby"]
+[ext_resource type="Texture2D" uid="uid://grcfe5qmekeu" path="res://assets/tile_map and sprites/objects.png" id="8_qp55b"]
+[ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="9_wbutu"]
+[ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/tile_map and sprites/plains.png" id="10_6i5tc"]
+[ext_resource type="Texture2D" uid="uid://j0thw16myu7j" path="res://assets/used-png/Player.png" id="11_6fejx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0bac"]
-texture = ExtResource("1_7ghph")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pci4"]
+texture = ExtResource("2_akoio")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -40,8 +35,8 @@ texture = ExtResource("1_7ghph")
 2:4/0 = 0
 3:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmyho"]
-texture = ExtResource("2_na5tu")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o854k"]
+texture = ExtResource("3_ho73k")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -59,12 +54,12 @@ texture = ExtResource("2_na5tu")
 2:3/0 = 0
 3:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hnm4a"]
-texture = ExtResource("3_jsnws")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahy0u"]
+texture = ExtResource("4_dyuxe")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4vd1"]
-texture = ExtResource("4_f345f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bh37c"]
+texture = ExtResource("5_8of67")
 1:0/0 = 0
 1:0/0/terrain_set = 0
 2:0/0 = 0
@@ -132,8 +127,8 @@ texture = ExtResource("4_f345f")
 4:6/0 = 0
 4:6/0/terrain_set = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1402k"]
-texture = ExtResource("5_bqa5m")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0o0q"]
+texture = ExtResource("6_pgh6j")
 1:0/0 = 0
 2:0/0 = 0
 0:1/0 = 0
@@ -151,8 +146,8 @@ texture = ExtResource("5_bqa5m")
 1:4/0 = 0
 2:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ol7uo"]
-texture = ExtResource("6_a0bac")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro420"]
+texture = ExtResource("7_wmmby")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -168,8 +163,8 @@ texture = ExtResource("6_a0bac")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7xoa"]
-texture = ExtResource("7_tmyho")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t04dq"]
+texture = ExtResource("8_qp55b")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -379,8 +374,8 @@ texture = ExtResource("7_tmyho")
 14:12/0 = 0
 15:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vme25"]
-texture = ExtResource("8_hnm4a")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sd7bm"]
+texture = ExtResource("9_wbutu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -441,8 +436,8 @@ texture = ExtResource("8_hnm4a")
 2:11/0 = 0
 3:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oiypb"]
-texture = ExtResource("9_e4vd1")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b08iv"]
+texture = ExtResource("10_6i5tc")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -758,7 +753,7 @@ texture = ExtResource("9_e4vd1")
 4:11/0 = 0
 5:11/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_x11oh"]
+[sub_resource type="TileSet" id="TileSet_dow5n"]
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "grass 0"
 terrain_set_0/terrain_0/color = Color(0.681564, 9.19297e-06, 0.459988, 1)
@@ -766,18 +761,18 @@ terrain_set_0/terrain_1/name = "house 1"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 terrain_set_0/terrain_2/name = "holm 2"
 terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_a0bac")
-sources/1 = SubResource("TileSetAtlasSource_tmyho")
-sources/2 = SubResource("TileSetAtlasSource_hnm4a")
-sources/3 = SubResource("TileSetAtlasSource_e4vd1")
-sources/4 = SubResource("TileSetAtlasSource_1402k")
-sources/5 = SubResource("TileSetAtlasSource_ol7uo")
-sources/6 = SubResource("TileSetAtlasSource_a7xoa")
-sources/7 = SubResource("TileSetAtlasSource_vme25")
-sources/8 = SubResource("TileSetAtlasSource_oiypb")
+sources/0 = SubResource("TileSetAtlasSource_8pci4")
+sources/1 = SubResource("TileSetAtlasSource_o854k")
+sources/2 = SubResource("TileSetAtlasSource_ahy0u")
+sources/3 = SubResource("TileSetAtlasSource_bh37c")
+sources/4 = SubResource("TileSetAtlasSource_g0o0q")
+sources/5 = SubResource("TileSetAtlasSource_ro420")
+sources/6 = SubResource("TileSetAtlasSource_t04dq")
+sources/7 = SubResource("TileSetAtlasSource_sd7bm")
+sources/8 = SubResource("TileSetAtlasSource_b08iv")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a81yy"]
-texture = ExtResource("4_f345f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cals8"]
+texture = ExtResource("5_8of67")
 1:0/0 = 0
 1:0/0/z_index = 5
 2:0/0 = 0
@@ -861,8 +856,8 @@ texture = ExtResource("4_f345f")
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfj6m"]
-texture = ExtResource("2_na5tu")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mpkr8"]
+texture = ExtResource("3_ho73k")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.8945, -5.02042, 1.94186, -5.02042, 2.03541, -4.07082, 3.01397, -4.03168, 3.01397, -1.99627, 1.99627, -1.99627, 1.92898, 8, -2.08101, 8, -2.07263, 6.79425, -1.97838, -2.00511, -2.97483, -2.03541, -2.98383, -4.0258, -1.98922, -3.97844)
 1:0/0 = 0
@@ -896,8 +891,8 @@ texture = ExtResource("2_na5tu")
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.94849, -8, 2.0058, -4.0689, 3.01397, -4.03168, 2.9943, -2.00511, 1.99627, -1.99627, 2.01373, 2.01373, 1.98922, 4.0258, 0.994611, 4.07317, 0.947248, 5.02042, -0.839054, 5.03432, -0.994611, 3.97844, -1.98922, 4.0258, -1.92982, 1.92982, -8, 2.01096, -8, -1.94161, -1.9733, -2.00565, -2.97483, -2.03541, -2.98383, -4.0258, -2.0058, -4.0689, -2.0058, -8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n02kn"]
-texture = ExtResource("9_e4vd1")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tucx6"]
+texture = ExtResource("10_6i5tc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -985,14 +980,14 @@ texture = ExtResource("9_e4vd1")
 4:11/0 = 0
 5:11/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_f345f"]
+[sub_resource type="TileSet" id="TileSet_qabww"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_a81yy")
-sources/1 = SubResource("TileSetAtlasSource_qfj6m")
-sources/2 = SubResource("TileSetAtlasSource_n02kn")
+sources/0 = SubResource("TileSetAtlasSource_cals8")
+sources/1 = SubResource("TileSetAtlasSource_mpkr8")
+sources/2 = SubResource("TileSetAtlasSource_tucx6")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_puhxk"]
-texture = ExtResource("8_hnm4a")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toqhx"]
+texture = ExtResource("9_wbutu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1063,8 +1058,8 @@ texture = ExtResource("8_hnm4a")
 2:11/0 = 0
 3:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x11oh"]
-texture = ExtResource("7_tmyho")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74qtc"]
+texture = ExtResource("8_qp55b")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1274,13 +1269,13 @@ texture = ExtResource("7_tmyho")
 14:12/0 = 0
 15:12/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_tmyho"]
+[sub_resource type="TileSet" id="TileSet_d0hjk"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_puhxk")
-sources/1 = SubResource("TileSetAtlasSource_x11oh")
+sources/0 = SubResource("TileSetAtlasSource_toqhx")
+sources/1 = SubResource("TileSetAtlasSource_74qtc")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7h02s"]
-texture = ExtResource("5_bqa5m")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26vse"]
+texture = ExtResource("6_pgh6j")
 1:0/0 = 0
 1:0/0/z_index = 5
 2:0/0 = 0
@@ -1316,8 +1311,8 @@ texture = ExtResource("5_bqa5m")
 2:4/0 = 0
 2:4/0/z_index = -1
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fb6u6"]
-texture = ExtResource("6_a0bac")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gyaur"]
+texture = ExtResource("7_wmmby")
 2:0/0 = 0
 2:0/0/z_index = 5
 3:0/0 = 0
@@ -1343,8 +1338,8 @@ texture = ExtResource("6_a0bac")
 3:2/0 = 0
 3:2/0/z_index = -1
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spjrp"]
-texture = ExtResource("9_e4vd1")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jajre"]
+texture = ExtResource("10_6i5tc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1414,8 +1409,8 @@ texture = ExtResource("9_e4vd1")
 4:11/0 = 0
 5:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_13g4d"]
-texture = ExtResource("7_tmyho")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jax0"]
+texture = ExtResource("8_qp55b")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1639,289 +1634,549 @@ texture = ExtResource("7_tmyho")
 9:8/0 = 0
 9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.92273, -8, -8, 2.06311, -8, 1.94849, 5.96008, -8, 6.0174)
 
-[sub_resource type="TileSet" id="TileSet_7h02s"]
+[sub_resource type="TileSet" id="TileSet_42sqa"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7h02s")
-sources/1 = SubResource("TileSetAtlasSource_fb6u6")
-sources/3 = SubResource("TileSetAtlasSource_spjrp")
-sources/4 = SubResource("TileSetAtlasSource_13g4d")
+sources/0 = SubResource("TileSetAtlasSource_26vse")
+sources/1 = SubResource("TileSetAtlasSource_gyaur")
+sources/3 = SubResource("TileSetAtlasSource_jajre")
+sources/4 = SubResource("TileSetAtlasSource_4jax0")
 
-[sub_resource type="GDScript" id="GDScript_f345f"]
-script/source = "extends Camera2D
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fvbb"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 192, 32, 32)
 
-var zoom_speed = 0.1
-var min_zoom = 1.3
-var max_zoom = 3.3
-var can_zoom = true
-var original_pos
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml7e8"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 192, 32, 32)
 
-func _ready():
-	original_pos = position
-	
-func _process(delta):
-	if Global.damage:
-		shake_camera()
-		
-func _input(event):
-	if can_zoom and event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			zoom = (zoom - Vector2(zoom_speed, zoom_speed)).clamp(Vector2(min_zoom, min_zoom), Vector2(max_zoom, max_zoom))
-		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			zoom = (zoom + Vector2(zoom_speed, zoom_speed)).clamp(Vector2(min_zoom, min_zoom), Vector2(max_zoom, max_zoom))
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihjo1"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 192, 32, 32)
 
-func shake_camera():
-	if !can_zoom:
-		return
-		
-	can_zoom = false
-	
-	var tween = create_tween()
-	var shake_str = 3.0
-	var shake_time = 0.01
-	
-	tween.tween_property(self, \"position\", original_pos + Vector2(shake_str, shake_str), shake_time)
-	tween.tween_property(self, \"position\", original_pos - Vector2(shake_str, shake_str), shake_time)
-	tween.tween_property(self, \"position\", original_pos, shake_time)
-	
-	await get_tree().create_timer(0.05).timeout
-	can_zoom = true
-"
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk1vr"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 192, 32, 32)
 
-[sub_resource type="Animation" id="Animation_jsnws"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DirectionalLight2D:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/days:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:texture_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.01]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_34jf3"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 224, 32, 32)
 
-[sub_resource type="Animation" id="Animation_na5tu"]
-resource_name = "day-night"
-length = 120.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DirectionalLight2D:energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 30.3, 60.9113, 90.0333, 120),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.8, 0.8, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/days:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.766667, 1.5, 2.3, 3.23333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.627451), Color(1, 1, 1, 1), Color(1, 1, 1, 0.627451), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:texture_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 30.8, 60.9141, 90.0667, 120),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.01, 0.01, 2.0, 2.0, 0.01]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(61.3368),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"slime_spawn"
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7b46"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4wxg"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bup7g"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ja17"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4iqv"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42h83"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuf2t"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrjdb"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk4ol"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4reak"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt23p"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8m7u"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qucqc"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsw3c"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1uwf"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ie14"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk8el"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vgh4"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3knh"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3008"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpsxb"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt08c"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vs06"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uieu"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wapc"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj5ck"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lu7o"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rkx0"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyue1"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyaf6"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtygy"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmxba"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8hgv"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od4qb"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsvhi"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slqdk"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yrng"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(160, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acav1"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36u8p"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtno0"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6a6d"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5j3d"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk2jd"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8aaj"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op5kk"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32gv3"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_081ml"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7u3n"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymct0"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hm66"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf2qa"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko5ao"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8280"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fmm8"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nkdk"]
+atlas = ExtResource("11_6fejx")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_akoio"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fvbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml7e8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihjo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk1vr")
+}],
+"loop": false,
+"name": &"Attack_down",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34jf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7b46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4wxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bup7g")
+}],
+"loop": false,
+"name": &"Attack_front",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ja17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4iqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42h83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuf2t")
+}],
+"loop": false,
+"name": &"Attack_left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrjdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kk4ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4reak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt23p")
+}],
+"loop": false,
+"name": &"Attack_right",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8m7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qucqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsw3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1uwf")
+}],
+"loop": false,
+"name": &"Attack_up",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ie14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk8el")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vgh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3knh")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3008")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpsxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rt08c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vs06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uieu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wapc")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj5ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lu7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rkx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyue1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyaf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtygy")
+}],
+"loop": true,
+"name": &"Down_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmxba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8hgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od4qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsvhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slqdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yrng")
+}],
+"loop": true,
+"name": &"Front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acav1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36u8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtno0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6a6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5j3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk2jd")
+}],
+"loop": true,
+"name": &"Front_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8aaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op5kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32gv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_081ml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7u3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymct0")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hm66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf2qa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko5ao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8280")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fmm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nkdk")
+}],
+"loop": true,
+"name": &"Up_idle",
+"speed": 5.0
 }]
-}
-tracks/4/type = "method"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("player")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"save_game"
-}]
-}
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_f345f"]
-_data = {
-&"RESET": SubResource("Animation_jsnws"),
-&"day-night": SubResource("Animation_na5tu")
-}
+[node name="menu" type="Node2D"]
+script = ExtResource("1_6fejx")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f345f"]
-size = Vector2(13.5, 15.5)
-
-[node name="world" type="Node2D"]
-y_sort_enabled = true
-script = ExtResource("1_jsnws")
-
-[node name="TileMapLayer" type="Node" parent="."]
-
-[node name="grass" type="TileMapLayer" parent="TileMapLayer"]
+[node name="grass" type="TileMapLayer" parent="."]
 z_index = -100
 tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAABAAAAAgAAAAAAAAACAAAAAgAAAAAAAAADAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAFAAAAAgAAAAAAAAAGAAAAAgAAAAAAAAAHAAAAAgAAAAAAAAAIAAAAAgAAAAAAAAAJAAAAAgAAAAAAAAAKAAAAAgAAAAAAAAALAAAAAgAAAAAAAAAMAAAAAgAAAAAAAAANAAAAAgAAAAAAAAAOAAAAAgAAAAAAAAAOAAEAAgAAAAAAAAAPAAEAAgAAAAAAAAAQAAEAAgAAAAAAAAARAAEAAgAAAAAAAAASAAEAAgAAAAAAAAATAAEAAgAAAAAAAAAUAAEAAgAAAAAAAAAVAAEAAgAAAAAAAAAWAAEAAgAAAAAAAAAXAAEAAgAAAAAAAAAYAAEAAgAAAAAAAAAZAAEAAgAAAAAAAAAaAAEAAgAAAAAAAAAbAAEAAgAAAAAAAAAcAAEACAABAAEAAAAdAAEACAACAAEAAAAbAAAAAgAAAAAAAAAaAAAAAgAAAAAAAAAZAAAAAgAAAAAAAAAYAAAAAgAAAAAAAAAXAAAAAgAAAAAAAAAWAAAAAgAAAAAAAAAVAAAAAgAAAAAAAAAUAAAAAgAAAAAAAAATAAAAAgAAAAAAAAASAAAAAgAAAAAAAAARAAAAAgAAAAAAAAAQAAAAAgAAAAAAAAAPAAAAAgAAAAAAAAAcAAAACAABAAEAAAAdAAAACAACAAEAAAANAAEAAgAAAAAAAAAMAAEAAgAAAAAAAAALAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAFAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAADAAEAAgAAAAAAAAACAAEAAgAAAAAAAAABAAEAAgAAAAAAAAAAAAEAAgAAAAAAAAAeAAAACAADAAEAAAAeAAEACAAEAAEAAAAfAAAAAgAAAAAAAAAfAAEACAACAAAAAAAgAAAAAgAAAAAAAAAgAAEACAACAAAAAAAhAAAAAgAAAAAAAAAhAAEACAACAAAAAAAiAAAAAgAAAAAAAAAiAAEACAACAAAAAAAjAAAAAgAAAAAAAAAjAAEACAACAAAAAAAkAAAAAgAAAAAAAAAkAAEACAACAAAAAAAlAAAAAgAAAAAAAAAlAAEACAACAAAAAAAmAAAAAgAAAAAAAAAmAAEACAACAAAAAAAnAAAAAgAAAAAAAAAnAAEACAACAAAAAAAoAAAAAgAAAAAAAAAoAAEACAACAAAAAAApAAAAAgAAAAAAAAApAAEACAACAAAAAAAqAAAAAgAAAAAAAAAqAAEACAACAAAAAAArAAAAAgAAAAAAAAArAAEACAACAAAAAAAsAAAAAgAAAAAAAAAsAAEACAACAAAAAAAtAAAAAgAAAAAAAAAtAAEACAADAAAAAAAuAAAAAgAAAAAAAAAuAAEAAgAAAAAAAAAvAAAAAgAAAAAAAAAvAAEAAgAAAAAAAAAwAAAAAgAAAAAAAAAwAAEAAgAAAAAAAAAxAAAAAgAAAAAAAAAxAAEAAgAAAAAAAAAyAAAAAgAAAAAAAAAyAAEAAgAAAAAAAAAzAAAAAgAAAAAAAAAzAAEAAgAAAAAAAAA0AAAAAgAAAAAAAAA0AAEAAgAAAAAAAAA1AAAAAgAAAAAAAAA1AAEAAgAAAAAAAAA2AAAAAgAAAAAAAAA2AAEAAgAAAAAAAAA3AAAAAgAAAAAAAAA3AAEAAgAAAAAAAAA4AAAAAgAAAAAAAAA4AAEAAgAAAAAAAAA5AAAAAgAAAAAAAAA5AAEAAgAAAAAAAAA6AAAAAgAAAAAAAAA6AAEAAgAAAAAAAAA7AAAAAgAAAAAAAAA7AAEAAgAAAAAAAAA8AAAAAgAAAAAAAAA8AAEAAgAAAAAAAAA9AAAAAgAAAAAAAAA9AAEAAgAAAAAAAAA+AAAAAgAAAAAAAAA+AAEAAgAAAAAAAAA/AAAAAgAAAAAAAAA/AAEAAgAAAAAAAABAAAAAAgAAAAAAAABAAAEAAgAAAAAAAABBAAAAAgAAAAAAAABBAAEAAgAAAAAAAABCAAAAAgAAAAAAAABCAAEAAgAAAAAAAABDAAAAAgAAAAAAAABDAAEAAgAAAAAAAABEAAAAAgAAAAAAAABEAAEAAgAAAAAAAABFAAAAAgAAAAAAAABFAAEAAgAAAAAAAABGAAAAAgAAAAAAAABGAAEAAgAAAAAAAABHAAAAAgAAAAAAAABHAAEAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAAEAAIAAgAAAAAAAAAEAAMAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAMAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAMAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAAMAAIAAgAAAAAAAAAMAAMAAgAAAAAAAAANAAIAAgAAAAAAAAANAAMAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAPAAIAAgAAAAAAAAAPAAMAAgAAAAAAAAAQAAIAAgAAAAAAAAAQAAMAAgAAAAAAAAARAAIAAgAAAAAAAAARAAMAAgAAAAAAAAASAAIAAgAAAAAAAAASAAMAAgAAAAAAAAATAAIAAgAAAAAAAAATAAMAAgAAAAAAAAAUAAIAAgAAAAAAAAAUAAMAAgAAAAAAAAAVAAIAAgAAAAAAAAAVAAMAAgAAAAAAAAAWAAIAAgAAAAAAAAAWAAMAAgAAAAAAAAAXAAIAAgAAAAAAAAAXAAMAAgAAAAAAAAAYAAIAAgAAAAAAAAAYAAMAAgAAAAAAAAAZAAIAAgAAAAAAAAAZAAMAAgAAAAAAAAAaAAIAAgAAAAAAAAAaAAMAAgAAAAAAAAAbAAIAAgAAAAAAAAAbAAMAAgAAAAAAAAAcAAIACAABAAEAAAAcAAMACAABAAEAAAAdAAIACAACAAEAAAAdAAMACAACAAEAAAAAAAQAAgAAAAAAAAAAAAUAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAACAAQAAgAAAAAAAAACAAUAAgAAAAAAAAADAAQAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAANAAQAAgAAAAAAAAANAAUAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAPAAQAAgAAAAAAAAAPAAUAAgAAAAAAAAAQAAQAAgAAAAAAAAAQAAUAAgAAAAAAAAARAAQAAgAAAAAAAAARAAUAAgAAAAAAAAASAAQAAgAAAAAAAAASAAUAAgAAAAAAAAATAAQAAgAAAAAAAAATAAUAAgAAAAAAAAAUAAQAAgAAAAAAAAAUAAUAAgAAAAAAAAAVAAQAAgAAAAAAAAAVAAUAAgAAAAAAAAAWAAQAAgAAAAAAAAAWAAUAAgAAAAAAAAAXAAQAAgAAAAAAAAAXAAUAAgAAAAAAAAAYAAQAAgAAAAAAAAAYAAUAAgAAAAAAAAAZAAQAAgAAAAAAAAAZAAUAAgAAAAAAAAAaAAQAAgAAAAAAAAAaAAUAAgAAAAAAAAAbAAQAAgAAAAAAAAAbAAUAAgAAAAAAAAAcAAQACAABAAEAAAAcAAUACAABAAEAAAAdAAQACAACAAEAAAAdAAUACAACAAEAAAAAAAYAAgAAAAAAAAAAAAcAAgAAAAAAAAABAAYAAgAAAAAAAAABAAcAAgAAAAAAAAACAAYAAgAAAAAAAAACAAcAAgAAAAAAAAADAAYAAgAAAAAAAAADAAcAAgAAAAAAAAAEAAYAAgAAAAAAAAAEAAcAAgAAAAAAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAAAAAAGAAYAAgAAAAAAAAAGAAcAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAcAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAcAAgAAAAAAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAAAAAALAAYAAgAAAAAAAAALAAcAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAcAAgAAAAAAAAANAAYAAgAAAAAAAAANAAcAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAPAAYAAgAAAAAAAAAPAAcAAgAAAAAAAAAQAAYAAgAAAAAAAAAQAAcAAgAAAAAAAAARAAYAAgAAAAAAAAARAAcAAgAAAAAAAAASAAYAAgAAAAAAAAASAAcAAgAAAAAAAAATAAYAAgAAAAAAAAATAAcAAgAAAAAAAAAUAAYAAgAAAAAAAAAUAAcAAgAAAAAAAAAVAAYAAgAAAAAAAAAVAAcAAgAAAAAAAAAWAAYAAgAAAAAAAAAWAAcAAgAAAAAAAAAXAAYAAgAAAAAAAAAXAAcAAgAAAAAAAAAYAAYAAgAAAAAAAAAYAAcAAgAAAAAAAAAZAAYAAgAAAAAAAAAZAAcAAgAAAAAAAAAaAAYAAgAAAAAAAAAaAAcAAgAAAAAAAAAbAAYAAgAAAAAAAAAbAAcAAgAAAAAAAAAcAAYACAABAAEAAAAcAAcACAABAAEAAAAdAAYACAACAAEAAAAdAAcACAACAAEAAAAAAAgAAgAAAAAAAAAAAAkAAgAAAAAAAAABAAgAAgAAAAAAAAABAAkAAgAAAAAAAAACAAgAAgAAAAAAAAACAAkAAgAAAAAAAAADAAgAAgAAAAAAAAADAAkAAgAAAAAAAAAEAAgAAgAAAAAAAAAEAAkAAgAAAAAAAAAFAAgAAgAAAAAAAAAFAAkAAgAAAAAAAAAGAAgAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAgAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAgAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAgAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAgAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAgAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAgAAgAAAAAAAAANAAkAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAPAAgAAgAAAAAAAAAPAAkAAgAAAAAAAAAQAAgAAgAAAAAAAAAQAAkAAgAAAAAAAAARAAgAAgAAAAAAAAARAAkAAgAAAAAAAAASAAgAAgAAAAAAAAASAAkAAgAAAAAAAAATAAgAAgAAAAAAAAATAAkAAgAAAAAAAAAUAAgAAgAAAAAAAAAUAAkAAgAAAAAAAAAVAAgAAgAAAAAAAAAVAAkAAgAAAAAAAAAWAAgAAgAAAAAAAAAWAAkAAgAAAAAAAAAXAAgAAgAAAAAAAAAXAAkAAgAAAAAAAAAYAAgAAgAAAAAAAAAYAAkAAgAAAAAAAAAZAAgAAgAAAAAAAAAZAAkAAgAAAAAAAAAaAAgAAgAAAAAAAAAaAAkAAgAAAAAAAAAbAAgAAgAAAAAAAAAbAAkAAgAAAAAAAAAcAAgACAABAAEAAAAcAAkACAABAAEAAAAdAAgACAACAAEAAAAdAAkACAACAAEAAAAAAAoAAgAAAAAAAAAAAAsAAgAAAAAAAAABAAoAAgAAAAAAAAABAAsAAgAAAAAAAAACAAoAAgAAAAAAAAACAAsAAgAAAAAAAAADAAoAAgAAAAAAAAADAAsAAgAAAAAAAAAEAAoAAgAAAAAAAAAEAAsAAgAAAAAAAAAFAAoAAgAAAAAAAAAFAAsAAgAAAAAAAAAGAAoAAgAAAAAAAAAGAAsAAgAAAAAAAAAHAAoAAgAAAAAAAAAHAAsAAgAAAAAAAAAIAAoAAgAAAAAAAAAIAAsAAgAAAAAAAAAJAAoAAgAAAAAAAAAJAAsAAgAAAAAAAAAKAAoAAgAAAAAAAAAKAAsAAgAAAAAAAAALAAoAAgAAAAAAAAALAAsAAgAAAAAAAAAMAAoAAgAAAAAAAAAMAAsAAgAAAAAAAAANAAoAAgAAAAAAAAANAAsAAgAAAAAAAAAOAAoAAgAAAAAAAAAOAAsAAgAAAAAAAAAPAAoAAgAAAAAAAAAPAAsAAgAAAAAAAAAQAAoAAgAAAAAAAAAQAAsAAgAAAAAAAAARAAoAAgAAAAAAAAARAAsAAgAAAAAAAAASAAoAAgAAAAAAAAASAAsAAgAAAAAAAAATAAoAAgAAAAAAAAATAAsAAgAAAAAAAAAUAAoAAgAAAAAAAAAUAAsAAgAAAAAAAAAVAAoAAgAAAAAAAAAVAAsAAgAAAAAAAAAWAAoAAgAAAAAAAAAWAAsAAgAAAAAAAAAXAAoAAgAAAAAAAAAXAAsAAgAAAAAAAAAYAAoAAgAAAAAAAAAYAAsAAgAAAAAAAAAZAAoAAgAAAAAAAAAZAAsAAgAAAAAAAAAaAAoAAgAAAAAAAAAaAAsAAgAAAAAAAAAbAAoAAgAAAAAAAAAbAAsAAgAAAAAAAAAcAAoACAABAAEAAAAcAAsACAABAAEAAAAdAAoACAACAAEAAAAdAAsACAACAAEAAAAAAAwAAgAAAAAAAAAAAA0AAgAAAAAAAAABAAwAAgAAAAAAAAABAA0AAgAAAAAAAAACAAwAAgAAAAAAAAACAA0AAgAAAAAAAAADAAwAAgAAAAAAAAADAA0AAgAAAAAAAAAEAAwAAgAAAAAAAAAEAA0AAgAAAAAAAAAFAAwAAgAAAAAAAAAFAA0AAgAAAAAAAAAGAAwAAgAAAAAAAAAGAA0AAgAAAAAAAAAHAAwAAgAAAAAAAAAHAA0AAgAAAAAAAAAIAAwAAgAAAAAAAAAIAA0AAgAAAAAAAAAJAAwAAgAAAAAAAAAJAA0AAgAAAAAAAAAKAAwAAgAAAAAAAAAKAA0AAgAAAAAAAAALAAwAAgAAAAAAAAALAA0AAgAAAAAAAAAMAAwAAgAAAAAAAAAMAA0AAgAAAAAAAAANAAwAAgAAAAAAAAANAA0AAgAAAAAAAAAOAAwAAgAAAAAAAAAOAA0AAgAAAAAAAAAPAAwAAgAAAAAAAAAPAA0AAgAAAAAAAAAQAAwAAgAAAAAAAAAQAA0AAgAAAAAAAAARAAwAAgAAAAAAAAARAA0AAgAAAAAAAAASAAwAAgAAAAAAAAASAA0AAgAAAAAAAAATAAwAAgAAAAAAAAATAA0AAgAAAAAAAAAUAAwAAgAAAAAAAAAUAA0AAgAAAAAAAAAVAAwAAgAAAAAAAAAVAA0AAgAAAAAAAAAWAAwAAgAAAAAAAAAWAA0AAgAAAAAAAAAXAAwAAgAAAAAAAAAXAA0AAgAAAAAAAAAYAAwAAgAAAAAAAAAYAA0AAgAAAAAAAAAZAAwAAgAAAAAAAAAZAA0AAgAAAAAAAAAaAAwAAgAAAAAAAAAaAA0AAgAAAAAAAAAbAAwAAgAAAAAAAAAbAA0AAgAAAAAAAAAcAAwACAABAAEAAAAcAA0ACAABAAEAAAAdAAwACAACAAEAAAAdAA0ACAACAAEAAAAAAA4AAgAAAAAAAAAAAA8AAgAAAAAAAAABAA4AAgAAAAAAAAABAA8AAgAAAAAAAAACAA4AAgAAAAAAAAACAA8AAgAAAAAAAAADAA4AAgAAAAAAAAADAA8AAgAAAAAAAAAEAA4AAgAAAAAAAAAEAA8AAgAAAAAAAAAFAA4AAgAAAAAAAAAFAA8AAgAAAAAAAAAGAA4AAgAAAAAAAAAGAA8AAgAAAAAAAAAHAA4AAgAAAAAAAAAHAA8AAgAAAAAAAAAIAA4AAgAAAAAAAAAIAA8AAgAAAAAAAAAJAA4AAgAAAAAAAAAJAA8AAgAAAAAAAAAKAA4AAgAAAAAAAAAKAA8AAgAAAAAAAAALAA4AAgAAAAAAAAALAA8AAgAAAAAAAAAMAA4AAgAAAAAAAAAMAA8AAgAAAAAAAAANAA4AAgAAAAAAAAANAA8AAgAAAAAAAAAOAA4AAgAAAAAAAAAOAA8AAgAAAAAAAAAPAA4AAgAAAAAAAAAPAA8AAgAAAAAAAAAQAA4AAgAAAAAAAAAQAA8AAgAAAAAAAAARAA4AAgAAAAAAAAARAA8AAgAAAAAAAAASAA4AAgAAAAAAAAASAA8AAgAAAAAAAAATAA4AAgAAAAAAAAATAA8AAgAAAAAAAAAUAA4AAgAAAAAAAAAUAA8AAgAAAAAAAAAVAA4AAgAAAAAAAAAVAA8AAgAAAAAAAAAWAA4AAgAAAAAAAAAWAA8AAgAAAAAAAAAXAA4AAgAAAAAAAAAXAA8AAgAAAAAAAAAYAA4AAgAAAAAAAAAYAA8AAgAAAAAAAAAZAA4AAgAAAAAAAAAZAA8AAgAAAAAAAAAaAA4AAgAAAAAAAAAaAA8AAgAAAAAAAAAbAA4AAgAAAAAAAAAbAA8AAgAAAAAAAAAcAA4ACAABAAEAAAAcAA8ACAABAAEAAAAdAA4ACAACAAEAAAAdAA8ACAACAAEAAAAAABAAAgAAAAAAAAAAABEAAgAAAAAAAAABABAAAgAAAAAAAAABABEAAgAAAAAAAAACABAAAgAAAAAAAAACABEAAgAAAAAAAAADABAAAgAAAAAAAAADABEAAgAAAAAAAAAEABAAAgAAAAAAAAAEABEAAgAAAAAAAAAFABAAAgAAAAAAAAAFABEAAgAAAAAAAAAGABAAAgAAAAAAAAAGABEAAgAAAAAAAAAHABAAAgAAAAAAAAAHABEAAgAAAAAAAAAIABAAAgAAAAAAAAAIABEAAgAAAAAAAAAJABAAAgAAAAAAAAAJABEAAgAAAAAAAAAKABAAAgAAAAAAAAAKABEAAgAAAAAAAAALABAAAgAAAAAAAAALABEAAgAAAAAAAAANABAAAgAAAAAAAAANABEAAgAAAAAAAAAOABAAAgAAAAAAAAAOABEAAgAAAAAAAAAPABAAAgAAAAAAAAAPABEAAgAAAAAAAAAQABAAAgAAAAAAAAAQABEAAgAAAAAAAAARABAAAgAAAAAAAAARABEAAgAAAAAAAAASABAAAgAAAAAAAAASABEAAgAAAAAAAAATABAAAgAAAAAAAAATABEAAgAAAAAAAAAUABAAAgAAAAAAAAAUABEAAgAAAAAAAAAVABAAAgAAAAAAAAAVABEAAgAAAAAAAAAWABAAAgAAAAAAAAAWABEAAgAAAAAAAAAXABAAAgAAAAAAAAAXABEAAgAAAAAAAAAYABAAAgAAAAAAAAAYABEAAgAAAAAAAAAZABAAAgAAAAAAAAAZABEAAgAAAAAAAAAaABAAAgAAAAAAAAAaABEAAgAAAAAAAAAbABAAAgAAAAAAAAAbABEAAgAAAAAAAAAcABAACAABAAEAAAAcABEACAABAAEAAAAdABAACAACAAEAAAAdABEACAACAAEAAAAAABIAAgAAAAAAAAAAABMACAACAAAAAAABABIAAgAAAAAAAAABABMACAACAAAAAAACABIAAgAAAAAAAAACABMACAACAAAAAAADABIAAgAAAAAAAAADABMACAACAAAAAAAEABIAAgAAAAAAAAAEABMACAACAAAAAAAFABIAAgAAAAAAAAAFABMACAACAAAAAAAGABIAAgAAAAAAAAAGABMACAACAAAAAAAHABIAAgAAAAAAAAAHABMACAACAAAAAAAIABIAAgAAAAAAAAAIABMACAACAAAAAAAJABIAAgAAAAAAAAAJABMACAACAAAAAAAKABIAAgAAAAAAAAAKABMACAACAAAAAAALABIAAgAAAAAAAAALABMACAACAAAAAAANABIAAgAAAAAAAAANABMACAACAAAAAAAOABIAAgAAAAAAAAAOABMACAACAAAAAAAPABIAAgAAAAAAAAAPABMACAACAAAAAAAQABIAAgAAAAAAAAAQABMACAACAAAAAAARABIAAgAAAAAAAAARABMACAACAAAAAAASABIAAgAAAAAAAAASABMACAACAAAAAAATABIAAgAAAAAAAAATABMACAACAAAAAAAUABIAAgAAAAAAAAAUABMACAACAAAAAAAVABIAAgAAAAAAAAAVABMACAACAAAAAAAWABIAAgAAAAAAAAAWABMACAACAAAAAAAXABIAAgAAAAAAAAAXABMACAACAAAAAAAYABIAAgAAAAAAAAAYABMACAACAAAAAAAZABIAAgAAAAAAAAAZABMACAACAAAAAAAaABIAAgAAAAAAAAAaABMACAACAAAAAAAbABIAAgAAAAAAAAAbABMACAACAAAAAAAcABIACAABAAEAAAAcABMACAAFAAEAAAAdABIACAACAAEAAAAdABMACAACAAEAAAAAABQACAACAAEAAAAAABUACAACAAIAAAABABQACAACAAEAAAABABUACAACAAIAAAACABQACAACAAEAAAACABUACAACAAIAAAADABQACAACAAEAAAADABUACAACAAIAAAAEABQACAACAAEAAAAEABUACAACAAIAAAAFABQACAACAAEAAAAFABUACAACAAIAAAAGABQACAACAAEAAAAGABUACAACAAIAAAAHABQACAACAAEAAAAHABUACAACAAIAAAAIABQACAACAAEAAAAIABUACAACAAIAAAAJABQACAACAAEAAAAJABUACAACAAIAAAAKABQACAACAAEAAAAKABUACAACAAIAAAALABQACAACAAEAAAALABUACAACAAIAAAAMABQACAACAAEAAAAMABUACAACAAIAAAANABQACAACAAEAAAANABUACAACAAIAAAAOABQACAACAAEAAAAOABUACAACAAIAAAAPABQACAACAAEAAAAPABUACAACAAIAAAAQABQACAACAAEAAAAQABUACAACAAIAAAARABQACAACAAEAAAARABUACAACAAIAAAASABQACAACAAEAAAASABUACAACAAIAAAATABQACAACAAEAAAATABUACAACAAIAAAAUABQACAACAAEAAAAUABUACAACAAIAAAAVABQACAACAAEAAAAVABUACAACAAIAAAAWABQACAACAAEAAAAWABUACAACAAIAAAAXABQACAACAAEAAAAXABUACAACAAIAAAAYABQACAACAAEAAAAYABUACAACAAIAAAAZABQACAACAAEAAAAZABUACAACAAIAAAAaABQACAACAAEAAAAaABUACAACAAIAAAAbABQACAACAAEAAAAbABUACAACAAIAAAAcABQACAACAAEAAAAcABUACAAFAAAAAAAdABQACAACAAEAAAAdABUACAACAAEAAAAAABYAAgAAAAAAAAAAABcAAgAAAAAAAAABABYAAgAAAAAAAAABABcAAgAAAAAAAAACABYAAgAAAAAAAAACABcAAgAAAAAAAAADABYAAgAAAAAAAAADABcAAgAAAAAAAAAEABYAAgAAAAAAAAAEABcAAgAAAAAAAAAFABYAAgAAAAAAAAAFABcAAgAAAAAAAAAGABYAAgAAAAAAAAAGABcAAgAAAAAAAAAHABYAAgAAAAAAAAAHABcAAgAAAAAAAAAIABYAAgAAAAAAAAAIABcAAgAAAAAAAAAJABYAAgAAAAAAAAAJABcAAgAAAAAAAAAKABYAAgAAAAAAAAAKABcAAgAAAAAAAAALABYAAgAAAAAAAAALABcAAgAAAAAAAAAMABYAAgAAAAAAAAAMABcAAgAAAAAAAAANABYAAgAAAAAAAAANABcAAgAAAAAAAAAOABYAAgAAAAAAAAAOABcAAgAAAAAAAAAPABYAAgAAAAAAAAAPABcAAgAAAAAAAAAQABYAAgAAAAAAAAAQABcAAgAAAAAAAAARABYAAgAAAAAAAAARABcAAgAAAAAAAAASABYAAgAAAAAAAAASABcAAgAAAAAAAAATABYAAgAAAAAAAAATABcAAgAAAAAAAAAUABYAAgAAAAAAAAAUABcAAgAAAAAAAAAVABYAAgAAAAAAAAAVABcAAgAAAAAAAAAWABYAAgAAAAAAAAAWABcAAgAAAAAAAAAXABYAAgAAAAAAAAAXABcAAgAAAAAAAAAYABYAAgAAAAAAAAAYABcAAgAAAAAAAAAZABYAAgAAAAAAAAAZABcAAgAAAAAAAAAaABYAAgAAAAAAAAAaABcAAgAAAAAAAAAbABYAAgAAAAAAAAAbABcAAgAAAAAAAAAcABYACAABAAEAAAAcABcACAABAAEAAAAdABYACAACAAEAAAAdABcACAACAAEAAAAAABgAAgAAAAAAAAAAABkAAgAAAAAAAAABABgAAgAAAAAAAAABABkAAgAAAAAAAAACABgAAgAAAAAAAAACABkAAgAAAAAAAAADABgAAgAAAAAAAAADABkAAgAAAAAAAAAEABgAAgAAAAAAAAAEABkAAgAAAAAAAAAFABgAAgAAAAAAAAAFABkAAgAAAAAAAAAGABgAAgAAAAAAAAAGABkAAgAAAAAAAAAHABgAAgAAAAAAAAAHABkAAgAAAAAAAAAIABgAAgAAAAAAAAAIABkAAgAAAAAAAAAJABgAAgAAAAAAAAAJABkAAgAAAAAAAAAKABgAAgAAAAAAAAAKABkAAgAAAAAAAAALABgAAgAAAAAAAAALABkAAgAAAAAAAAAMABgAAgAAAAAAAAAMABkAAgAAAAAAAAANABgAAgAAAAAAAAANABkAAgAAAAAAAAAOABgAAgAAAAAAAAAOABkAAgAAAAAAAAAPABgAAgAAAAAAAAAPABkAAgAAAAAAAAAQABgAAgAAAAAAAAAQABkAAgAAAAAAAAARABgAAgAAAAAAAAARABkAAgAAAAAAAAASABgAAgAAAAAAAAASABkAAgAAAAAAAAATABgAAgAAAAAAAAATABkAAgAAAAAAAAAUABgAAgAAAAAAAAAUABkAAgAAAAAAAAAVABgAAgAAAAAAAAAVABkAAgAAAAAAAAAWABgAAgAAAAAAAAAWABkAAgAAAAAAAAAXABgAAgAAAAAAAAAXABkAAgAAAAAAAAAYABgAAgAAAAAAAAAYABkAAgAAAAAAAAAZABgAAgAAAAAAAAAZABkAAgAAAAAAAAAaABgAAgAAAAAAAAAaABkAAgAAAAAAAAAbABgAAgAAAAAAAAAbABkAAgAAAAAAAAAcABgACAABAAEAAAAcABkACAABAAEAAAAdABgACAACAAEAAAAdABkACAACAAEAAAAAABoAAgAAAAAAAAAAABsAAgAAAAAAAAABABoAAgAAAAAAAAABABsAAgAAAAAAAAACABoAAgAAAAAAAAACABsAAgAAAAAAAAADABoAAgAAAAAAAAADABsAAgAAAAAAAAAEABoAAgAAAAAAAAAEABsAAgAAAAAAAAAFABoAAgAAAAAAAAAFABsAAgAAAAAAAAAGABoAAgAAAAAAAAAGABsAAgAAAAAAAAAHABoAAgAAAAAAAAAHABsAAgAAAAAAAAAIABoAAgAAAAAAAAAIABsAAgAAAAAAAAAJABoAAgAAAAAAAAAJABsAAgAAAAAAAAAKABoAAgAAAAAAAAAKABsAAgAAAAAAAAALABoAAgAAAAAAAAALABsAAgAAAAAAAAAMABoAAgAAAAAAAAAMABsAAgAAAAAAAAANABoAAgAAAAAAAAANABsAAgAAAAAAAAAOABoAAgAAAAAAAAAOABsAAgAAAAAAAAAPABoAAgAAAAAAAAAPABsAAgAAAAAAAAAQABoAAgAAAAAAAAAQABsAAgAAAAAAAAARABoAAgAAAAAAAAARABsAAgAAAAAAAAASABoAAgAAAAAAAAASABsAAgAAAAAAAAATABoAAgAAAAAAAAATABsAAgAAAAAAAAAUABoAAgAAAAAAAAAUABsAAgAAAAAAAAAVABoAAgAAAAAAAAAVABsAAgAAAAAAAAAWABoAAgAAAAAAAAAWABsAAgAAAAAAAAAXABoAAgAAAAAAAAAXABsAAgAAAAAAAAAYABoAAgAAAAAAAAAYABsAAgAAAAAAAAAZABoAAgAAAAAAAAAZABsAAgAAAAAAAAAaABoAAgAAAAAAAAAaABsAAgAAAAAAAAAbABoAAgAAAAAAAAAbABsAAgAAAAAAAAAcABoACAABAAEAAAAcABsACAABAAEAAAAdABoACAACAAEAAAAdABsACAACAAEAAAAAABwAAgAAAAAAAAAAAB0AAgAAAAAAAAABABwAAgAAAAAAAAABAB0AAgAAAAAAAAACABwAAgAAAAAAAAACAB0AAgAAAAAAAAADABwAAgAAAAAAAAADAB0AAgAAAAAAAAAEABwAAgAAAAAAAAAEAB0AAgAAAAAAAAAFABwAAgAAAAAAAAAFAB0AAgAAAAAAAAAGABwAAgAAAAAAAAAGAB0AAgAAAAAAAAAHABwAAgAAAAAAAAAHAB0AAgAAAAAAAAAIABwAAgAAAAAAAAAIAB0AAgAAAAAAAAAJABwAAgAAAAAAAAAJAB0AAgAAAAAAAAAKABwAAgAAAAAAAAAKAB0AAgAAAAAAAAALABwAAgAAAAAAAAALAB0AAgAAAAAAAAAMABwAAgAAAAAAAAAMAB0AAgAAAAAAAAANABwAAgAAAAAAAAANAB0AAgAAAAAAAAAOABwAAgAAAAAAAAAOAB0AAgAAAAAAAAAPABwAAgAAAAAAAAAPAB0AAgAAAAAAAAAQABwAAgAAAAAAAAAQAB0AAgAAAAAAAAARABwAAgAAAAAAAAARAB0AAgAAAAAAAAASABwAAgAAAAAAAAASAB0AAgAAAAAAAAATABwAAgAAAAAAAAATAB0AAgAAAAAAAAAUABwAAgAAAAAAAAAUAB0AAgAAAAAAAAAVABwAAgAAAAAAAAAVAB0AAgAAAAAAAAAWABwAAgAAAAAAAAAWAB0AAgAAAAAAAAAXABwAAgAAAAAAAAAXAB0AAgAAAAAAAAAYABwAAgAAAAAAAAAYAB0AAgAAAAAAAAAZABwAAgAAAAAAAAAZAB0AAgAAAAAAAAAaABwAAgAAAAAAAAAaAB0AAgAAAAAAAAAbABwAAgAAAAAAAAAbAB0AAgAAAAAAAAAcABwACAABAAEAAAAcAB0ACAABAAEAAAAdABwACAACAAEAAAAdAB0ACAACAAEAAAAAAB4AAgAAAAAAAAAAAB8AAgAAAAAAAAABAB4AAgAAAAAAAAABAB8AAgAAAAAAAAACAB4AAgAAAAAAAAACAB8AAgAAAAAAAAADAB4AAgAAAAAAAAADAB8AAgAAAAAAAAAEAB4AAgAAAAAAAAAEAB8AAgAAAAAAAAAFAB4AAgAAAAAAAAAFAB8AAgAAAAAAAAAGAB4AAgAAAAAAAAAGAB8AAgAAAAAAAAAHAB4AAgAAAAAAAAAHAB8AAgAAAAAAAAAIAB4AAgAAAAAAAAAIAB8AAgAAAAAAAAAJAB4AAgAAAAAAAAAJAB8AAgAAAAAAAAAKAB4AAgAAAAAAAAAKAB8AAgAAAAAAAAALAB4AAgAAAAAAAAALAB8AAgAAAAAAAAAMAB4AAgAAAAAAAAAMAB8AAgAAAAAAAAANAB4AAgAAAAAAAAANAB8AAgAAAAAAAAAOAB4AAgAAAAAAAAAOAB8AAgAAAAAAAAAPAB4AAgAAAAAAAAAPAB8AAgAAAAAAAAAQAB4AAgAAAAAAAAAQAB8AAgAAAAAAAAARAB4AAgAAAAAAAAARAB8AAgAAAAAAAAASAB4AAgAAAAAAAAASAB8AAgAAAAAAAAATAB4AAgAAAAAAAAATAB8AAgAAAAAAAAAUAB4AAgAAAAAAAAAUAB8AAgAAAAAAAAAVAB4AAgAAAAAAAAAVAB8AAgAAAAAAAAAWAB4AAgAAAAAAAAAWAB8AAgAAAAAAAAAXAB4AAgAAAAAAAAAXAB8AAgAAAAAAAAAYAB4AAgAAAAAAAAAYAB8AAgAAAAAAAAAZAB4AAgAAAAAAAAAZAB8AAgAAAAAAAAAaAB4AAgAAAAAAAAAaAB8AAgAAAAAAAAAbAB4AAgAAAAAAAAAbAB8AAgAAAAAAAAAcAB4ACAABAAIAAAAcAB8AAgAAAAAAAAAdAB4ACAACAAIAAAAdAB8AAgAAAAAAAAAAACAAAgAAAAAAAAAAACEAAgAAAAAAAAABACAAAgAAAAAAAAABACEAAgAAAAAAAAACACAAAgAAAAAAAAACACEAAgAAAAAAAAADACAAAgAAAAAAAAADACEAAgAAAAAAAAAEACAAAgAAAAAAAAAEACEAAgAAAAAAAAAFACAAAgAAAAAAAAAFACEAAgAAAAAAAAAGACAAAgAAAAAAAAAGACEAAgAAAAAAAAAHACAAAgAAAAAAAAAHACEAAgAAAAAAAAAIACAAAgAAAAAAAAAIACEAAgAAAAAAAAAJACAAAgAAAAAAAAAJACEAAgAAAAAAAAAKACAAAgAAAAAAAAAKACEAAgAAAAAAAAALACAAAgAAAAAAAAALACEAAgAAAAAAAAAMACAAAgAAAAAAAAAMACEAAgAAAAAAAAANACAAAgAAAAAAAAANACEAAgAAAAAAAAAOACAAAgAAAAAAAAAOACEAAgAAAAAAAAAPACAAAgAAAAAAAAAPACEAAgAAAAAAAAAQACAAAgAAAAAAAAAQACEAAgAAAAAAAAARACAAAgAAAAAAAAARACEAAgAAAAAAAAASACAAAgAAAAAAAAASACEAAgAAAAAAAAATACAAAgAAAAAAAAATACEAAgAAAAAAAAAUACAAAgAAAAAAAAAUACEAAgAAAAAAAAAVACAAAgAAAAAAAAAVACEAAgAAAAAAAAAWACAAAgAAAAAAAAAWACEAAgAAAAAAAAAXACAAAgAAAAAAAAAXACEAAgAAAAAAAAAYACAAAgAAAAAAAAAYACEAAgAAAAAAAAAZACAAAgAAAAAAAAAZACEAAgAAAAAAAAAaACAAAgAAAAAAAAAaACEAAgAAAAAAAAAbACAAAgAAAAAAAAAbACEAAgAAAAAAAAAcACAAAgAAAAAAAAAcACEAAgAAAAAAAAAdACAAAgAAAAAAAAAdACEAAgAAAAAAAAAAACIAAgAAAAAAAAAAACMAAgAAAAAAAAABACIAAgAAAAAAAAABACMAAgAAAAAAAAACACIAAgAAAAAAAAACACMAAgAAAAAAAAADACIAAgAAAAAAAAADACMAAgAAAAAAAAAEACIAAgAAAAAAAAAEACMAAgAAAAAAAAAFACIAAgAAAAAAAAAFACMAAgAAAAAAAAAGACIAAgAAAAAAAAAGACMAAgAAAAAAAAAHACIAAgAAAAAAAAAHACMAAgAAAAAAAAAIACIAAgAAAAAAAAAIACMAAgAAAAAAAAAJACIAAgAAAAAAAAAJACMAAgAAAAAAAAAKACIAAgAAAAAAAAAKACMAAgAAAAAAAAALACIAAgAAAAAAAAALACMAAgAAAAAAAAAMACIAAgAAAAAAAAAMACMAAgAAAAAAAAANACIAAgAAAAAAAAANACMAAgAAAAAAAAAOACIAAgAAAAAAAAAOACMAAgAAAAAAAAAPACIAAgAAAAAAAAAPACMAAgAAAAAAAAAQACIAAgAAAAAAAAAQACMAAgAAAAAAAAARACIAAgAAAAAAAAARACMAAgAAAAAAAAASACIAAgAAAAAAAAASACMAAgAAAAAAAAATACIAAgAAAAAAAAATACMAAgAAAAAAAAAUACIAAgAAAAAAAAAUACMAAgAAAAAAAAAVACIAAgAAAAAAAAAVACMAAgAAAAAAAAAWACIAAgAAAAAAAAAWACMAAgAAAAAAAAAXACIAAgAAAAAAAAAXACMAAgAAAAAAAAAYACIAAgAAAAAAAAAYACMAAgAAAAAAAAAZACIAAgAAAAAAAAAZACMAAgAAAAAAAAAaACIAAgAAAAAAAAAaACMAAgAAAAAAAAAbACIAAgAAAAAAAAAbACMAAgAAAAAAAAAcACIAAgAAAAAAAAAcACMAAgAAAAAAAAAdACIAAgAAAAAAAAAdACMAAgAAAAAAAAAAACQAAgAAAAAAAAAAACUAAgAAAAAAAAABACQAAgAAAAAAAAABACUAAgAAAAAAAAACACQAAgAAAAAAAAACACUAAgAAAAAAAAADACQAAgAAAAAAAAADACUAAgAAAAAAAAAEACQAAgAAAAAAAAAEACUAAgAAAAAAAAAFACQAAgAAAAAAAAAFACUAAgAAAAAAAAAGACQAAgAAAAAAAAAGACUAAgAAAAAAAAAHACQAAgAAAAAAAAAHACUAAgAAAAAAAAAIACQAAgAAAAAAAAAIACUAAgAAAAAAAAAJACQAAgAAAAAAAAAJACUAAgAAAAAAAAAKACQAAgAAAAAAAAAKACUAAgAAAAAAAAALACQAAgAAAAAAAAALACUAAgAAAAAAAAAMACQAAgAAAAAAAAAMACUAAgAAAAAAAAANACQAAgAAAAAAAAANACUAAgAAAAAAAAAOACQAAgAAAAAAAAAOACUAAgAAAAAAAAAPACQAAgAAAAAAAAAPACUAAgAAAAAAAAAQACQAAgAAAAAAAAAQACUAAgAAAAAAAAARACQAAgAAAAAAAAARACUAAgAAAAAAAAASACQAAgAAAAAAAAASACUAAgAAAAAAAAATACQAAgAAAAAAAAATACUAAgAAAAAAAAAUACQAAgAAAAAAAAAUACUAAgAAAAAAAAAVACQAAgAAAAAAAAAVACUAAgAAAAAAAAAWACQAAgAAAAAAAAAWACUAAgAAAAAAAAAXACQAAgAAAAAAAAAXACUAAgAAAAAAAAAYACQAAgAAAAAAAAAYACUAAgAAAAAAAAAZACQAAgAAAAAAAAAZACUAAgAAAAAAAAAaACQAAgAAAAAAAAAaACUAAgAAAAAAAAAbACQAAgAAAAAAAAAbACUAAgAAAAAAAAAcACQAAgAAAAAAAAAcACUAAgAAAAAAAAAdACQAAgAAAAAAAAAdACUAAgAAAAAAAAAAACYAAgAAAAAAAAAAACcAAgAAAAAAAAABACYAAgAAAAAAAAABACcAAgAAAAAAAAACACYAAgAAAAAAAAACACcAAgAAAAAAAAADACYAAgAAAAAAAAADACcAAgAAAAAAAAAEACYAAgAAAAAAAAAEACcAAgAAAAAAAAAFACYAAgAAAAAAAAAFACcAAgAAAAAAAAAGACYAAgAAAAAAAAAGACcAAgAAAAAAAAAHACYAAgAAAAAAAAAHACcAAgAAAAAAAAAIACYAAgAAAAAAAAAIACcAAgAAAAAAAAAJACYAAgAAAAAAAAAJACcAAgAAAAAAAAAKACYAAgAAAAAAAAAKACcAAgAAAAAAAAALACYAAgAAAAAAAAALACcAAgAAAAAAAAAMACYAAgAAAAAAAAAMACcAAgAAAAAAAAANACYAAgAAAAAAAAANACcAAgAAAAAAAAAOACYAAgAAAAAAAAAOACcAAgAAAAAAAAAPACYAAgAAAAAAAAAPACcAAgAAAAAAAAAQACYAAgAAAAAAAAAQACcAAgAAAAAAAAARACYAAgAAAAAAAAARACcAAgAAAAAAAAASACYAAgAAAAAAAAASACcAAgAAAAAAAAATACYAAgAAAAAAAAATACcAAgAAAAAAAAAUACYAAgAAAAAAAAAUACcAAgAAAAAAAAAVACYAAgAAAAAAAAAVACcAAgAAAAAAAAAWACYAAgAAAAAAAAAWACcAAgAAAAAAAAAXACYAAgAAAAAAAAAXACcAAgAAAAAAAAAYACYAAgAAAAAAAAAYACcAAgAAAAAAAAAZACYAAgAAAAAAAAAZACcAAgAAAAAAAAAaACYAAgAAAAAAAAAaACcAAgAAAAAAAAAbACYAAgAAAAAAAAAbACcAAgAAAAAAAAAcACYAAgAAAAAAAAAcACcAAgAAAAAAAAAdACYAAgAAAAAAAAAdACcAAgAAAAAAAAAAACgAAgAAAAAAAAABACgAAgAAAAAAAAACACgAAgAAAAAAAAADACgAAgAAAAAAAAAEACgAAgAAAAAAAAAFACgAAgAAAAAAAAAGACgAAgAAAAAAAAAHACgAAgAAAAAAAAAIACgAAgAAAAAAAAAJACgAAgAAAAAAAAAKACgAAgAAAAAAAAALACgAAgAAAAAAAAAMACgAAgAAAAAAAAANACgAAgAAAAAAAAAOACgAAgAAAAAAAAAPACgAAgAAAAAAAAAQACgAAgAAAAAAAAARACgAAgAAAAAAAAASACgAAgAAAAAAAAATACgAAgAAAAAAAAAUACgAAgAAAAAAAAAVACgAAgAAAAAAAAAWACgAAgAAAAAAAAAXACgAAgAAAAAAAAAYACgAAgAAAAAAAAAZACgAAgAAAAAAAAAaACgAAgAAAAAAAAAbACgAAgAAAAAAAAAeAAIACAAEAAAAAAAeAAMACAADAAEAAAAeAAQACAADAAEAAAAeAAUACAADAAEAAAAeAAYACAADAAEAAAAeAAcACAADAAEAAAAeAAgACAADAAEAAAAeAAkACAADAAEAAAAeAAoACAADAAEAAAAeAAsACAADAAEAAAAeAAwACAADAAEAAAAeAA4ACAADAAEAAAAeAA8ACAADAAEAAAAeABAACAADAAEAAAAeABEACAADAAEAAAAeABIACAADAAEAAAAeABMACAADAAEAAAAeABQACAADAAEAAAAeABUACAADAAEAAAAeABYACAADAAEAAAAeABcACAADAAEAAAAeABgACAADAAEAAAAeABkACAADAAEAAAAeABoACAADAAEAAAAeABsACAADAAEAAAAeABwACAAEAAEAAAAeAB0ACAACAAEAAAAeAB4ACAACAAIAAAAeAB8AAgAAAAAAAAAeACAAAgAAAAAAAAAeACEAAgAAAAAAAAAeACIAAgAAAAAAAAAeACMAAgAAAAAAAAAeACQAAgAAAAAAAAAeACUAAgAAAAAAAAAeACYAAgAAAAAAAAAeACcAAgAAAAAAAAAfAAIACAACAAIAAAAfAAMAAgAAAAAAAAAfAAQAAgAAAAAAAAAfAAUAAgAAAAAAAAAfAAYAAgAAAAAAAAAfAAcAAgAAAAAAAAAfAAgAAgAAAAAAAAAfAAkAAgAAAAAAAAAfAAoAAgAAAAAAAAAfAAsAAgAAAAAAAAAfAAwAAgAAAAAAAAAfAA0AAgAAAAAAAAAfAA4AAgAAAAAAAAAfAA8AAgAAAAAAAAAfABAAAgAAAAAAAAAfABEAAgAAAAAAAAAfABIAAgAAAAAAAAAfABMAAgAAAAAAAAAfABQAAgAAAAAAAAAfABUAAgAAAAAAAAAfABYAAgAAAAAAAAAfABcAAgAAAAAAAAAfABgAAgAAAAAAAAAfABkAAgAAAAAAAAAfABoAAgAAAAAAAAAfABsAAgAAAAAAAAAfABwACAACAAAAAAAfAB0ACAACAAEAAAAfAB4ACAACAAIAAAAfAB8AAgAAAAAAAAAfACAAAgAAAAAAAAAfACEAAgAAAAAAAAAfACIAAgAAAAAAAAAfACMAAgAAAAAAAAAfACQAAgAAAAAAAAAfACUAAgAAAAAAAAAfACYAAgAAAAAAAAAfACcAAgAAAAAAAAAgAAIACAACAAIAAAAgAAMAAgAAAAAAAAAgAAQAAgAAAAAAAAAgAAUAAgAAAAAAAAAgAAYAAgAAAAAAAAAgAAcAAgAAAAAAAAAgAAgAAgAAAAAAAAAgAAkAAgAAAAAAAAAgAAoAAgAAAAAAAAAgAAsAAgAAAAAAAAAgAAwAAgAAAAAAAAAgAA0AAgAAAAAAAAAgAA4AAgAAAAAAAAAgAA8AAgAAAAAAAAAgABAAAgAAAAAAAAAgABEAAgAAAAAAAAAgABIAAgAAAAAAAAAgABMAAgAAAAAAAAAgABQAAgAAAAAAAAAgABUAAgAAAAAAAAAgABYAAgAAAAAAAAAgABcAAgAAAAAAAAAgABgAAgAAAAAAAAAgABkAAgAAAAAAAAAgABoAAgAAAAAAAAAgABsAAgAAAAAAAAAgABwACAACAAAAAAAgAB0ACAACAAEAAAAgAB4ACAACAAIAAAAgAB8AAgAAAAAAAAAgACAAAgAAAAAAAAAgACEAAgAAAAAAAAAgACIAAgAAAAAAAAAgACMAAgAAAAAAAAAgACQAAgAAAAAAAAAgACUAAgAAAAAAAAAgACYAAgAAAAAAAAAgACcAAgAAAAAAAAAgACgAAgAAAAAAAAAhAAIACAACAAIAAAAhAAMAAgAAAAAAAAAhAAQAAgAAAAAAAAAhAAUAAgAAAAAAAAAhAAYAAgAAAAAAAAAhAAcAAgAAAAAAAAAhAAgAAgAAAAAAAAAhAAkAAgAAAAAAAAAhAAoAAgAAAAAAAAAhAAsAAgAAAAAAAAAhAAwAAgAAAAAAAAAhAA0AAgAAAAAAAAAhAA4AAgAAAAAAAAAhAA8AAgAAAAAAAAAhABAAAgAAAAAAAAAhABEAAgAAAAAAAAAhABIAAgAAAAAAAAAhABMAAgAAAAAAAAAhABQAAgAAAAAAAAAhABUAAgAAAAAAAAAhABYAAgAAAAAAAAAhABcAAgAAAAAAAAAhABgAAgAAAAAAAAAhABkAAgAAAAAAAAAhABoAAgAAAAAAAAAhABsAAgAAAAAAAAAhABwACAACAAAAAAAhAB0ACAACAAEAAAAhAB4ACAACAAIAAAAhAB8AAgAAAAAAAAAhACAAAgAAAAAAAAAhACEAAgAAAAAAAAAhACIAAgAAAAAAAAAhACMAAgAAAAAAAAAhACQAAgAAAAAAAAAhACUAAgAAAAAAAAAhACYAAgAAAAAAAAAhACcAAgAAAAAAAAAhACgAAgAAAAAAAAAiAAIACAACAAIAAAAiAAMAAgAAAAAAAAAiAAQAAgAAAAAAAAAiAAUAAgAAAAAAAAAiAAYAAgAAAAAAAAAiAAcAAgAAAAAAAAAiAAgAAgAAAAAAAAAiAAkAAgAAAAAAAAAiAAoAAgAAAAAAAAAiAAsAAgAAAAAAAAAiAAwAAgAAAAAAAAAiAA0AAgAAAAAAAAAiAA4AAgAAAAAAAAAiAA8AAgAAAAAAAAAiABEAAgAAAAAAAAAiABIAAgAAAAAAAAAiABMAAgAAAAAAAAAiABQAAgAAAAAAAAAiABUAAgAAAAAAAAAiABYAAgAAAAAAAAAiABcAAgAAAAAAAAAiABgAAgAAAAAAAAAiABkAAgAAAAAAAAAiABoAAgAAAAAAAAAiABsAAgAAAAAAAAAiABwACAACAAAAAAAiAB0ACAACAAEAAAAiAB4ACAACAAIAAAAiAB8AAgAAAAAAAAAiACAAAgAAAAAAAAAiACEAAgAAAAAAAAAiACIAAgAAAAAAAAAiACMAAgAAAAAAAAAiACQAAgAAAAAAAAAiACUAAgAAAAAAAAAiACYAAgAAAAAAAAAiACcAAgAAAAAAAAAiACgAAgAAAAAAAAAjAAIACAACAAIAAAAjAAMAAgAAAAAAAAAjAAQAAgAAAAAAAAAjAAUAAgAAAAAAAAAjAAYAAgAAAAAAAAAjAAcAAgAAAAAAAAAjAAgAAgAAAAAAAAAjAAkAAgAAAAAAAAAjAAoAAgAAAAAAAAAjAAsAAgAAAAAAAAAjAAwAAgAAAAAAAAAjAA0AAgAAAAAAAAAjAA4AAgAAAAAAAAAjAA8AAgAAAAAAAAAjABAAAgAAAAAAAAAjABEAAgAAAAAAAAAjABIAAgAAAAAAAAAjABMAAgAAAAAAAAAjABQAAgAAAAAAAAAjABUAAgAAAAAAAAAjABYAAgAAAAAAAAAjABcAAgAAAAAAAAAjABgAAgAAAAAAAAAjABkAAgAAAAAAAAAjABoAAgAAAAAAAAAjABsAAgAAAAAAAAAjABwACAACAAAAAAAjAB0ACAACAAEAAAAjAB4ACAACAAIAAAAjAB8AAgAAAAAAAAAjACAAAgAAAAAAAAAjACEAAgAAAAAAAAAjACIAAgAAAAAAAAAjACMAAgAAAAAAAAAjACQAAgAAAAAAAAAjACUAAgAAAAAAAAAjACYAAgAAAAAAAAAjACcAAgAAAAAAAAAjACgAAgAAAAAAAAAkAAIACAACAAIAAAAkAAMAAgAAAAAAAAAkAAQAAgAAAAAAAAAkAAUAAgAAAAAAAAAkAAYAAgAAAAAAAAAkAAcAAgAAAAAAAAAkAAgAAgAAAAAAAAAkAAkAAgAAAAAAAAAkAAoAAgAAAAAAAAAkAAsAAgAAAAAAAAAkAAwAAgAAAAAAAAAkAA0AAgAAAAAAAAAkAA4AAgAAAAAAAAAkAA8AAgAAAAAAAAAkABAAAgAAAAAAAAAkABEAAgAAAAAAAAAkABIAAgAAAAAAAAAkABMAAgAAAAAAAAAkABQAAgAAAAAAAAAkABUAAgAAAAAAAAAkABYAAgAAAAAAAAAkABcAAgAAAAAAAAAkABgAAgAAAAAAAAAkABkAAgAAAAAAAAAkABoAAgAAAAAAAAAkABsAAgAAAAAAAAAkABwACAACAAAAAAAkAB0ACAACAAEAAAAkAB4ACAACAAIAAAAkAB8AAgAAAAAAAAAkACAAAgAAAAAAAAAkACEAAgAAAAAAAAAkACIAAgAAAAAAAAAkACMAAgAAAAAAAAAkACQAAgAAAAAAAAAkACUAAgAAAAAAAAAkACYAAgAAAAAAAAAkACcAAgAAAAAAAAAkACgAAgAAAAAAAAAlAAIACAACAAIAAAAlAAMAAgAAAAAAAAAlAAQAAgAAAAAAAAAlAAUAAgAAAAAAAAAlAAYAAgAAAAAAAAAlAAcAAgAAAAAAAAAlAAgAAgAAAAAAAAAlAAkAAgAAAAAAAAAlAAoAAgAAAAAAAAAlAAsAAgAAAAAAAAAlAAwAAgAAAAAAAAAlAA0AAgAAAAAAAAAlAA4AAgAAAAAAAAAlAA8AAgAAAAAAAAAlABAAAgAAAAAAAAAlABEAAgAAAAAAAAAlABIAAgAAAAAAAAAlABMAAgAAAAAAAAAlABQAAgAAAAAAAAAlABUAAgAAAAAAAAAlABYAAgAAAAAAAAAlABcAAgAAAAAAAAAlABgAAgAAAAAAAAAlABkAAgAAAAAAAAAlABoAAgAAAAAAAAAlABsAAgAAAAAAAAAlABwACAACAAAAAAAlAB0ACAACAAEAAAAlAB4ACAACAAIAAAAlAB8AAgAAAAAAAAAlACAAAgAAAAAAAAAlACEAAgAAAAAAAAAlACIAAgAAAAAAAAAlACMAAgAAAAAAAAAlACQAAgAAAAAAAAAlACUAAgAAAAAAAAAlACYAAgAAAAAAAAAlACcAAgAAAAAAAAAlACgAAgAAAAAAAAAmAAIACAACAAIAAAAmAAMAAgAAAAAAAAAmAAQAAgAAAAAAAAAmAAUAAgAAAAAAAAAmAAYAAgAAAAAAAAAmAAcAAgAAAAAAAAAmAAgAAgAAAAAAAAAmAAkAAgAAAAAAAAAmAAoAAgAAAAAAAAAmAAsAAgAAAAAAAAAmAAwAAgAAAAAAAAAmAA0AAgAAAAAAAAAmAA4AAgAAAAAAAAAmAA8AAgAAAAAAAAAmABAAAgAAAAAAAAAmABEAAgAAAAAAAAAmABIAAgAAAAAAAAAmABMAAgAAAAAAAAAmABQAAgAAAAAAAAAmABUAAgAAAAAAAAAmABYAAgAAAAAAAAAmABcAAgAAAAAAAAAmABgAAgAAAAAAAAAmABkAAgAAAAAAAAAmABoAAgAAAAAAAAAmABsAAgAAAAAAAAAmABwACAACAAAAAAAmAB0ACAACAAEAAAAmAB4ACAACAAIAAAAmAB8AAgAAAAAAAAAmACAAAgAAAAAAAAAmACEAAgAAAAAAAAAmACIAAgAAAAAAAAAmACMAAgAAAAAAAAAmACQAAgAAAAAAAAAmACUAAgAAAAAAAAAmACYAAgAAAAAAAAAmACcAAgAAAAAAAAAmACgAAgAAAAAAAAAnAAIACAACAAIAAAAnAAMAAgAAAAAAAAAnAAQAAgAAAAAAAAAnAAUAAgAAAAAAAAAnAAYAAgAAAAAAAAAnAAcAAgAAAAAAAAAnAAgAAgAAAAAAAAAnAAkAAgAAAAAAAAAnAAoAAgAAAAAAAAAnAAsAAgAAAAAAAAAnAAwAAgAAAAAAAAAnAA0AAgAAAAAAAAAnAA4AAgAAAAAAAAAnAA8AAgAAAAAAAAAnABAAAgAAAAAAAAAnABEAAgAAAAAAAAAnABIAAgAAAAAAAAAnABMAAgAAAAAAAAAnABQAAgAAAAAAAAAnABUAAgAAAAAAAAAnABYAAgAAAAAAAAAnABcAAgAAAAAAAAAnABgAAgAAAAAAAAAnABkAAgAAAAAAAAAnABoAAgAAAAAAAAAnABsAAgAAAAAAAAAnABwACAACAAAAAAAnAB0ACAACAAEAAAAnAB4ACAACAAIAAAAnAB8AAgAAAAAAAAAnACAAAgAAAAAAAAAnACEAAgAAAAAAAAAnACIAAgAAAAAAAAAnACMAAgAAAAAAAAAnACQAAgAAAAAAAAAnACUAAgAAAAAAAAAnACYAAgAAAAAAAAAnACcAAgAAAAAAAAAnACgAAgAAAAAAAAAoAAIACAACAAIAAAAoAAMAAgAAAAAAAAAoAAQAAgAAAAAAAAAoAAUAAgAAAAAAAAAoAAYAAgAAAAAAAAAoAAcAAgAAAAAAAAAoAAgAAgAAAAAAAAAoAAkAAgAAAAAAAAAoAAoAAgAAAAAAAAAoAAsAAgAAAAAAAAAoAAwAAgAAAAAAAAAoAA0AAgAAAAAAAAAoAA4AAgAAAAAAAAAoAA8AAgAAAAAAAAAoABAAAgAAAAAAAAAoABEAAgAAAAAAAAAoABIAAgAAAAAAAAAoABMAAgAAAAAAAAAoABQAAgAAAAAAAAAoABUAAgAAAAAAAAAoABYAAgAAAAAAAAAoABcAAgAAAAAAAAAoABgAAgAAAAAAAAAoABkAAgAAAAAAAAAoABoAAgAAAAAAAAAoABsAAgAAAAAAAAAoABwACAACAAAAAAAoAB0ACAACAAEAAAAoAB4ACAACAAIAAAAoAB8AAgAAAAAAAAAoACAAAgAAAAAAAAAoACEAAgAAAAAAAAAoACIAAgAAAAAAAAAoACMAAgAAAAAAAAAoACQAAgAAAAAAAAAoACUAAgAAAAAAAAAoACYAAgAAAAAAAAAoACcAAgAAAAAAAAAoACgAAgAAAAAAAAApAAIACAACAAIAAAApAAMAAgAAAAAAAAApAAQAAgAAAAAAAAApAAUAAgAAAAAAAAApAAYAAgAAAAAAAAApAAcAAgAAAAAAAAApAAgAAgAAAAAAAAApAAkAAgAAAAAAAAApAAoAAgAAAAAAAAApAAsAAgAAAAAAAAApAAwAAgAAAAAAAAApAA0AAgAAAAAAAAApAA4AAgAAAAAAAAApAA8AAgAAAAAAAAApABAAAgAAAAAAAAApABEAAgAAAAAAAAApABIAAgAAAAAAAAApABMAAgAAAAAAAAApABQAAgAAAAAAAAApABUAAgAAAAAAAAApABYAAgAAAAAAAAApABcAAgAAAAAAAAApABgAAgAAAAAAAAApABkAAgAAAAAAAAApABoAAgAAAAAAAAApABsAAgAAAAAAAAApABwACAACAAAAAAApAB0ACAACAAEAAAApAB4ACAACAAIAAAApAB8AAgAAAAAAAAApACAAAgAAAAAAAAApACEAAgAAAAAAAAApACIAAgAAAAAAAAApACMAAgAAAAAAAAApACQAAgAAAAAAAAApACUAAgAAAAAAAAApACYAAgAAAAAAAAApACcAAgAAAAAAAAApACgAAgAAAAAAAAAqAAIACAACAAIAAAAqAAMAAgAAAAAAAAAqAAQAAgAAAAAAAAAqAAUAAgAAAAAAAAAqAAYAAgAAAAAAAAAqAAcAAgAAAAAAAAAqAAgAAgAAAAAAAAAqAAkAAgAAAAAAAAAqAAoAAgAAAAAAAAAqAAsAAgAAAAAAAAAqAAwAAgAAAAAAAAAqAA0AAgAAAAAAAAAqAA4AAgAAAAAAAAAqAA8AAgAAAAAAAAAqABAAAgAAAAAAAAAqABEAAgAAAAAAAAAqABIAAgAAAAAAAAAqABMAAgAAAAAAAAAqABQAAgAAAAAAAAAqABUAAgAAAAAAAAAqABYAAgAAAAAAAAAqABcAAgAAAAAAAAAqABgAAgAAAAAAAAAqABkAAgAAAAAAAAAqABoAAgAAAAAAAAAqABsAAgAAAAAAAAAqABwACAACAAAAAAAqAB0ACAACAAEAAAAqAB4ACAACAAIAAAAqAB8AAgAAAAAAAAAqACAAAgAAAAAAAAAqACEAAgAAAAAAAAAqACIAAgAAAAAAAAAqACMAAgAAAAAAAAAqACQAAgAAAAAAAAAqACUAAgAAAAAAAAAqACYAAgAAAAAAAAAqACcAAgAAAAAAAAAqACgAAgAAAAAAAAArAAIACAACAAIAAAArAAMAAgAAAAAAAAArAAQAAgAAAAAAAAArAAUAAgAAAAAAAAArAAYAAgAAAAAAAAArAAcAAgAAAAAAAAArAAgAAgAAAAAAAAArAAkAAgAAAAAAAAArAAoAAgAAAAAAAAArAAsAAgAAAAAAAAArAAwAAgAAAAAAAAArAA0AAgAAAAAAAAArAA4AAgAAAAAAAAArAA8AAgAAAAAAAAArABAAAgAAAAAAAAArABEAAgAAAAAAAAArABIAAgAAAAAAAAArABMAAgAAAAAAAAArABQAAgAAAAAAAAArABUAAgAAAAAAAAArABYAAgAAAAAAAAArABcAAgAAAAAAAAArABgAAgAAAAAAAAArABkAAgAAAAAAAAArABoAAgAAAAAAAAArABsAAgAAAAAAAAArABwACAACAAAAAAArAB0ACAACAAEAAAArAB4ACAACAAIAAAArAB8AAgAAAAAAAAArACAAAgAAAAAAAAArACEAAgAAAAAAAAArACIAAgAAAAAAAAArACMAAgAAAAAAAAArACQAAgAAAAAAAAArACUAAgAAAAAAAAArACYAAgAAAAAAAAArACcAAgAAAAAAAAArACgAAgAAAAAAAAAsAAIACAACAAIAAAAsAAMAAgAAAAAAAAAsAAQAAgAAAAAAAAAsAAUAAgAAAAAAAAAsAAYAAgAAAAAAAAAsAAcAAgAAAAAAAAAsAAgAAgAAAAAAAAAsAAkAAgAAAAAAAAAsAAoAAgAAAAAAAAAsAAsAAgAAAAAAAAAsAAwAAgAAAAAAAAAsAA0AAgAAAAAAAAAsAA4AAgAAAAAAAAAsAA8AAgAAAAAAAAAsABAAAgAAAAAAAAAsABEAAgAAAAAAAAAsABIAAgAAAAAAAAAsABMAAgAAAAAAAAAsABQAAgAAAAAAAAAsABUAAgAAAAAAAAAsABYAAgAAAAAAAAAsABcAAgAAAAAAAAAsABgAAgAAAAAAAAAsABkAAgAAAAAAAAAsABoAAgAAAAAAAAAsABsAAgAAAAAAAAAsABwACAACAAAAAAAsAB0ACAACAAEAAAAsAB4ACAACAAIAAAAsAB8AAgAAAAAAAAAsACAAAgAAAAAAAAAsACEAAgAAAAAAAAAsACIAAgAAAAAAAAAsACMAAgAAAAAAAAAsACQAAgAAAAAAAAAsACUAAgAAAAAAAAAsACYAAgAAAAAAAAAsACcAAgAAAAAAAAAsACgAAgAAAAAAAAAtAAIACAADAAIAAAAtAAMAAgAAAAAAAAAtAAQAAgAAAAAAAAAtAAUAAgAAAAAAAAAtAAYAAgAAAAAAAAAtAAcAAgAAAAAAAAAtAAgAAgAAAAAAAAAtAAkAAgAAAAAAAAAtAAoAAgAAAAAAAAAtAAsAAgAAAAAAAAAtAAwAAgAAAAAAAAAtAA0AAgAAAAAAAAAtAA4AAgAAAAAAAAAtAA8AAgAAAAAAAAAtABAAAgAAAAAAAAAtABEAAgAAAAAAAAAtABIAAgAAAAAAAAAtABMAAgAAAAAAAAAtABQAAgAAAAAAAAAtABUAAgAAAAAAAAAtABYAAgAAAAAAAAAtABcAAgAAAAAAAAAtABgAAgAAAAAAAAAtABkAAgAAAAAAAAAtABoAAgAAAAAAAAAtABsAAgAAAAAAAAAtABwACAACAAAAAAAtAB0ACAACAAEAAAAtAB4ACAACAAIAAAAtAB8AAgAAAAAAAAAtACAAAgAAAAAAAAAtACEAAgAAAAAAAAAtACIAAgAAAAAAAAAtACMAAgAAAAAAAAAtACQAAgAAAAAAAAAtACUAAgAAAAAAAAAtACYAAgAAAAAAAAAtACcAAgAAAAAAAAAtACgAAgAAAAAAAAAuAAIAAgAAAAAAAAAuAAMAAgAAAAAAAAAuAAQAAgAAAAAAAAAuAAUAAgAAAAAAAAAuAAYAAgAAAAAAAAAuAAcAAgAAAAAAAAAuAAgAAgAAAAAAAAAuAAkAAgAAAAAAAAAuAAoAAgAAAAAAAAAuAAsAAgAAAAAAAAAuAAwAAgAAAAAAAAAuAA0AAgAAAAAAAAAuAA4AAgAAAAAAAAAuAA8AAgAAAAAAAAAuABAAAgAAAAAAAAAuABEAAgAAAAAAAAAuABIAAgAAAAAAAAAuABMAAgAAAAAAAAAuABQAAgAAAAAAAAAuABUAAgAAAAAAAAAuABYAAgAAAAAAAAAuABcAAgAAAAAAAAAuABgAAgAAAAAAAAAuABkAAgAAAAAAAAAuABoAAgAAAAAAAAAuABsAAgAAAAAAAAAuABwACAACAAAAAAAuAB0ACAACAAEAAAAuAB4ACAACAAIAAAAuAB8AAgAAAAAAAAAuACAAAgAAAAAAAAAuACEAAgAAAAAAAAAuACIAAgAAAAAAAAAuACMAAgAAAAAAAAAuACQAAgAAAAAAAAAuACUAAgAAAAAAAAAuACYAAgAAAAAAAAAuACcAAgAAAAAAAAAuACgAAgAAAAAAAAAvAAIAAgAAAAAAAAAvAAMAAgAAAAAAAAAvAAQAAgAAAAAAAAAvAAUAAgAAAAAAAAAvAAYAAgAAAAAAAAAvAAcAAgAAAAAAAAAvAAgAAgAAAAAAAAAvAAkAAgAAAAAAAAAvAAoAAgAAAAAAAAAvAAsAAgAAAAAAAAAvAAwAAgAAAAAAAAAvAA0AAgAAAAAAAAAvAA4AAgAAAAAAAAAvAA8AAgAAAAAAAAAvABAAAgAAAAAAAAAvABEAAgAAAAAAAAAvABIAAgAAAAAAAAAvABMAAgAAAAAAAAAvABQAAgAAAAAAAAAvABUAAgAAAAAAAAAvABYAAgAAAAAAAAAvABcAAgAAAAAAAAAvABgAAgAAAAAAAAAvABkAAgAAAAAAAAAvABoAAgAAAAAAAAAvABsAAgAAAAAAAAAvABwACAACAAAAAAAvAB0ACAACAAEAAAAvAB4ACAACAAIAAAAvAB8AAgAAAAAAAAAvACAAAgAAAAAAAAAvACEAAgAAAAAAAAAvACIAAgAAAAAAAAAvACMAAgAAAAAAAAAvACQAAgAAAAAAAAAvACUAAgAAAAAAAAAvACYAAgAAAAAAAAAvACcAAgAAAAAAAAAvACgAAgAAAAAAAAAwAAIAAgAAAAAAAAAwAAMAAgAAAAAAAAAwAAQAAgAAAAAAAAAwAAUAAgAAAAAAAAAwAAYAAgAAAAAAAAAwAAcAAgAAAAAAAAAwAAgAAgAAAAAAAAAwAAkAAgAAAAAAAAAwAAoAAgAAAAAAAAAwAAsAAgAAAAAAAAAwAAwAAgAAAAAAAAAwAA0AAgAAAAAAAAAwAA4AAgAAAAAAAAAwAA8AAgAAAAAAAAAwABAAAgAAAAAAAAAwABEAAgAAAAAAAAAwABIAAgAAAAAAAAAwABMAAgAAAAAAAAAwABQAAgAAAAAAAAAwABUAAgAAAAAAAAAwABYAAgAAAAAAAAAwABcAAgAAAAAAAAAwABgAAgAAAAAAAAAwABkAAgAAAAAAAAAwABoAAgAAAAAAAAAwABsAAgAAAAAAAAAwABwACAACAAAAAAAwAB0ACAACAAEAAAAwAB4ACAACAAIAAAAwAB8AAgAAAAAAAAAwACAAAgAAAAAAAAAwACEAAgAAAAAAAAAwACIAAgAAAAAAAAAwACMAAgAAAAAAAAAwACQAAgAAAAAAAAAwACUAAgAAAAAAAAAwACYAAgAAAAAAAAAwACcAAgAAAAAAAAAwACgAAgAAAAAAAAAxAAIAAgAAAAAAAAAxAAMAAgAAAAAAAAAxAAQAAgAAAAAAAAAxAAUAAgAAAAAAAAAxAAYAAgAAAAAAAAAxAAcAAgAAAAAAAAAxAAgAAgAAAAAAAAAxAAkAAgAAAAAAAAAxAAoAAgAAAAAAAAAxAAsAAgAAAAAAAAAxAAwAAgAAAAAAAAAxAA0AAgAAAAAAAAAxAA4AAgAAAAAAAAAxAA8AAgAAAAAAAAAxABAAAgAAAAAAAAAxABEAAgAAAAAAAAAxABIAAgAAAAAAAAAxABMAAgAAAAAAAAAxABQAAgAAAAAAAAAxABUAAgAAAAAAAAAxABYAAgAAAAAAAAAxABcAAgAAAAAAAAAxABgAAgAAAAAAAAAxABkAAgAAAAAAAAAxABoAAgAAAAAAAAAxABsAAgAAAAAAAAAxABwACAACAAAAAAAxAB0ACAACAAEAAAAxAB4ACAACAAIAAAAxAB8AAgAAAAAAAAAxACAAAgAAAAAAAAAxACEAAgAAAAAAAAAxACIAAgAAAAAAAAAxACMAAgAAAAAAAAAxACQAAgAAAAAAAAAxACUAAgAAAAAAAAAxACYAAgAAAAAAAAAxACcAAgAAAAAAAAAxACgAAgAAAAAAAAAyAAIAAgAAAAAAAAAyAAMAAgAAAAAAAAAyAAQAAgAAAAAAAAAyAAUAAgAAAAAAAAAyAAYAAgAAAAAAAAAyAAcAAgAAAAAAAAAyAAgAAgAAAAAAAAAyAAkAAgAAAAAAAAAyAAoAAgAAAAAAAAAyAAsAAgAAAAAAAAAyAAwAAgAAAAAAAAAyAA0AAgAAAAAAAAAyAA4AAgAAAAAAAAAyAA8AAgAAAAAAAAAyABAAAgAAAAAAAAAyABEAAgAAAAAAAAAyABIAAgAAAAAAAAAyABMAAgAAAAAAAAAyABQAAgAAAAAAAAAyABUAAgAAAAAAAAAyABYAAgAAAAAAAAAyABcAAgAAAAAAAAAyABgAAgAAAAAAAAAyABkAAgAAAAAAAAAyABoAAgAAAAAAAAAyABsAAgAAAAAAAAAyABwACAACAAAAAAAyAB0ACAACAAEAAAAyAB4ACAAFAAAAAAAyAB8ACAABAAEAAAAyACAACAABAAEAAAAyACEACAABAAEAAAAyACIACAABAAEAAAAyACMACAABAAEAAAAyACQACAABAAEAAAAyACUACAABAAEAAAAyACYACAABAAEAAAAyACcACAABAAEAAAAyACgACAABAAEAAAAzAAIAAgAAAAAAAAAzAAMAAgAAAAAAAAAzAAQAAgAAAAAAAAAzAAUAAgAAAAAAAAAzAAYAAgAAAAAAAAAzAAcAAgAAAAAAAAAzAAgAAgAAAAAAAAAzAAkAAgAAAAAAAAAzAAoAAgAAAAAAAAAzAAsAAgAAAAAAAAAzAAwAAgAAAAAAAAAzAA0AAgAAAAAAAAAzAA4AAgAAAAAAAAAzAA8AAgAAAAAAAAAzABAAAgAAAAAAAAAzABEAAgAAAAAAAAAzABIAAgAAAAAAAAAzABMAAgAAAAAAAAAzABQAAgAAAAAAAAAzABUAAgAAAAAAAAAzABYAAgAAAAAAAAAzABcAAgAAAAAAAAAzABgAAgAAAAAAAAAzABkAAgAAAAAAAAAzABoAAgAAAAAAAAAzABsAAgAAAAAAAAAzABwACAACAAAAAAAzAB0ACAACAAEAAAAzAB4ACAACAAEAAAAzAB8ACAACAAEAAAAzACAACAACAAEAAAAzACEACAACAAEAAAAzACIACAACAAEAAAAzACMACAACAAEAAAAzACQACAACAAEAAAAzACUACAACAAEAAAAzACYACAACAAEAAAAzACcACAACAAEAAAAzACgACAACAAEAAAA0AAIAAgAAAAAAAAA0AAMAAgAAAAAAAAA0AAQAAgAAAAAAAAA0AAUAAgAAAAAAAAA0AAYAAgAAAAAAAAA0AAcAAgAAAAAAAAA0AAgAAgAAAAAAAAA0AAkAAgAAAAAAAAA0AAoAAgAAAAAAAAA0AAsAAgAAAAAAAAA0AAwAAgAAAAAAAAA0AA0AAgAAAAAAAAA0AA4AAgAAAAAAAAA0AA8AAgAAAAAAAAA0ABAAAgAAAAAAAAA0ABEAAgAAAAAAAAA0ABIAAgAAAAAAAAA0ABMAAgAAAAAAAAA0ABQAAgAAAAAAAAA0ABUAAgAAAAAAAAA0ABYAAgAAAAAAAAA0ABcAAgAAAAAAAAA0ABgAAgAAAAAAAAA0ABkAAgAAAAAAAAA0ABoAAgAAAAAAAAA0ABsAAgAAAAAAAAA0ABwACAACAAAAAAA0AB0ACAACAAEAAAA0AB4ACAAEAAAAAAA0AB8ACAADAAEAAAA0ACAACAADAAEAAAA0ACEACAADAAEAAAA0ACIACAADAAEAAAA0ACMACAADAAEAAAA0ACQACAADAAEAAAA0ACUACAADAAEAAAA0ACYACAADAAEAAAA0ACcACAADAAEAAAA0ACgACAADAAEAAAA1AAIAAgAAAAAAAAA1AAMAAgAAAAAAAAA1AAQAAgAAAAAAAAA1AAUAAgAAAAAAAAA1AAYAAgAAAAAAAAA1AAcAAgAAAAAAAAA1AAgAAgAAAAAAAAA1AAkAAgAAAAAAAAA1AAoAAgAAAAAAAAA1AAsAAgAAAAAAAAA1AAwAAgAAAAAAAAA1AA0AAgAAAAAAAAA1AA4AAgAAAAAAAAA1AA8AAgAAAAAAAAA1ABAAAgAAAAAAAAA1ABEAAgAAAAAAAAA1ABIAAgAAAAAAAAA1ABMAAgAAAAAAAAA1ABQAAgAAAAAAAAA1ABUAAgAAAAAAAAA1ABYAAgAAAAAAAAA1ABcAAgAAAAAAAAA1ABgAAgAAAAAAAAA1ABkAAgAAAAAAAAA1ABoAAgAAAAAAAAA1ABsAAgAAAAAAAAA1ABwACAACAAAAAAA1AB0ACAACAAEAAAA1AB4ACAACAAIAAAA1AB8AAgAAAAAAAAA1ACAAAgAAAAAAAAA1ACEAAgAAAAAAAAA1ACIAAgAAAAAAAAA1ACMAAgAAAAAAAAA1ACQAAgAAAAAAAAA1ACUAAgAAAAAAAAA1ACYAAgAAAAAAAAA1ACcAAgAAAAAAAAA1ACgAAgAAAAAAAAA2AAIAAgAAAAAAAAA2AAMAAgAAAAAAAAA2AAQAAgAAAAAAAAA2AAUAAgAAAAAAAAA2AAYAAgAAAAAAAAA2AAcAAgAAAAAAAAA2AAgAAgAAAAAAAAA2AAkAAgAAAAAAAAA2AAoAAgAAAAAAAAA2AAsAAgAAAAAAAAA2AAwAAgAAAAAAAAA2AA0AAgAAAAAAAAA2AA4AAgAAAAAAAAA2AA8AAgAAAAAAAAA2ABAAAgAAAAAAAAA2ABEAAgAAAAAAAAA2ABIAAgAAAAAAAAA2ABMAAgAAAAAAAAA2ABQAAgAAAAAAAAA2ABUAAgAAAAAAAAA2ABYAAgAAAAAAAAA2ABcAAgAAAAAAAAA2ABgAAgAAAAAAAAA2ABkAAgAAAAAAAAA2ABoAAgAAAAAAAAA2ABsAAgAAAAAAAAA2ABwACAACAAAAAAA2AB0ACAACAAEAAAA2AB4ACAACAAIAAAA2AB8AAgAAAAAAAAA2ACAAAgAAAAAAAAA2ACEAAgAAAAAAAAA2ACIAAgAAAAAAAAA2ACMAAgAAAAAAAAA2ACQAAgAAAAAAAAA2ACUAAgAAAAAAAAA2ACYAAgAAAAAAAAA2ACcAAgAAAAAAAAA2ACgAAgAAAAAAAAA3AAIAAgAAAAAAAAA3AAMAAgAAAAAAAAA3AAQAAgAAAAAAAAA3AAUAAgAAAAAAAAA3AAYAAgAAAAAAAAA3AAcAAgAAAAAAAAA3AAgAAgAAAAAAAAA3AAkAAgAAAAAAAAA3AAoAAgAAAAAAAAA3AAsAAgAAAAAAAAA3AAwAAgAAAAAAAAA3AA0AAgAAAAAAAAA3AA4AAgAAAAAAAAA3AA8AAgAAAAAAAAA3ABAAAgAAAAAAAAA3ABEAAgAAAAAAAAA3ABIAAgAAAAAAAAA3ABMAAgAAAAAAAAA3ABQAAgAAAAAAAAA3ABUAAgAAAAAAAAA3ABYAAgAAAAAAAAA3ABcAAgAAAAAAAAA3ABgAAgAAAAAAAAA3ABkAAgAAAAAAAAA3ABoAAgAAAAAAAAA3ABsAAgAAAAAAAAA3ABwACAACAAAAAAA3AB0ACAACAAEAAAA3AB4ACAACAAIAAAA3AB8AAgAAAAAAAAA3ACAAAgAAAAAAAAA3ACEAAgAAAAAAAAA3ACIAAgAAAAAAAAA3ACMAAgAAAAAAAAA3ACQAAgAAAAAAAAA3ACUAAgAAAAAAAAA3ACYAAgAAAAAAAAA3ACcAAgAAAAAAAAA3ACgAAgAAAAAAAAA4AAIAAgAAAAAAAAA4AAMAAgAAAAAAAAA4AAQAAgAAAAAAAAA4AAUAAgAAAAAAAAA4AAYAAgAAAAAAAAA4AAcAAgAAAAAAAAA4AAgAAgAAAAAAAAA4AAkAAgAAAAAAAAA4AAoAAgAAAAAAAAA4AAsAAgAAAAAAAAA4AAwAAgAAAAAAAAA4AA0AAgAAAAAAAAA4AA4AAgAAAAAAAAA4AA8AAgAAAAAAAAA4ABAAAgAAAAAAAAA4ABEAAgAAAAAAAAA4ABIAAgAAAAAAAAA4ABMAAgAAAAAAAAA4ABQAAgAAAAAAAAA4ABUAAgAAAAAAAAA4ABYAAgAAAAAAAAA4ABcAAgAAAAAAAAA4ABgAAgAAAAAAAAA4ABkAAgAAAAAAAAA4ABoAAgAAAAAAAAA4ABsAAgAAAAAAAAA4ABwACAACAAAAAAA4AB0ACAACAAEAAAA4AB4ACAACAAIAAAA4AB8AAgAAAAAAAAA4ACAAAgAAAAAAAAA4ACEAAgAAAAAAAAA4ACIAAgAAAAAAAAA4ACMAAgAAAAAAAAA4ACQAAgAAAAAAAAA4ACUAAgAAAAAAAAA4ACYAAgAAAAAAAAA4ACcAAgAAAAAAAAA4ACgAAgAAAAAAAAA5AAIAAgAAAAAAAAA5AAMAAgAAAAAAAAA5AAQAAgAAAAAAAAA5AAUAAgAAAAAAAAA5AAYAAgAAAAAAAAA5AAcAAgAAAAAAAAA5AAgAAgAAAAAAAAA5AAkAAgAAAAAAAAA5AAoAAgAAAAAAAAA5AAsAAgAAAAAAAAA5AAwAAgAAAAAAAAA5AA0AAgAAAAAAAAA5AA4AAgAAAAAAAAA5AA8AAgAAAAAAAAA5ABAAAgAAAAAAAAA5ABEAAgAAAAAAAAA5ABIAAgAAAAAAAAA5ABMAAgAAAAAAAAA5ABQAAgAAAAAAAAA5ABUAAgAAAAAAAAA5ABYAAgAAAAAAAAA5ABcAAgAAAAAAAAA5ABgAAgAAAAAAAAA5ABkAAgAAAAAAAAA5ABoAAgAAAAAAAAA5ABsAAgAAAAAAAAA5ABwACAACAAAAAAA5AB0ACAACAAEAAAA5AB4ACAACAAIAAAA5ACgAAgAAAAAAAAA6AAIAAgAAAAAAAAA6AAMAAgAAAAAAAAA6AAQAAgAAAAAAAAA6AAUAAgAAAAAAAAA6AAYAAgAAAAAAAAA6AAcAAgAAAAAAAAA6AAgAAgAAAAAAAAA6AAkAAgAAAAAAAAA6AAoAAgAAAAAAAAA6AAsAAgAAAAAAAAA6AAwAAgAAAAAAAAA6AA0AAgAAAAAAAAA6AA4AAgAAAAAAAAA6AA8AAgAAAAAAAAA6ABAAAgAAAAAAAAA6ABEAAgAAAAAAAAA6ABIAAgAAAAAAAAA6ABMAAgAAAAAAAAA6ABQAAgAAAAAAAAA6ABUAAgAAAAAAAAA6ABYAAgAAAAAAAAA6ABcAAgAAAAAAAAA6ABgAAgAAAAAAAAA6ABkAAgAAAAAAAAA6ABoAAgAAAAAAAAA6ABsAAgAAAAAAAAA6ABwACAACAAAAAAA6AB0ACAACAAEAAAA6AB4ACAACAAIAAAA6AB8AAgAAAAAAAAA6ACgAAgAAAAAAAAA7AAIAAgAAAAAAAAA7AAMAAgAAAAAAAAA7AAQAAgAAAAAAAAA7AAUAAgAAAAAAAAA7AAYAAgAAAAAAAAA7AAcAAgAAAAAAAAA7AAgAAgAAAAAAAAA7AAkAAgAAAAAAAAA7AAoAAgAAAAAAAAA7AAsAAgAAAAAAAAA7AAwAAgAAAAAAAAA7AA0AAgAAAAAAAAA7AA4AAgAAAAAAAAA7AA8AAgAAAAAAAAA7ABAAAgAAAAAAAAA7ABEAAgAAAAAAAAA7ABIAAgAAAAAAAAA7ABMAAgAAAAAAAAA7ABQAAgAAAAAAAAA7ABUAAgAAAAAAAAA7ABYAAgAAAAAAAAA7ABcAAgAAAAAAAAA7ABgAAgAAAAAAAAA7ABkAAgAAAAAAAAA7ABoAAgAAAAAAAAA7ABsAAgAAAAAAAAA7ABwACAACAAAAAAA7AB0ACAACAAEAAAA7AB4ACAACAAIAAAA7AB8AAgAAAAAAAAA7ACgAAgAAAAAAAAA8AAIAAgAAAAAAAAA8AAMAAgAAAAAAAAA8AAQAAgAAAAAAAAA8AAUAAgAAAAAAAAA8AAYAAgAAAAAAAAA8AAcAAgAAAAAAAAA8AAgAAgAAAAAAAAA8AAkAAgAAAAAAAAA8AAoAAgAAAAAAAAA8AAsAAgAAAAAAAAA8AAwAAgAAAAAAAAA8AA0AAgAAAAAAAAA8AA4AAgAAAAAAAAA8AA8AAgAAAAAAAAA8ABAAAgAAAAAAAAA8ABEAAgAAAAAAAAA8ABIAAgAAAAAAAAA8ABMAAgAAAAAAAAA8ABQAAgAAAAAAAAA8ABUAAgAAAAAAAAA8ABYAAgAAAAAAAAA8ABcAAgAAAAAAAAA8ABgAAgAAAAAAAAA8ABkAAgAAAAAAAAA8ABoAAgAAAAAAAAA8ABsAAgAAAAAAAAA8ABwACAACAAAAAAA8AB0ACAACAAEAAAA8AB4ACAACAAIAAAA8AB8AAgAAAAAAAAA8ACgAAgAAAAAAAAA9AAIAAgAAAAAAAAA9AAMAAgAAAAAAAAA9AAQAAgAAAAAAAAA9AAUAAgAAAAAAAAA9AAYAAgAAAAAAAAA9AAcAAgAAAAAAAAA9AAgAAgAAAAAAAAA9AAkAAgAAAAAAAAA9AAoAAgAAAAAAAAA9AAsAAgAAAAAAAAA9AAwAAgAAAAAAAAA9AA0AAgAAAAAAAAA9AA4AAgAAAAAAAAA9AA8AAgAAAAAAAAA9ABAAAgAAAAAAAAA9ABEAAgAAAAAAAAA9ABIAAgAAAAAAAAA9ABMAAgAAAAAAAAA9ABQAAgAAAAAAAAA9ABUAAgAAAAAAAAA9ABYAAgAAAAAAAAA9ABcAAgAAAAAAAAA9ABgAAgAAAAAAAAA9ABkAAgAAAAAAAAA9ABoAAgAAAAAAAAA9ABsAAgAAAAAAAAA9ABwACAACAAAAAAA9AB0ACAACAAEAAAA9AB4ACAACAAIAAAA9AB8AAgAAAAAAAAA9ACgAAgAAAAAAAAA+AAIAAgAAAAAAAAA+AAMAAgAAAAAAAAA+AAQAAgAAAAAAAAA+AAUAAgAAAAAAAAA+AAYAAgAAAAAAAAA+AAcAAgAAAAAAAAA+AAgAAgAAAAAAAAA+AAkAAgAAAAAAAAA+AAoAAgAAAAAAAAA+AAsAAgAAAAAAAAA+AAwAAgAAAAAAAAA+AA0AAgAAAAAAAAA+AA4AAgAAAAAAAAA+AA8AAgAAAAAAAAA+ABAAAgAAAAAAAAA+ABEAAgAAAAAAAAA+ABIAAgAAAAAAAAA+ABMAAgAAAAAAAAA+ABQAAgAAAAAAAAA+ABUAAgAAAAAAAAA+ABYAAgAAAAAAAAA+ABcAAgAAAAAAAAA+ABgAAgAAAAAAAAA+ABkAAgAAAAAAAAA+ABoAAgAAAAAAAAA+ABsAAgAAAAAAAAA+ABwACAACAAAAAAA+AB0ACAACAAEAAAA+AB4ACAACAAIAAAA+AB8AAgAAAAAAAAA+ACgAAgAAAAAAAAA/AAIAAgAAAAAAAAA/AAMAAgAAAAAAAAA/AAQAAgAAAAAAAAA/AAUAAgAAAAAAAAA/AAYAAgAAAAAAAAA/AAcAAgAAAAAAAAA/AAgAAgAAAAAAAAA/AAkAAgAAAAAAAAA/AAoAAgAAAAAAAAA/AAsAAgAAAAAAAAA/AAwAAgAAAAAAAAA/AA0AAgAAAAAAAAA/AA4AAgAAAAAAAAA/AA8AAgAAAAAAAAA/ABAAAgAAAAAAAAA/ABEAAgAAAAAAAAA/ABIAAgAAAAAAAAA/ABMAAgAAAAAAAAA/ABQAAgAAAAAAAAA/ABUAAgAAAAAAAAA/ABYAAgAAAAAAAAA/ABcAAgAAAAAAAAA/ABgAAgAAAAAAAAA/ABkAAgAAAAAAAAA/ABoAAgAAAAAAAAA/ABsAAgAAAAAAAAA/ABwACAACAAAAAAA/AB0ACAACAAEAAAA/AB4ACAACAAIAAAA/AB8AAgAAAAAAAAA/ACgAAgAAAAAAAABAAAIAAgAAAAAAAABAAAMAAgAAAAAAAABAAAQAAgAAAAAAAABAAAUAAgAAAAAAAABAAAYAAgAAAAAAAABAAAcAAgAAAAAAAABAAAgAAgAAAAAAAABAAAkAAgAAAAAAAABAAAoAAgAAAAAAAABAAAsAAgAAAAAAAABAAAwAAgAAAAAAAABAAA0AAgAAAAAAAABAAA4AAgAAAAAAAABAAA8AAgAAAAAAAABAABAAAgAAAAAAAABAABEAAgAAAAAAAABAABIAAgAAAAAAAABAABMAAgAAAAAAAABAABQAAgAAAAAAAABAABUAAgAAAAAAAABAABYAAgAAAAAAAABAABcAAgAAAAAAAABAABgAAgAAAAAAAABAABkAAgAAAAAAAABAABoAAgAAAAAAAABAABsAAgAAAAAAAABAABwACAACAAAAAABAAB0ACAACAAEAAABAAB4ACAACAAIAAABAAB8AAgAAAAAAAABAACgAAgAAAAAAAABBAAIAAgAAAAAAAABBAAMAAgAAAAAAAABBAAQAAgAAAAAAAABBAAUAAgAAAAAAAABBAAYAAgAAAAAAAABBAAcAAgAAAAAAAABBAAgAAgAAAAAAAABBAAkAAgAAAAAAAABBAAoAAgAAAAAAAABBAAsAAgAAAAAAAABBAAwAAgAAAAAAAABBAA0AAgAAAAAAAABBAA4AAgAAAAAAAABBAA8AAgAAAAAAAABBABAAAgAAAAAAAABBABEAAgAAAAAAAABBABIAAgAAAAAAAABBABMAAgAAAAAAAABBABQAAgAAAAAAAABBABUAAgAAAAAAAABBABYAAgAAAAAAAABBABcAAgAAAAAAAABBABgAAgAAAAAAAABBABkAAgAAAAAAAABBABoAAgAAAAAAAABBABsAAgAAAAAAAABBABwACAACAAAAAABBAB0ACAACAAEAAABBAB4ACAACAAIAAABBAB8AAgAAAAAAAABBACgAAgAAAAAAAABCAAIAAgAAAAAAAABCAAMAAgAAAAAAAABCAAQAAgAAAAAAAABCAAUAAgAAAAAAAABCAAYAAgAAAAAAAABCAAcAAgAAAAAAAABCAAgAAgAAAAAAAABCAAkAAgAAAAAAAABCAAoAAgAAAAAAAABCAAsAAgAAAAAAAABCAAwAAgAAAAAAAABCAA0AAgAAAAAAAABCAA4AAgAAAAAAAABCAA8AAgAAAAAAAABCABAAAgAAAAAAAABCABEAAgAAAAAAAABCABIAAgAAAAAAAABCABMAAgAAAAAAAABCABQAAgAAAAAAAABCABUAAgAAAAAAAABCABYAAgAAAAAAAABCABcAAgAAAAAAAABCABgAAgAAAAAAAABCABkAAgAAAAAAAABCABoAAgAAAAAAAABCABsAAgAAAAAAAABCABwACAACAAAAAABCAB0ACAACAAEAAABCAB4ACAACAAIAAABCAB8AAgAAAAAAAABCACgAAgAAAAAAAABDAAIAAgAAAAAAAABDAAMAAgAAAAAAAABDAAQAAgAAAAAAAABDAAUAAgAAAAAAAABDAAYAAgAAAAAAAABDAAcAAgAAAAAAAABDAAgAAgAAAAAAAABDAAkAAgAAAAAAAABDAAoAAgAAAAAAAABDAAsAAgAAAAAAAABDAAwAAgAAAAAAAABDAA0AAgAAAAAAAABDAA4AAgAAAAAAAABDAA8AAgAAAAAAAABDABAAAgAAAAAAAABDABEAAgAAAAAAAABDABIAAgAAAAAAAABDABMAAgAAAAAAAABDABQAAgAAAAAAAABDABUAAgAAAAAAAABDABYAAgAAAAAAAABDABcAAgAAAAAAAABDABgAAgAAAAAAAABDABkAAgAAAAAAAABDABoAAgAAAAAAAABDABsAAgAAAAAAAABDABwACAACAAAAAABDAB0ACAACAAEAAABDAB4ACAACAAIAAABDAB8AAgAAAAAAAABDACgAAgAAAAAAAABEAAIAAgAAAAAAAABEAAMAAgAAAAAAAABEAAQAAgAAAAAAAABEAAUAAgAAAAAAAABEAAYAAgAAAAAAAABEAAcAAgAAAAAAAABEAAgAAgAAAAAAAABEAAkAAgAAAAAAAABEAAoAAgAAAAAAAABEAAsAAgAAAAAAAABEAAwAAgAAAAAAAABEAA0AAgAAAAAAAABEAA4AAgAAAAAAAABEAA8AAgAAAAAAAABEABAAAgAAAAAAAABEABEAAgAAAAAAAABEABIAAgAAAAAAAABEABMAAgAAAAAAAABEABQAAgAAAAAAAABEABUAAgAAAAAAAABEABYAAgAAAAAAAABEABcAAgAAAAAAAABEABgAAgAAAAAAAABEABkAAgAAAAAAAABEABoAAgAAAAAAAABEABsAAgAAAAAAAABEABwACAACAAAAAABEAB0ACAACAAEAAABEAB4ACAACAAIAAABEAB8AAgAAAAAAAABEACAAAgAAAAAAAABEACEAAgAAAAAAAABEACIAAgAAAAAAAABEACMAAgAAAAAAAABEACQAAgAAAAAAAABEACUAAgAAAAAAAABEACYAAgAAAAAAAABEACcAAgAAAAAAAABEACgAAgAAAAAAAABFAAIAAgAAAAAAAABFAAMAAgAAAAAAAABFAAQAAgAAAAAAAABFAAUAAgAAAAAAAABFAAYAAgAAAAAAAABFAAcAAgAAAAAAAABFAAgAAgAAAAAAAABFAAkAAgAAAAAAAABFAAoAAgAAAAAAAABFAAsAAgAAAAAAAABFAAwAAgAAAAAAAABFAA0AAgAAAAAAAABFAA4AAgAAAAAAAABFAA8AAgAAAAAAAABFABAAAgAAAAAAAABFABEAAgAAAAAAAABFABIAAgAAAAAAAABFABMAAgAAAAAAAABFABQAAgAAAAAAAABFABUAAgAAAAAAAABFABYAAgAAAAAAAABFABcAAgAAAAAAAABFABgAAgAAAAAAAABFABkAAgAAAAAAAABFABoAAgAAAAAAAABFABsAAgAAAAAAAABFABwACAACAAAAAABFAB0ACAACAAEAAABFAB4ACAACAAIAAABFAB8AAgAAAAAAAABFACAAAgAAAAAAAABFACEAAgAAAAAAAABFACIAAgAAAAAAAABFACMAAgAAAAAAAABFACQAAgAAAAAAAABFACUAAgAAAAAAAABFACYAAgAAAAAAAABFACcAAgAAAAAAAABFACgAAgAAAAAAAABGAAIAAgAAAAAAAABGAAMAAgAAAAAAAABGAAQAAgAAAAAAAABGAAUAAgAAAAAAAABGAAYAAgAAAAAAAABGAAcAAgAAAAAAAABGAAgAAgAAAAAAAABGAAkAAgAAAAAAAABGAAoAAgAAAAAAAABGAAsAAgAAAAAAAABGAAwAAgAAAAAAAABGAA0AAgAAAAAAAABGAA4AAgAAAAAAAABGAA8AAgAAAAAAAABGABAAAgAAAAAAAABGABEAAgAAAAAAAABGABIAAgAAAAAAAABGABMAAgAAAAAAAABGABQAAgAAAAAAAABGABUAAgAAAAAAAABGABYAAgAAAAAAAABGABcAAgAAAAAAAABGABgAAgAAAAAAAABGABkAAgAAAAAAAABGABoAAgAAAAAAAABGABsAAgAAAAAAAABGABwACAACAAAAAABGAB0ACAACAAEAAABGAB4ACAACAAIAAABGAB8AAgAAAAAAAABGACAAAgAAAAAAAABGACEAAgAAAAAAAABGACIAAgAAAAAAAABGACMAAgAAAAAAAABGACQAAgAAAAAAAABGACUAAgAAAAAAAABGACYAAgAAAAAAAABGACcAAgAAAAAAAABGACgAAgAAAAAAAABHAAIAAgAAAAAAAABHAAMAAgAAAAAAAABHAAQAAgAAAAAAAABHAAUAAgAAAAAAAABHAAYAAgAAAAAAAABHAAcAAgAAAAAAAABHAAgAAgAAAAAAAABHAAkAAgAAAAAAAABHAAoAAgAAAAAAAABHAAsAAgAAAAAAAABHAAwAAgAAAAAAAABHAA0AAgAAAAAAAABHAA4AAgAAAAAAAABHAA8AAgAAAAAAAABHABAAAgAAAAAAAABHABEAAgAAAAAAAABHABIAAgAAAAAAAABHABMAAgAAAAAAAABHABQAAgAAAAAAAABHABUAAgAAAAAAAABHABYAAgAAAAAAAABHABcAAgAAAAAAAABHABgAAgAAAAAAAABHABkAAgAAAAAAAABHABoAAgAAAAAAAABHABsAAgAAAAAAAABHABwACAACAAAAAABHAB0ACAACAAEAAABHAB4ACAACAAIAAABHAB8AAgAAAAAAAABHACAAAgAAAAAAAABHACEAAgAAAAAAAABHACIAAgAAAAAAAABHACMAAgAAAAAAAABHACQAAgAAAAAAAABHACUAAgAAAAAAAABHACYAAgAAAAAAAABHACcAAgAAAAAAAABHACgAAgAAAAAAAAAiABAAAgAAAAAAAAAeAA0ACAADAAEAAAA5AB8AAgAAAAAAAAA5ACAAAgAAAAAAAAA6ACEAAgAAAAAAAAA6ACIAAgAAAAAAAAA7ACIAAgAAAAAAAAA7ACMAAgAAAAAAAAA8ACMAAgAAAAAAAAA8ACQAAgAAAAAAAAA9ACQAAgAAAAAAAAA+ACQAAgAAAAAAAAA+ACUAAgAAAAAAAAA/ACUAAgAAAAAAAABAACYAAgAAAAAAAABBACYAAgAAAAAAAABCACYAAgAAAAAAAABCACcAAgAAAAAAAABDACcAAgAAAAAAAABDACYAAgAAAAAAAABDACUAAgAAAAAAAABDACQAAgAAAAAAAABDACMAAgAAAAAAAABDACIAAgAAAAAAAABCACIAAgAAAAAAAABCACEAAgAAAAAAAABCACAAAgAAAAAAAABBACAAAgAAAAAAAABDACAAAgAAAAAAAAA8ACAAAgAAAAAAAAA7ACAAAgAAAAAAAAA6ACAAAgAAAAAAAAA9ACAAAgAAAAAAAAA+ACAAAgAAAAAAAAA/ACAAAgAAAAAAAABAACAAAgAAAAAAAABBACEAAgAAAAAAAABDACEAAgAAAAAAAABAACEAAgAAAAAAAAA/ACEAAgAAAAAAAAA/ACIAAgAAAAAAAAA+ACIAAgAAAAAAAABAACIAAgAAAAAAAABBACIAAgAAAAAAAAA+ACEAAgAAAAAAAAA9ACEAAgAAAAAAAAA8ACEAAgAAAAAAAAA7ACEAAgAAAAAAAAA5ACEAAgAAAAAAAAA5ACIAAgAAAAAAAAA5ACMAAgAAAAAAAAA5ACQAAgAAAAAAAAA5ACUAAgAAAAAAAAA5ACYAAgAAAAAAAAA5ACcAAgAAAAAAAAA6ACcAAgAAAAAAAAA7ACcAAgAAAAAAAAA8ACcAAgAAAAAAAAA9ACcAAgAAAAAAAAA+ACcAAgAAAAAAAAA/ACcAAgAAAAAAAABAACcAAgAAAAAAAABBACcAAgAAAAAAAAA+ACYAAgAAAAAAAAA9ACYAAgAAAAAAAAA8ACYAAgAAAAAAAAA7ACYAAgAAAAAAAAA6ACYAAgAAAAAAAAA/ACYAAgAAAAAAAAA7ACUAAgAAAAAAAAA6ACUAAgAAAAAAAAA7ACQAAgAAAAAAAAA6ACQAAgAAAAAAAAA6ACMAAgAAAAAAAAA8ACUAAgAAAAAAAAA9ACUAAgAAAAAAAABAACUAAgAAAAAAAABBACUAAgAAAAAAAABBACQAAgAAAAAAAABCACQAAgAAAAAAAABAACQAAgAAAAAAAABCACUAAgAAAAAAAABCACMAAgAAAAAAAABBACMAAgAAAAAAAABAACMAAgAAAAAAAAA/ACMAAgAAAAAAAAA+ACMAAgAAAAAAAAA/ACQAAgAAAAAAAAA9ACIAAgAAAAAAAAA8ACIAAgAAAAAAAAA9ACMAAgAAAAAAAAAcACgAAgAAAAAAAAAdACgAAgAAAAAAAAAeACgAAgAAAAAAAAAfACgAAgAAAAAAAAAMABMACAACAAAAAAAMABIAAgAAAAAAAAAMABEAAgAAAAAAAAAMABAAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_x11oh")
+tile_set = SubResource("TileSet_dow5n")
 
-[node name="house_mountains_fence" type="TileMapLayer" parent="TileMapLayer"]
+[node name="house_mountains_fence" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAVAAwAAAAAAAEAAAAVAA0AAAAAAAIAAAAVAA4AAAAAAAMAAAAVAA8AAAAAAAQAAAAVABAAAAAAAAUAAAAVABEAAAAAAAYAAAAWAAsAAAABAAAAAAAWAAwAAAABAAEAAAAWAA0AAAABAAIAAAAWAA4AAAABAAMAAAAWAA8AAAABAAQAAAAWABAAAAABAAUAAAAWABEAAAABAAYAAAAXAAsAAAACAAAAAAAXAAwAAAACAAEAAAAXAA0AAAACAAIAAAAXAA4AAAACAAMAAAAXAA8AAAACAAQAAAAXABAAAAACAAUAAAAXABEAAAACAAYAAAAYAAsAAAADAAAAAAAYAAwAAAADAAEAAAAYAA0AAAADAAIAAAAYAA4AAAADAAMAAAAYAA8AAAADAAQAAAAYABAAAAADAAUAAAAYABEAAAADAAYAAAAZAAwAAAAEAAEAAAAZAA0AAAAEAAIAAAAZAA4AAAAEAAMAAAAZAA8AAAAEAAQAAAAZABAAAAAEAAUAAAAZABEAAAAEAAYAAAAuAAAAAgABAAUAAAAuAAEAAgABAAUAAAAuAAIAAgABAAUAAAAuAAMAAgABAAUAAAAuAAQAAgABAAUAAAAuAAUAAgABAAUAAAAuAAYAAgABAAUAAAAuAAcAAgABAAUAAAAuAAgAAgABAAYAAAAvAAgAAgACAAYAAAAwAAgAAgACAAYAAAAxAAgAAgACAAYAAAAyAAgAAgAFAAQAAAAzAAgAAgACAAUAAAA0AAgAAgACAAUAAAA1AAgAAgACAAUAAAA2AAgAAgACAAUAAAA3AAgAAgACAAUAAAA4AAgAAgACAAUAAAA5AAgAAgAEAAQAAAA6AAgAAgACAAYAAAA7AAgAAgACAAYAAAA8AAgAAgACAAYAAAA9AAgAAgACAAYAAAA+AAgAAgACAAYAAAA/AAgAAgACAAYAAABAAAgAAgADAAYAAABAAAcAAgADAAUAAABAAAYAAgADAAUAAABAAAUAAgADAAUAAABAAAQAAgADAAUAAABAAAMAAgADAAUAAABAAAIAAgADAAUAAABAAAEAAgADAAUAAABAAAAAAgADAAUAAAAvAAAAAgACAAUAAAAvAAEAAgACAAUAAAAvAAIAAgACAAUAAAAvAAMAAgACAAUAAAAvAAQAAgACAAUAAAAvAAUAAgACAAUAAAAvAAYAAgACAAUAAAAvAAcAAgACAAUAAAAwAAAAAgACAAUAAAAwAAEAAgACAAUAAAAwAAIAAgACAAUAAAAwAAMAAgACAAUAAAAwAAQAAgACAAUAAAAwAAUAAgACAAUAAAAwAAYAAgACAAUAAAAwAAcAAgACAAUAAAAxAAAAAgACAAUAAAAxAAEAAgACAAUAAAAxAAIAAgACAAUAAAAxAAMAAgACAAUAAAAxAAQAAgACAAUAAAAxAAUAAgACAAUAAAAxAAYAAgACAAUAAAAxAAcAAgACAAUAAAAyAAAAAgACAAUAAAAyAAEAAgACAAUAAAAyAAIAAgACAAUAAAAyAAMAAgACAAUAAAAyAAQAAgACAAUAAAAyAAUAAgACAAUAAAAyAAYAAgACAAUAAAAyAAcAAgACAAUAAAAzAAAAAgACAAUAAAAzAAEAAgACAAUAAAAzAAIAAgACAAUAAAAzAAMAAgACAAUAAAAzAAQAAgACAAUAAAAzAAUAAgACAAUAAAAzAAYAAgACAAUAAAAzAAcAAgACAAUAAAA0AAAAAgACAAUAAAA0AAEAAgACAAUAAAA0AAIAAgACAAUAAAA0AAMAAgACAAUAAAA0AAQAAgACAAUAAAA0AAUAAgACAAUAAAA0AAYAAgACAAUAAAA0AAcAAgACAAUAAAA1AAAAAgACAAUAAAA1AAEAAgACAAUAAAA1AAIAAgACAAUAAAA1AAMAAgACAAUAAAA1AAQAAgACAAUAAAA1AAUAAgACAAUAAAA1AAYAAgACAAUAAAA1AAcAAgACAAUAAAA2AAAAAgACAAUAAAA2AAEAAgACAAUAAAA2AAIAAgACAAUAAAA2AAMAAgACAAUAAAA2AAQAAgACAAUAAAA2AAUAAgACAAUAAAA2AAYAAgACAAUAAAA2AAcAAgACAAUAAAA3AAAAAgACAAUAAAA3AAEAAgACAAUAAAA3AAIAAgACAAUAAAA3AAMAAgACAAUAAAA3AAQAAgACAAUAAAA3AAUAAgACAAUAAAA3AAYAAgACAAUAAAA3AAcAAgACAAUAAAA4AAAAAgACAAUAAAA4AAEAAgACAAUAAAA4AAIAAgACAAUAAAA4AAMAAgACAAUAAAA4AAQAAgACAAUAAAA4AAUAAgACAAUAAAA4AAYAAgACAAUAAAA4AAcAAgACAAUAAAA5AAAAAgACAAUAAAA5AAEAAgACAAUAAAA5AAIAAgACAAUAAAA5AAMAAgACAAUAAAA5AAQAAgACAAUAAAA5AAUAAgACAAUAAAA5AAYAAgACAAUAAAA5AAcAAgACAAUAAAA6AAAAAgACAAUAAAA6AAEAAgACAAUAAAA6AAIAAgACAAUAAAA6AAMAAgACAAUAAAA6AAQAAgACAAUAAAA6AAUAAgACAAUAAAA6AAYAAgACAAUAAAA6AAcAAgACAAUAAAA7AAAAAgACAAUAAAA7AAEAAgACAAUAAAA7AAIAAgACAAUAAAA7AAMAAgACAAUAAAA7AAQAAgACAAUAAAA7AAUAAgACAAUAAAA7AAYAAgACAAUAAAA7AAcAAgACAAUAAAA8AAAAAgACAAUAAAA8AAEAAgACAAUAAAA8AAIAAgACAAUAAAA8AAMAAgACAAUAAAA8AAQAAgACAAUAAAA8AAUAAgACAAUAAAA8AAYAAgACAAUAAAA8AAcAAgACAAUAAAA9AAAAAgACAAUAAAA9AAEAAgACAAUAAAA9AAIAAgACAAUAAAA9AAMAAgACAAUAAAA9AAQAAgACAAUAAAA9AAUAAgACAAUAAAA9AAYAAgACAAUAAAA9AAcAAgACAAUAAAA+AAAAAgACAAUAAAA+AAEAAgACAAUAAAA+AAIAAgACAAUAAAA+AAMAAgACAAUAAAA+AAQAAgACAAUAAAA+AAUAAgACAAUAAAA+AAYAAgACAAUAAAA+AAcAAgACAAUAAAA/AAAAAgACAAUAAAA/AAEAAgACAAUAAAA/AAIAAgACAAUAAAA/AAMAAgACAAUAAAA/AAQAAgACAAUAAAA/AAUAAgACAAUAAAA/AAYAAgACAAUAAAA/AAcAAgACAAUAAAAAAB8AAgACAAUAAAAAACAAAgACAAUAAAAAACEAAgACAAUAAAAAACIAAgACAAUAAAAAACMAAgACAAUAAAAAACQAAgACAAUAAAAAACUAAgACAAUAAAAAACYAAgACAAUAAAAAACcAAgACAAUAAAABAB8AAgACAAUAAAABACAAAgACAAUAAAABACEAAgACAAUAAAABACIAAgACAAUAAAABACMAAgACAAUAAAABACQAAgACAAUAAAABACUAAgACAAUAAAABACYAAgACAAUAAAABACcAAgACAAUAAAACAB8AAgACAAUAAAACACAAAgACAAUAAAACACEAAgACAAUAAAACACIAAgACAAUAAAACACMAAgACAAUAAAACACQAAgACAAUAAAACACUAAgACAAUAAAACACYAAgACAAUAAAACACcAAgACAAUAAAADAB8AAgACAAUAAAADACAAAgACAAUAAAADACEAAgACAAUAAAADACIAAgACAAUAAAADACMAAgACAAUAAAADACQAAgACAAUAAAADACUAAgACAAUAAAADACYAAgACAAUAAAADACcAAgACAAUAAAAEAB8AAgACAAUAAAAEACAAAgACAAUAAAAEACEAAgACAAUAAAAEACIAAgACAAUAAAAEACMAAgACAAUAAAAEACQAAgACAAUAAAAEACUAAgACAAUAAAAEACYAAgACAAUAAAAEACcAAgACAAUAAAAFAB8AAgACAAUAAAAFACAAAgACAAUAAAAFACEAAgACAAUAAAAFACIAAgACAAUAAAAFACMAAgACAAUAAAAFACQAAgACAAUAAAAFACUAAgACAAUAAAAFACYAAgACAAUAAAAFACcAAgACAAUAAAAGAB8AAgACAAUAAAAGACAAAgACAAUAAAAGACEAAgACAAUAAAAGACIAAgACAAUAAAAGACMAAgACAAUAAAAGACQAAgACAAUAAAAGACUAAgACAAUAAAAGACYAAgACAAUAAAAGACcAAgACAAUAAAAHAB8AAgACAAUAAAAHACAAAgACAAUAAAAHACEAAgACAAUAAAAHACIAAgACAAUAAAAHACMAAgACAAUAAAAHACQAAgACAAUAAAAHACUAAgACAAUAAAAHACYAAgACAAUAAAAHACcAAgACAAUAAAAIAB8AAgACAAUAAAAIACAAAgACAAUAAAAIACEAAgACAAUAAAAIACIAAgACAAUAAAAIACMAAgACAAUAAAAIACQAAgACAAUAAAAIACUAAgACAAUAAAAIACYAAgACAAUAAAAIACcAAgACAAUAAAAJAB8AAgACAAUAAAAJACAAAgACAAUAAAAJACEAAgACAAUAAAAJACIAAgACAAUAAAAJACMAAgACAAUAAAAJACQAAgACAAUAAAAJACUAAgACAAUAAAAJACYAAgACAAUAAAAJACcAAgACAAUAAAAKAB8AAgACAAUAAAAKACAAAgACAAUAAAAKACEAAgACAAUAAAAKACIAAgACAAUAAAAKACMAAgACAAUAAAAKACQAAgACAAUAAAAKACUAAgACAAUAAAAKACYAAgACAAUAAAAKACcAAgACAAUAAAALAB8AAgACAAUAAAALACAAAgACAAUAAAALACEAAgACAAUAAAALACIAAgACAAUAAAALACMAAgACAAUAAAALACQAAgACAAUAAAALACUAAgACAAUAAAALACYAAgACAAUAAAALACcAAgACAAUAAAAMAB8AAgACAAUAAAAMACAAAgACAAUAAAAMACEAAgACAAUAAAAMACIAAgACAAUAAAAMACMAAgACAAUAAAAMACQAAgACAAUAAAAMACUAAgACAAUAAAAMACYAAgACAAUAAAAMACcAAgACAAUAAAANAB8AAgACAAUAAAANACAAAgACAAUAAAANACEAAgACAAUAAAANACIAAgACAAUAAAANACMAAgACAAUAAAANACQAAgACAAUAAAANACUAAgACAAUAAAANACYAAgACAAUAAAANACcAAgACAAUAAAAOAB8AAgACAAUAAAAOACAAAgACAAUAAAAOACEAAgACAAUAAAAOACIAAgACAAUAAAAOACMAAgACAAUAAAAOACQAAgACAAUAAAAOACUAAgACAAUAAAAOACYAAgACAAUAAAAOACcAAgACAAUAAAAPAB8AAgACAAUAAAAPACAAAgACAAUAAAAPACEAAgACAAUAAAAPACIAAgACAAUAAAAPACMAAgACAAUAAAAPACQAAgACAAUAAAAPACUAAgACAAUAAAAPACYAAgACAAUAAAAPACcAAgACAAUAAAAQAB8AAgACAAUAAAAQACAAAgACAAUAAAAQACEAAgACAAUAAAAQACIAAgACAAUAAAAQACMAAgACAAUAAAAQACQAAgACAAUAAAAQACUAAgACAAUAAAAQACYAAgACAAUAAAAQACcAAgACAAUAAAARAB8AAgAEAAUAAAARACAAAgACAAUAAAARACEAAgACAAUAAAARACIAAgACAAUAAAARACMAAgACAAUAAAARACQAAgACAAUAAAARACUAAgACAAUAAAARACYAAgACAAUAAAARACcAAgACAAUAAAASAB8AAgACAAQAAAASACAAAgACAAUAAAASACEAAgACAAUAAAASACIAAgACAAUAAAASACMAAgACAAUAAAASACQAAgACAAUAAAASACUAAgACAAUAAAASACYAAgACAAUAAAASACcAAgACAAUAAAATAB8AAgACAAQAAAATACAAAgACAAUAAAATACEAAgACAAUAAAATACIAAgACAAUAAAATACMAAgACAAUAAAATACQAAgACAAUAAAATACUAAgACAAUAAAATACYAAgACAAUAAAATACcAAgACAAUAAAAUAB8AAgADAAQAAAAUACAAAgADAAUAAAAUACEAAgADAAUAAAAUACIAAgADAAUAAAAUACMAAgADAAUAAAAUACQAAgADAAUAAAAUACUAAgADAAUAAAAUACYAAgADAAUAAAAUACcAAgADAAUAAAAAACgAAgACAAUAAAABACgAAgACAAUAAAACACgAAgACAAUAAAADACgAAgACAAUAAAAEACgAAgACAAUAAAAFACgAAgACAAUAAAAGACgAAgACAAUAAAAHACgAAgACAAUAAAAIACgAAgACAAUAAAAJACgAAgACAAUAAAAKACgAAgACAAUAAAALACgAAgACAAUAAAAMACgAAgACAAUAAAANACgAAgACAAUAAAAOACgAAgACAAUAAAAPACgAAgACAAUAAAAQACgAAgACAAUAAAARACgAAgACAAUAAAASACgAAgACAAUAAAATACgAAgACAAUAAAAUACgAAgADAAUAAAAEAB0AAgABAAQAAAAEAB4AAgAFAAUAAAAFAB0AAgACAAQAAAAFAB4AAgACAAUAAAAGAB0AAgACAAQAAAAGAB4AAgACAAUAAAAHAB0AAgACAAQAAAAHAB4AAgACAAUAAAAIAB0AAgACAAQAAAAIAB4AAgACAAUAAAAJAB0AAgACAAQAAAAJAB4AAgACAAUAAAAKAB0AAgACAAQAAAAKAB4AAgACAAUAAAALAB0AAgACAAQAAAALAB4AAgACAAUAAAAMAB0AAgACAAQAAAAMAB4AAgACAAUAAAANAB0AAgACAAQAAAANAB4AAgACAAUAAAAOAB0AAgACAAQAAAAOAB4AAgACAAUAAAAPAB0AAgACAAQAAAAPAB4AAgACAAUAAAAQAB0AAgADAAQAAAAQAB4AAgAEAAUAAAARAB4AAgADAAQAAAADAB4AAgACAAQAAAAAAB4AAgACAAQAAAABAB4AAgACAAQAAAACAB4AAgACAAQAAAA3AAkAAgACAAUAAAA4AAkAAgACAAUAAAA1AAkAAgACAAUAAAA2AAkAAgACAAUAAAA1AAoAAgAFAAQAAAA2AAoAAgACAAUAAAA3AAoAAgACAAUAAAA4AAoAAgAEAAQAAAA1AAsAAgABAAYAAAA2AAsAAgACAAYAAAA4AAsAAgADAAYAAAA5AAkAAgADAAUAAAA5AAoAAgADAAYAAAAyAAkAAgABAAYAAAAzAAkAAgAFAAQAAAAzAAoAAgABAAYAAAA0AAkAAgACAAUAAAA0AAoAAgACAAYAAAA3AAsAAgACAAYAAAATAA4AAQAAAAEAAAATAA8AAQAAAAEAAAATABAAAQAAAAEAAAATAA0AAQAAAAEAAAATAAwAAQAAAAEAAAATAAsAAQAAAAEAAAATAAoAAQAAAAEAAAATAAkAAQAAAAEAAAATAAgAAQADAAEAAAASAAgAAQACAAAAAAARAAgAAQACAAAAAAAQAAgAAQACAAAAAAAPAAgAAQACAAAAAAAOAAgAAQACAAAAAAANAAgAAQABAAEAAAALAAgAAQADAAEAAAAKAAgAAQACAAAAAAAJAAgAAQACAAAAAAAIAAgAAQACAAAAAAAHAAgAAQACAAAAAAAHABEAAQADAAAAAAAJABEAAQABAAAAAAAKABEAAQACAAAAAAALABEAAQADAAMAAAAOABEAAQACAAAAAAAPABEAAQADAAAAAAARABEAAQABAAAAAAASABEAAQACAAAAAAATABEAAQADAAMAAAANABEAAQABAAMAAAAFAAgAAQABAAEAAAAGAAgAAQACAAAAAAAGABEAAQACAAAAAAAFABEAAQABAAMAAAAFABAAAQAAAAEAAAAFAA8AAQAAAAEAAAAFAA4AAQAAAAEAAAAFAA0AAQAAAAEAAAAFAAwAAQAAAAEAAAAFAAsAAQAAAAEAAAAFAAoAAQAAAAEAAAAFAAkAAQAAAAEAAAALAAkAAQAAAAEAAAALAAoAAQAAAAEAAAALAAsAAQAAAAEAAAALAAwAAQAAAAEAAAALAA0AAQAAAAEAAAALAA4AAQAAAAEAAAALAA8AAQAAAAEAAAALABAAAQAAAAEAAAANABAAAQAAAAEAAAANAA8AAQAAAAEAAAANAA4AAQAAAAEAAAANAA0AAQAAAAEAAAANAAwAAQAAAAEAAAANAAsAAQAAAAEAAAANAAoAAQAAAAEAAAANAAkAAQAAAAEAAAA=")
-tile_set = SubResource("TileSet_f345f")
+tile_set = SubResource("TileSet_qabww")
 
-[node name="decor" type="TileMapLayer" parent="TileMapLayer"]
-tile_map_data = PackedByteArray("AAAVABEAAAACAAoAAAAEAAQAAAAAAAgAAAAUAAUAAAAAAAgAAAAEAA0AAAAAAAgAAAA2ABEAAAAAAAgAAAA3AAYAAAAAAAgAAABCABEAAAAAAAgAAABCABgAAAAAAAgAAAAqABYAAAAAAAgAAAAkAA0AAAAAAAgAAAAeACIAAAAAAAgAAAAXABoAAAAAAAgAAAALABgAAAAAAAgAAAAEABoAAAAAAAgAAAALACAAAAAAAAgAAAAFACUAAAAAAAgAAAA6AAMAAAAAAAgAAAArACUAAAAAAAgAAAA7ACQAAAAAAAgAAABDACEAAAAAAAgAAAARACUAAAABAAgAAAAyAAUAAAABAAgAAAA/AAMAAAABAAgAAAAlABcAAAABAAgAAAAZAAcAAAABAAgAAAAnAAUAAAABAAgAAAA9ACIAAAABAAgAAAAlACUAAAABAAgAAAALACUAAAACAAMAAAAEACEAAAACAAMAAAA5AAcAAAACAAMAAAAkABIAAAACAAMAAAAgABkAAAACAAMAAAAaABcAAAACAAMAAAA0AAkAAAADAAMAAAA+AAYAAAADAAMAAAA1AAIAAAADAAMAAAAKACEAAAAAAAMAAAADACcAAAAAAAMAAAA6ABoAAAAAAAMAAAAvACIAAAAAAAMAAAAjAAsAAAAAAAMAAAAQACIAAAAAAAIAAAAHACMAAAAAAAIAAAA7AAIAAAAAAAIAAAAhABoAAAAAAAIAAAA8AAUAAAAAAAUAAAADACQAAAADAAUAAAAVABIAAQAAAAAAAAAyAAMAAQAAAAAAAAAHAAkAAAADAAEAAAAHAAoAAAADAAIAAAAIAAoAAAAEAAEAAAAIAAsAAAADAAIAAAAIAAkAAAADAAEAAAAIAAwAAAAEAAIAAAAHAAwAAAAEAAEAAAAHAAsAAAAEAAEAAAAIAA0AAAAEAAIAAAAIAA4AAAAEAAIAAAAHAA4AAAAEAAIAAAAHAA0AAAADAAIAAAAHAA8AAAADAAEAAAAHABAAAAADAAEAAAAIABAAAAADAAEAAAAIAA8AAAAEAAEAAAAJAAkAAAADAAEAAAAJAAoAAAAEAAEAAAAJAAsAAAAEAAEAAAAJAAwAAAADAAIAAAAJAA0AAAAEAAIAAAAJAA4AAAAEAAEAAAAJAA8AAAAEAAIAAAAJABAAAAADAAEAAAAQAAkAAAAGAAEAAAAQAAoAAAAGAAEAAAAQAAsAAAAGAAIAAAAQAAwAAAAFAAIAAAAQAA0AAAAGAAEAAAAQAA4AAAAGAAEAAAAQAA8AAAAFAAIAAAAQABAAAAAFAAEAAAARAAkAAAAFAAEAAAARAAoAAAAFAAEAAAARAAsAAAAFAAIAAAARAAwAAAAFAAIAAAARAA0AAAAGAAEAAAARAA4AAAAFAAIAAAARAA8AAAAGAAIAAAARABAAAAAFAAIAAAASAAkAAAAFAAEAAAASAAoAAAAFAAEAAAASAAsAAAAGAAEAAAASAAwAAAAFAAEAAAASAA0AAAAFAAEAAAASAA4AAAAFAAEAAAASAA8AAAAGAAEAAAASABAAAAAFAAIAAAAOAAkAAAAFAAIAAAAOAAoAAAAFAAEAAAAOAAsAAAAFAAEAAAAOAAwAAAAFAAEAAAAOAA0AAAAGAAEAAAAOAA4AAAAFAAIAAAAOAA8AAAAFAAEAAAAOABAAAAAFAAEAAAAPAAkAAAAFAAEAAAAPAAoAAAAGAAIAAAAPAAsAAAAGAAEAAAAPAAwAAAAFAAIAAAAPAA0AAAAGAAIAAAAPAA4AAAAGAAIAAAAPAA8AAAAFAAEAAAAPABAAAAAGAAEAAAAKAAkAAAADAAEAAAAKAAoAAAADAAEAAAAKAAsAAAADAAEAAAAKAAwAAAADAAIAAAAKAA0AAAADAAIAAAAKAA4AAAADAAEAAAAKAA8AAAADAAIAAAAKABAAAAAEAAEAAAAGAAkAAAADAAEAAAAGAAoAAAADAAIAAAAGAAsAAAADAAEAAAAGAAwAAAADAAEAAAAGAA0AAAAEAAEAAAAGAA4AAAADAAIAAAAGAA8AAAADAAEAAAAGABAAAAAEAAEAAAALABIAAAADAAAAAAATABIAAAAFAAAAAAArABQAAAAAAAcAAAAsABQAAAABAAcAAAAyABcAAAAAAAcAAAAzABcAAAABAAcAAAA5AA4AAAAAAAcAAAA6AA4AAAABAAcAAAApAAoAAAAAAAcAAAAqAAoAAAABAAcAAAA7ACAAAAAAAAcAAAA8ACAAAAABAAcAAAAmACEAAAAAAAcAAAAnACEAAAABAAcAAAAUABwAAAAAAAcAAAAVABwAAAABAAcAAAASABkAAAAAAAcAAAATABkAAAABAAcAAAAZABoAAAAAAAcAAAAaABoAAAABAAcAAAAHABgAAAAAAAcAAAAIABgAAAABAAcAAAACABcAAAAAAAcAAAADABcAAAABAAcAAAAMAAYAAAAAAAcAAAANAAYAAAABAAcAAAAFAAcAAAAAAAcAAAAGAAcAAAABAAcAAAAWAAoAAAAAAAcAAAAXAAoAAAABAAcAAAAPABcAAAACAAcAAAAZABwAAAACAAcAAAAYACEAAAACAAcAAAAMABsAAAACAAcAAAANAB8AAAACAAcAAAAIACcAAAACAAcAAAAvAAEAAAACAAcAAAA+AAEAAAACAAcAAAA1AAcAAAACAAcAAAAuAA8AAAACAAcAAAA+AAwAAAACAAcAAABEAAsAAAACAAcAAABCABUAAAACAAcAAAAVAAIAAAACAAcAAAAaAAoAAAACAAcAAAAlABUAAAACAAcAAAAoAA4AAAACAAcAAAAqABoAAAACAAcAAAA1ABkAAAACAAcAAAA8ABQAAAACAAcAAAAaACYAAAACAAcAAAANACEAAAACAAMAAAAbABQAAAAEAAQAAAAbABUAAAAEAAUAAAAbABYAAAAEAAYAAAAZABYAAQAKAAAAAAAaABYAAQALAAAAAAAjACcAAAACAAcAAAAYABYAAAACAAoAAAA=")
-tile_set = SubResource("TileSet_tmyho")
+[node name="decor" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAbABAAAAAEAAQAAAAbABEAAAAEAAUAAAAbABIAAAAEAAYAAAAVABEAAAACAAoAAAAEAAQAAAAAAAgAAAAUAAUAAAAAAAgAAAAEAA0AAAAAAAgAAAA2ABEAAAAAAAgAAAA3AAYAAAAAAAgAAABCABEAAAAAAAgAAABCABgAAAAAAAgAAAAqABYAAAAAAAgAAAAkAA0AAAAAAAgAAAAeACIAAAAAAAgAAAAXABoAAAAAAAgAAAALABgAAAAAAAgAAAAEABoAAAAAAAgAAAALACAAAAAAAAgAAAAFACUAAAAAAAgAAAA6AAMAAAAAAAgAAAArACUAAAAAAAgAAAA7ACQAAAAAAAgAAABDACEAAAAAAAgAAAARACUAAAABAAgAAAAyAAUAAAABAAgAAAA/AAMAAAABAAgAAAAlABcAAAABAAgAAAAZAAcAAAABAAgAAAAnAAUAAAABAAgAAAA9ACIAAAABAAgAAAAlACUAAAABAAgAAAALACUAAAACAAMAAAAEACEAAAACAAMAAAA5AAcAAAACAAMAAAAkABIAAAACAAMAAAAgABkAAAACAAMAAAAaABcAAAACAAMAAAA0AAkAAAADAAMAAAA+AAYAAAADAAMAAAA1AAIAAAADAAMAAAAKACEAAAAAAAMAAAADACcAAAAAAAMAAAA6ABoAAAAAAAMAAAAvACIAAAAAAAMAAAAjAAsAAAAAAAMAAAAQACIAAAAAAAIAAAAHACMAAAAAAAIAAAA7AAIAAAAAAAIAAAAhABoAAAAAAAIAAAA8AAUAAAAAAAUAAAADACQAAAADAAUAAAAZABIAAQAKAAAAAAAaABIAAQALAAAAAAAVABIAAQAAAAAAAAAyAAMAAQAAAAAAAAAHAAkAAAADAAEAAAAHAAoAAAADAAIAAAAIAAoAAAAEAAEAAAAIAAsAAAADAAIAAAAIAAkAAAADAAEAAAAIAAwAAAAEAAIAAAAHAAwAAAAEAAEAAAAHAAsAAAAEAAEAAAAIAA0AAAAEAAIAAAAIAA4AAAAEAAIAAAAHAA4AAAAEAAIAAAAHAA0AAAADAAIAAAAHAA8AAAADAAEAAAAHABAAAAADAAEAAAAIABAAAAADAAEAAAAIAA8AAAAEAAEAAAAJAAkAAAADAAEAAAAJAAoAAAAEAAEAAAAJAAsAAAAEAAEAAAAJAAwAAAADAAIAAAAJAA0AAAAEAAIAAAAJAA4AAAAEAAEAAAAJAA8AAAAEAAIAAAAJABAAAAADAAEAAAAQAAkAAAAGAAEAAAAQAAoAAAAGAAEAAAAQAAsAAAAGAAIAAAAQAAwAAAAFAAIAAAAQAA0AAAAGAAEAAAAQAA4AAAAGAAEAAAAQAA8AAAAFAAIAAAAQABAAAAAFAAEAAAARAAkAAAAFAAEAAAARAAoAAAAFAAEAAAARAAsAAAAFAAIAAAARAAwAAAAFAAIAAAARAA0AAAAGAAEAAAARAA4AAAAFAAIAAAARAA8AAAAGAAIAAAARABAAAAAFAAIAAAASAAkAAAAFAAEAAAASAAoAAAAFAAEAAAASAAsAAAAGAAEAAAASAAwAAAAFAAEAAAASAA0AAAAFAAEAAAASAA4AAAAFAAEAAAASAA8AAAAGAAEAAAASABAAAAAFAAIAAAAOAAkAAAAFAAIAAAAOAAoAAAAFAAEAAAAOAAsAAAAFAAEAAAAOAAwAAAAFAAEAAAAOAA0AAAAGAAEAAAAOAA4AAAAFAAIAAAAOAA8AAAAFAAEAAAAOABAAAAAFAAEAAAAPAAkAAAAFAAEAAAAPAAoAAAAGAAIAAAAPAAsAAAAGAAEAAAAPAAwAAAAFAAIAAAAPAA0AAAAGAAIAAAAPAA4AAAAGAAIAAAAPAA8AAAAFAAEAAAAPABAAAAAGAAEAAAAKAAkAAAADAAEAAAAKAAoAAAADAAEAAAAKAAsAAAADAAEAAAAKAAwAAAADAAIAAAAKAA0AAAADAAIAAAAKAA4AAAADAAEAAAAKAA8AAAADAAIAAAAKABAAAAAEAAEAAAAGAAkAAAADAAEAAAAGAAoAAAADAAIAAAAGAAsAAAADAAEAAAAGAAwAAAADAAEAAAAGAA0AAAAEAAEAAAAGAA4AAAADAAIAAAAGAA8AAAADAAEAAAAGABAAAAAEAAEAAAALABIAAAADAAAAAAATABIAAAAFAAAAAAArABQAAAAAAAcAAAAsABQAAAABAAcAAAAyABcAAAAAAAcAAAAzABcAAAABAAcAAAA5AA4AAAAAAAcAAAA6AA4AAAABAAcAAAApAAoAAAAAAAcAAAAqAAoAAAABAAcAAAA7ACAAAAAAAAcAAAA8ACAAAAABAAcAAAAmACEAAAAAAAcAAAAnACEAAAABAAcAAAAUABwAAAAAAAcAAAAVABwAAAABAAcAAAASABkAAAAAAAcAAAATABkAAAABAAcAAAAZABoAAAAAAAcAAAAaABoAAAABAAcAAAAHABgAAAAAAAcAAAAIABgAAAABAAcAAAACABcAAAAAAAcAAAADABcAAAABAAcAAAAMAAYAAAAAAAcAAAANAAYAAAABAAcAAAAFAAcAAAAAAAcAAAAGAAcAAAABAAcAAAAWAAoAAAAAAAcAAAAXAAoAAAABAAcAAAAYABYAAAACAAcAAAAPABcAAAACAAcAAAAZABwAAAACAAcAAAAYACEAAAACAAcAAAAMABsAAAACAAcAAAANAB8AAAACAAcAAAAIACcAAAACAAcAAAAvAAEAAAACAAcAAAA+AAEAAAACAAcAAAA1AAcAAAACAAcAAAAuAA8AAAACAAcAAAA+AAwAAAACAAcAAABEAAsAAAACAAcAAABCABUAAAACAAcAAAAVAAIAAAACAAcAAAAaAAoAAAACAAcAAAAlABUAAAACAAcAAAAoAA4AAAACAAcAAAAqABoAAAACAAcAAAA1ABkAAAACAAcAAAA8ABQAAAACAAcAAAAaACYAAAACAAcAAAANACEAAAACAAMAAAA=")
+tile_set = SubResource("TileSet_d0hjk")
 
-[node name="tree" type="TileMapLayer" parent="TileMapLayer"]
+[node name="tree" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAxAAIAAwABAAQAAAAxAAMAAwABAAUAAAAxAAQAAwABAAYAAAAyAAIAAwACAAQAAAAyAAMAAwACAAUAAAAyAAQAAwACAAYAAAAzAAIAAwADAAQAAAAzAAMAAwADAAUAAAAzAAQAAwADAAYAAAANACQAAAAAAAEAAAANACUAAAAAAAIAAAANACYAAAAAAAMAAAAOACMAAAABAAAAAAAOACQAAAABAAEAAAAOACUAAAABAAIAAAAOACYAAAABAAMAAAAOACcAAAABAAQAAAAPACMAAAACAAAAAAAPACQAAAACAAEAAAAPACUAAAACAAIAAAAPACYAAAACAAMAAAAPACcAAAACAAQAAAAQACQAAAADAAEAAAAQACUAAAADAAIAAAAQACYAAAADAAMAAAAFAB4AAAAAAAEAAAAFAB8AAAAAAAIAAAAFACAAAAAAAAMAAAAGAB0AAAABAAAAAAAGAB4AAAABAAEAAAAGAB8AAAABAAIAAAAGACAAAAABAAMAAAAGACEAAAABAAQAAAAHAB0AAAACAAAAAAAHAB4AAAACAAEAAAAHAB8AAAACAAIAAAAHACAAAAACAAMAAAAHACEAAAACAAQAAAAIAB4AAAADAAEAAAAIAB8AAAADAAIAAAAIACAAAAADAAMAAAA2AAIAAAAAAAEAAAA2AAMAAAAAAAIAAAA2AAQAAAAAAAMAAAA3AAEAAAABAAAAAAA3AAIAAAABAAEAAAA3AAMAAAABAAIAAAA3AAQAAAABAAMAAAA3AAUAAAABAAQAAAA4AAEAAAACAAAAAAA4AAIAAAACAAEAAAA4AAMAAAACAAIAAAA4AAQAAAACAAMAAAA4AAUAAAACAAQAAAA5AAIAAAADAAEAAAA5AAMAAAADAAIAAAA5AAQAAAADAAMAAAAqAAUAAAAAAAEAAAAqAAYAAAAAAAIAAAAqAAcAAAAAAAMAAAArAAQAAAABAAAAAAArAAUAAAABAAEAAAArAAYAAAABAAIAAAArAAcAAAABAAMAAAArAAgAAAABAAQAAAAsAAQAAAACAAAAAAAsAAUAAAACAAEAAAAsAAYAAAACAAIAAAAsAAcAAAACAAMAAAAsAAgAAAACAAQAAAAtAAUAAAADAAEAAAAtAAYAAAADAAIAAAAtAAcAAAADAAMAAAAsAAoAAAAAAAEAAAAsAAsAAAAAAAIAAAAsAAwAAAAAAAMAAAAtAAkAAAABAAAAAAAtAAoAAAABAAEAAAAtAAsAAAABAAIAAAAtAAwAAAABAAMAAAAtAA0AAAABAAQAAAAuAAkAAAACAAAAAAAuAAoAAAACAAEAAAAuAAsAAAACAAIAAAAuAAwAAAACAAMAAAAuAA0AAAACAAQAAAAvAAoAAAADAAEAAAAvAAsAAAADAAIAAAAvAAwAAAADAAMAAAAxAA0AAAAAAAEAAAAxAA4AAAAAAAIAAAAxAA8AAAAAAAMAAAAyAAwAAAABAAAAAAAyAA0AAAABAAEAAAAyAA4AAAABAAIAAAAyAA8AAAABAAMAAAAyABAAAAABAAQAAAAzAAwAAAACAAAAAAAzAA0AAAACAAEAAAAzAA4AAAACAAIAAAAzAA8AAAACAAMAAAAzABAAAAACAAQAAAA0AA0AAAADAAEAAAA0AA4AAAADAAIAAAA0AA8AAAADAAMAAAA6AAoAAAAAAAEAAAA6AAsAAAAAAAIAAAA6AAwAAAAAAAMAAAA7AAkAAAABAAAAAAA7AAoAAAABAAEAAAA7AAsAAAABAAIAAAA7AAwAAAABAAMAAAA7AA0AAAABAAQAAAA8AAkAAAACAAAAAAA8AAoAAAACAAEAAAA8AAsAAAACAAIAAAA8AAwAAAACAAMAAAA8AA0AAAACAAQAAAA9AAoAAAADAAEAAAA9AAsAAAADAAIAAAA9AAwAAAADAAMAAAA0ABQAAAAAAAEAAAA0ABUAAAAAAAIAAAA0ABYAAAAAAAMAAAA1ABMAAAABAAAAAAA1ABQAAAABAAEAAAA1ABUAAAABAAIAAAA1ABYAAAABAAMAAAA1ABcAAAABAAQAAAA2ABMAAAACAAAAAAA2ABQAAAACAAEAAAA2ABUAAAACAAIAAAA2ABYAAAACAAMAAAA2ABcAAAACAAQAAAA3ABQAAAADAAEAAAA3ABUAAAADAAIAAAA3ABYAAAADAAMAAAAuABMAAAAAAAEAAAAuABQAAAAAAAIAAAAuABUAAAAAAAMAAAAvABIAAAABAAAAAAAvABMAAAABAAEAAAAvABQAAAABAAIAAAAvABUAAAABAAMAAAAvABYAAAABAAQAAAAwABIAAAACAAAAAAAwABMAAAACAAEAAAAwABQAAAACAAIAAAAwABUAAAACAAMAAAAxABMAAAADAAEAAAAxABQAAAADAAIAAAAxABUAAAADAAMAAAAqAA8AAAAAAAEAAAAqABAAAAAAAAIAAAAqABEAAAAAAAMAAAArAA4AAAABAAAAAAArAA8AAAABAAEAAAArABAAAAABAAIAAAArABEAAAABAAMAAAArABIAAAABAAQAAAAsAA4AAAACAAAAAAAsAA8AAAACAAEAAAAsABAAAAACAAIAAAAsABEAAAACAAMAAAAsABIAAAACAAQAAAAtAA8AAAADAAEAAAAtABAAAAADAAIAAAAtABEAAAADAAMAAAAmABIAAAAAAAEAAAAmABMAAAAAAAIAAAAmABQAAAAAAAMAAAAnABEAAAABAAAAAAAnABIAAAABAAEAAAAnABMAAAABAAIAAAAnABQAAAABAAMAAAAnABUAAAABAAQAAAAoABEAAAACAAAAAAAoABIAAAACAAEAAAAoABMAAAACAAIAAAAoABQAAAACAAMAAAAoABUAAAACAAQAAAApABIAAAADAAEAAAApABMAAAADAAIAAAApABQAAAADAAMAAAA5ABYAAAAAAAEAAAA5ABcAAAAAAAIAAAA5ABgAAAAAAAMAAAA6ABUAAAABAAAAAAA6ABYAAAABAAEAAAA6ABcAAAABAAIAAAA6ABgAAAABAAMAAAA6ABkAAAABAAQAAAA7ABUAAAACAAAAAAA7ABYAAAACAAEAAAA7ABcAAAACAAIAAAA7ABgAAAACAAMAAAA7ABkAAAACAAQAAAA8ABYAAAADAAEAAAA8ABcAAAADAAIAAAA8ABgAAAADAAMAAAA9ABgAAAAAAAEAAAA9ABkAAAAAAAIAAAA9ABoAAAAAAAMAAAA+ABcAAAABAAAAAAA+ABgAAAABAAEAAAA+ABkAAAABAAIAAAA+ABoAAAABAAMAAAA+ABsAAAABAAQAAAA/ABcAAAACAAAAAAA/ABgAAAACAAEAAAA/ABkAAAACAAIAAAA/ABoAAAACAAMAAAA/ABsAAAACAAQAAABAABgAAAADAAEAAABAABkAAAADAAIAAABAABoAAAADAAMAAAA+ABMAAAAAAAEAAAA+ABQAAAAAAAIAAAA+ABUAAAAAAAMAAAA/ABIAAAABAAAAAAA/ABMAAAABAAEAAAA/ABQAAAABAAIAAAA/ABUAAAABAAMAAAA/ABYAAAABAAQAAABAABIAAAACAAAAAABAABMAAAACAAEAAABAABQAAAACAAIAAABAABUAAAACAAMAAABAABYAAAACAAQAAABBABMAAAADAAEAAABBABQAAAADAAIAAABBABUAAAADAAMAAABAAA0AAAAAAAEAAABAAA4AAAAAAAIAAABAAA8AAAAAAAMAAABBAAwAAAABAAAAAABBAA0AAAABAAEAAABBAA4AAAABAAIAAABBAA8AAAABAAMAAABBABAAAAABAAQAAABCAAwAAAACAAAAAABCAA0AAAACAAEAAABCAA4AAAACAAIAAABCAA8AAAACAAMAAABCABAAAAACAAQAAABDAA0AAAADAAEAAABDAA4AAAADAAIAAABDAA8AAAADAAMAAABEABIAAAAAAAEAAABEABMAAAAAAAIAAABEABQAAAAAAAMAAABFABEAAAABAAAAAABFABIAAAABAAEAAABFABMAAAABAAIAAABFABQAAAABAAMAAABFABUAAAABAAQAAABGABEAAAACAAAAAABGABIAAAACAAEAAABGABMAAAACAAIAAABGABQAAAACAAMAAABGABUAAAACAAQAAABHABIAAAADAAEAAABHABMAAAADAAIAAABHABQAAAADAAMAAABDAAUAAAAAAAEAAABDAAYAAAAAAAIAAABDAAcAAAAAAAMAAABEAAQAAAABAAAAAABEAAUAAAABAAEAAABEAAYAAAABAAIAAABEAAcAAAABAAMAAABEAAgAAAABAAQAAABFAAQAAAACAAAAAABFAAUAAAACAAEAAABFAAYAAAACAAIAAABFAAcAAAACAAMAAABFAAgAAAACAAQAAABGAAUAAAADAAEAAABGAAYAAAADAAIAAABGAAcAAAADAAMAAAAkAAYAAAAAAAEAAAAkAAcAAAAAAAIAAAAkAAgAAAAAAAMAAAAlAAUAAAABAAAAAAAlAAYAAAABAAEAAAAlAAcAAAABAAIAAAAlAAgAAAABAAMAAAAlAAkAAAABAAQAAAAmAAUAAAACAAAAAAAmAAYAAAACAAEAAAAmAAcAAAACAAIAAAAmAAgAAAACAAMAAAAmAAkAAAACAAQAAAAnAAYAAAADAAEAAAAnAAcAAAADAAIAAAAnAAgAAAADAAMAAAAWAB4AAQACAAAAAAAWAB8AAQACAAEAAAAXAB4AAQADAAAAAAAXAB8AAQADAAEAAAAWACAAAQACAAIAAAAXACAAAQADAAIAAAAQABoAAQACAAAAAAAQABsAAQACAAEAAAAQABwAAQACAAIAAAARABoAAQADAAAAAAARABsAAQADAAEAAAARABwAAQADAAIAAAAyABEAAQACAAAAAAAyABIAAQACAAEAAAAyABMAAQACAAIAAAAzABEAAQADAAAAAAAzABIAAQADAAEAAAAzABMAAQADAAIAAAAFABYAAQACAAAAAAAFABcAAQACAAEAAAAFABgAAQACAAIAAAAGABYAAQADAAAAAAAGABcAAQADAAEAAAAGABgAAQADAAIAAAAWAAUAAQACAAAAAAAWAAYAAQACAAEAAAAWAAcAAQACAAIAAAAXAAUAAQADAAAAAAAXAAYAAQADAAEAAAAXAAcAAQADAAIAAAAnABgAAQACAAAAAAAnABkAAQACAAEAAAAnABoAAQACAAIAAAAoABgAAQADAAAAAAAoABkAAQADAAEAAAAoABoAAQADAAIAAAAtABcAAQACAAAAAAAtABgAAQACAAEAAAAtABkAAQACAAIAAAAuABcAAQADAAAAAAAuABgAAQADAAEAAAAuABkAAQADAAIAAAAgAA0AAQACAAAAAAAgAA4AAQACAAEAAAAgAA8AAQACAAIAAAAhAA0AAQADAAAAAAAhAA4AAQADAAEAAAAhAA8AAQADAAIAAAAgAAYAAQACAAAAAAAgAAcAAQACAAEAAAAgAAgAAQACAAIAAAAhAAYAAQADAAAAAAAhAAcAAQADAAEAAAAhAAgAAQADAAIAAAAwABYAAAACAAQAAAAPAAMAAAAAAAEAAAAPAAQAAAAAAAIAAAAPAAUAAAAAAAMAAAAQAAIAAAABAAAAAAAQAAMAAAABAAEAAAAQAAQAAAABAAIAAAAQAAUAAAABAAMAAAAQAAYAAAABAAQAAAARAAIAAAACAAAAAAARAAMAAAACAAEAAAARAAQAAAACAAIAAAARAAUAAAACAAMAAAARAAYAAAACAAQAAAASAAMAAAADAAEAAAASAAQAAAADAAIAAAASAAUAAAADAAMAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAIAAAAHAAQAAAAAAAMAAAAIAAEAAAABAAAAAAAIAAIAAAABAAEAAAAIAAMAAAABAAIAAAAIAAQAAAABAAMAAAAIAAUAAAABAAQAAAAJAAEAAAACAAAAAAAJAAIAAAACAAEAAAAJAAMAAAACAAIAAAAJAAQAAAACAAMAAAAJAAUAAAACAAQAAAAKAAIAAAADAAEAAAAKAAMAAAADAAIAAAAKAAQAAAADAAMAAAABAAgAAAAAAAEAAAABAAkAAAAAAAIAAAABAAoAAAAAAAMAAAACAAcAAAABAAAAAAACAAgAAAABAAEAAAACAAkAAAABAAIAAAACAAoAAAABAAMAAAACAAsAAAABAAQAAAADAAcAAAACAAAAAAADAAgAAAACAAEAAAADAAkAAAACAAIAAAADAAoAAAACAAMAAAADAAsAAAACAAQAAAAEAAgAAAADAAEAAAAEAAkAAAADAAIAAAAEAAoAAAADAAMAAAAcACQAAAAAAAEAAAAcACUAAAAAAAIAAAAcACYAAAAAAAMAAAAdACMAAAABAAAAAAAdACQAAAABAAEAAAAdACUAAAABAAIAAAAdACYAAAABAAMAAAAdACcAAAABAAQAAAAeACMAAAACAAAAAAAeACQAAAACAAEAAAAeACUAAAACAAIAAAAeACYAAAACAAMAAAAeACcAAAACAAQAAAAfACQAAAADAAEAAAAfACUAAAADAAIAAAAfACYAAAADAAMAAAApACAAAAAAAAEAAAApACEAAAAAAAIAAAApACIAAAAAAAMAAAAqAB8AAAABAAAAAAAqACAAAAABAAEAAAAqACEAAAABAAIAAAAqACIAAAABAAMAAAAqACMAAAABAAQAAAArAB8AAAACAAAAAAArACAAAAACAAEAAAArACEAAAACAAIAAAArACIAAAACAAMAAAArACMAAAACAAQAAAAsACAAAAADAAEAAAAsACEAAAADAAIAAAAsACIAAAADAAMAAAA3ACAAAAAAAAEAAAA3ACEAAAAAAAIAAAA3ACIAAAAAAAMAAAA4AB8AAAABAAAAAAA4ACAAAAABAAEAAAA4ACEAAAABAAIAAAA4ACIAAAABAAMAAAA4ACMAAAABAAQAAAA5AB8AAAACAAAAAAA5ACAAAAACAAEAAAA5ACEAAAACAAIAAAA5ACIAAAACAAMAAAA5ACMAAAACAAQAAAA6ACAAAAADAAEAAAA6ACEAAAADAAIAAAA6ACIAAAADAAMAAAA/AB8AAAAAAAEAAAA/ACAAAAAAAAIAAAA/ACEAAAAAAAMAAABAAB4AAAABAAAAAABAAB8AAAABAAEAAABAACAAAAABAAIAAABAACEAAAABAAMAAABAACIAAAABAAQAAABBAB4AAAACAAAAAABBAB8AAAACAAEAAABBACAAAAACAAIAAABBACEAAAACAAMAAABBACIAAAACAAQAAABCAB8AAAADAAEAAABCACAAAAADAAIAAABCACEAAAADAAMAAAA9ACQAAAAAAAEAAAA9ACUAAAAAAAIAAAA9ACYAAAAAAAMAAAA+ACMAAAABAAAAAAA+ACQAAAABAAEAAAA+ACUAAAABAAIAAAA+ACYAAAABAAMAAAA+ACcAAAABAAQAAAA/ACMAAAACAAAAAAA/ACQAAAACAAEAAAA/ACUAAAACAAIAAAA/ACYAAAACAAMAAAA/ACcAAAACAAQAAABAACQAAAADAAEAAABAACUAAAADAAIAAABAACYAAAADAAMAAAAhACAAAAAAAAEAAAAhACEAAAAAAAIAAAAhACIAAAAAAAMAAAAiAB8AAAABAAAAAAAiACAAAAABAAEAAAAiACEAAAABAAIAAAAiACIAAAABAAMAAAAiACMAAAABAAQAAAAjAB8AAAACAAAAAAAjACAAAAACAAEAAAAjACEAAAACAAIAAAAjACIAAAACAAMAAAAjACMAAAACAAQAAAAkACAAAAADAAEAAAAkACEAAAADAAIAAAAkACIAAAADAAMAAAA6ABEAAQACAAAAAAA6ABIAAQACAAEAAAA6ABMAAQACAAIAAAA7ABEAAQADAAAAAAA7ABIAAQADAAEAAAA7ABMAAQADAAIAAAAUABYABAAGAAcAAAAUABcABAAGAAgAAAAVABYABAAHAAcAAAAVABcABAAHAAgAAAASACAABAAIAAYAAAAaAB8ABAAGAAcAAAAaACAABAAGAAgAAAAbAB8ABAAHAAcAAAAbACAABAAHAAgAAAAvAAYABAAGAAcAAAAvAAcABAAGAAgAAAAwAAYABAAHAAcAAAAwAAcABAAHAAgAAAASACEABAAIAAcAAAATACAABAAJAAYAAAATACIABAAJAAgAAAATACEABAAJAAcAAAASACIABAAIAAgAAAAgABMABAAIAAYAAAAhABMABAAJAAYAAAAhABUABAAJAAgAAAAgABUABAAIAAgAAAAhABQABAAJAAcAAAAgABQABAAIAAcAAAA=")
-tile_set = SubResource("TileSet_7h02s")
+tile_set = SubResource("TileSet_42sqa")
 
-[node name="player" parent="." instance=ExtResource("1_pjass")]
-z_index = 1
-position = Vector2(369, 314)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(2.5, 2.5)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(371, 286)
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
 limit_right = 1150
 limit_bottom = 650
-script = SubResource("GDScript_f345f")
+position_smoothing_speed = 1.0
 
-[node name="collision" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision"]
-visible = false
-polygon = PackedVector2Array(0, 484, 64, 485, 72, 470, 265, 468, 271, 483, 281, 484, 288, 501, 329, 501, 333, 514, 332, 656, 0, 655)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="collision"]
-visible = false
-polygon = PackedVector2Array(1151, 1, 1152, 648, 0, 648, -1, 4, 1149, 3, 1095, -79, -110, -93, -106, 760, 1230, 774, 1230, -86)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="collision"]
-visible = false
-polygon = PackedVector2Array(742, 0, 742, 136, 806, 136, 806, 153, 821, 153, 821, 168, 852, 169, 852, 184, 910, 184, 910, 169, 926, 169, 926, 137, 1038, 137, 1037, 2)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_f345f")
-}
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-energy = 0.0
-blend_mode = 1
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="days" type="Label" parent="CanvasLayer"]
-z_index = 101
-offset_left = 434.0
-offset_top = -2.0
-offset_right = 716.0
-offset_bottom = 135.0
+[node name="exit" type="Button" parent="."]
+offset_left = 209.0
+offset_top = 305.0
+offset_right = 395.0
+offset_bottom = 450.0
+scale = Vector2(0.566969, 0.417285)
 theme_override_font_sizes/font_size = 100
-text = "1 DAY"
-metadata/_edit_use_anchors_ = true
+text = "Exit"
 
-[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("16_hnm4a")]
-z_index = 100
-offset_left = 382.0
-offset_top = 565.0
-offset_right = 422.0
-offset_bottom = 605.0
-scale = Vector2(2.77917, 2.75542)
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(441, 336)
-scale = Vector2(0.135, 0.135)
-color = Color(0.996078, 0.682353, 0.203922, 1)
-texture = ExtResource("13_f345f")
-texture_scale = 0.01
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="FastEnemy" parent="Enemies" instance=ExtResource("14_bqa5m")]
-position = Vector2(130, 212)
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(363, 285)
-shape = SubResource("RectangleShape2D_f345f")
-
-[node name="TextHome" type="Label" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.717647)
-z_index = 6
-offset_left = 353.0
-offset_top = 239.0
-offset_right = 982.0
-offset_bottom = 516.0
-scale = Vector2(0.07, 0.07)
+[node name="play" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 200.0
+offset_right = 408.0
+offset_bottom = 345.0
+scale = Vector2(0.620209, 0.501859)
 theme_override_font_sizes/font_size = 100
-text = "Press \"E\"
-to go inside"
-horizontal_alignment = 1
+text = "Play"
 
-[node name="Rain" parent="." instance=ExtResource("15_a0bac")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(442, 326)
+sprite_frames = SubResource("SpriteFrames_akoio")
+animation = &"Down_idle"
 
-[node name="Shop" parent="." instance=ExtResource("16_tmyho")]
-z_index = 6
-position = Vector2(441, 290)
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

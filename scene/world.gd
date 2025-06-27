@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 
 	if Global.end:
-		get_tree().change_scene_to_file("res://scene/death_scene.tscn")
+		get_tree().change_scene_to_file("res://scene/other scn/death_scene.tscn")
 		Global.player_position = Vector2(997.0, 571.0)
 	else:
 		animP.play("day-night")
@@ -34,7 +34,7 @@ func _process(delta):
 		days.text = str(Global.days_count) + " DAY"
 
 	if house and Input.is_action_just_pressed("E"):
-		get_tree().change_scene_to_file("res://scene/house.tscn")
+		get_tree().change_scene_to_file("res://scene/other scn/house.tscn")
 		Global.player_position = Vector2(175.0, 69.0)
 		
 	

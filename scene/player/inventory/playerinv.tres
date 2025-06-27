@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=12 format=3 uid="uid://d13aog65ygr2d"]
+
+[ext_resource type="Script" uid="uid://cth38b0rp8ano" path="res://scene/player/inventory/Inv_slot.gd" id="2_g8gqn"]
+[ext_resource type="Script" uid="uid://c4au23equyvwh" path="res://scene/player/inventory/inventory.gd" id="3_11wfs"]
+[ext_resource type="Resource" uid="uid://cnnx7wxfwcd2y" path="res://scene/player/inventory/items/sword.tres" id="3_bm6gn"]
+
+[sub_resource type="Resource" id="Resource_f70d8"]
+script = ExtResource("2_g8gqn")
+item = ExtResource("3_bm6gn")
+amount = 1
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_11wfs"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_rlruy"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_uag4u"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_gso3e"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_bwpcq"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_gqx6p"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[sub_resource type="Resource" id="Resource_rdwic"]
+script = ExtResource("2_g8gqn")
+amount = 0
+metadata/_custom_type_script = "uid://cth38b0rp8ano"
+
+[resource]
+script = ExtResource("3_11wfs")
+slots = Array[ExtResource("2_g8gqn")]([SubResource("Resource_f70d8"), SubResource("Resource_11wfs"), SubResource("Resource_rlruy"), SubResource("Resource_uag4u"), SubResource("Resource_gso3e"), SubResource("Resource_bwpcq"), SubResource("Resource_gqx6p"), SubResource("Resource_rdwic")])
+metadata/_custom_type_script = "uid://c4au23equyvwh"

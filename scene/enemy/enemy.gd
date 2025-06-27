@@ -16,7 +16,7 @@ var can_move = true
 var death = false
 var player_in = false
 var show_damage = false
-var coin = preload("res://scene/coin.tscn")
+var coin = preload("res://scene/collactables/coin.tscn")
 
 
 func _physics_process(delta):
@@ -41,15 +41,15 @@ func _physics_process(delta):
 		return
 		
 	if player:
-		var direction = (player.position - position).normalized()
-		velocity = direction * speed
+		velocity = (player.position - position).normalized() * speed
 		animP.play("Walk")
-		anim.flip_h = direction.x < 0
+		anim.flip_h = velocity.x < 0
 	else:
 		velocity = Vector2.ZERO
 		animP.play("Idle")
 	move_and_slide()	
 
+#спросить у гпт объяснение обе функции
 func update_slime_data():
 	var found = false 
 	for i in range(Global.slime_data.size()):
@@ -65,6 +65,12 @@ func update_slime_data():
 			"health": health
 		})
 
+func remove_slime_data():
+	for i in range(Global.slime_data.size()):
+		if Global.slime_data[i].position.distance_to(position) < 10:
+			Global.slime_data.remove_at(i)
+			break
+
 func die():
 	Global.damage = false
 	can_move = false
@@ -77,12 +83,6 @@ func die():
 	var money = coin.instantiate()
 	get_tree().current_scene.add_child(money)
 	money.global_position = global_position
-	
-func remove_slime_data():
-	for i in range(Global.slime_data.size()):
-		if Global.slime_data[i].position.distance_to(position) < 10:
-			Global.slime_data.remove_at(i)
-			break
 			
 func _on_detector_body_entered(body):
 	if body.name == "player":
