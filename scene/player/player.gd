@@ -78,7 +78,7 @@ func _physics_process(delta):
 		return
 	
 	if Input.is_action_just_pressed("attack"):
-		attack()
+		pickax()
 	elif Input.is_action_pressed("up"):
 		up_move()
 	elif Input.is_action_pressed("down"):
@@ -255,6 +255,7 @@ func _on_hitbox_body_entered(body):
 		await get_tree().process_frame
 		Global.player_damage = original_damage
 		Global.damage_to_display = damage_to_display
+	
 
 var save_path = "user://savegame.save"
 
@@ -270,3 +271,13 @@ func load_game():
 
 func collect(item):
 	inv.insert(item)
+
+
+func _on_hitbox_pickax_body_entered(body):
+	if body.has_method("take_damage_ore"):
+		body.take_damage_ore()
+
+
+func _on_hitbox_ax_body_entered(body):
+	if body.has_method("take_damage_tree"):
+		body.take_damage_tree()

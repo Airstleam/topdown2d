@@ -11,7 +11,10 @@ var resume = false
 var save = false
 var load = false
 var player_is_dead = false
-
+var player_damage_ax = 1
+var player_damage_pickax = 1
+var player_iron_ore = 0
+var player_board = 0
 
 var slime_count = 0
 var slime_data = []

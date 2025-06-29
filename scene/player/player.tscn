@@ -1687,8 +1687,7 @@ inv = ExtResource("2_2fvbb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 10)
 sprite_frames = SubResource("SpriteFrames_l1uwf")
-animation = &"pickax_up"
-frame = 1
+animation = &"pickax_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
@@ -1707,7 +1706,7 @@ disabled = true
 [node name="HitboxAx" type="Area2D" parent="."]
 position = Vector2(0, 27)
 collision_layer = 0
-collision_mask = 4
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxAx"]
 position = Vector2(1, -11)
@@ -1717,7 +1716,7 @@ disabled = true
 [node name="HitboxPickax" type="Area2D" parent="."]
 position = Vector2(0, 27)
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPickax"]
 position = Vector2(1, -11)
@@ -1827,4 +1826,8 @@ texture = ExtResource("7_hp4bs")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="area_entered" from="HitboxAx" to="." method="_on_hitbox_ax_area_entered"]
+[connection signal="body_entered" from="HitboxAx" to="." method="_on_hitbox_ax_body_entered"]
+[connection signal="area_entered" from="HitboxPickax" to="." method="_on_hitbox_pickax_area_entered"]
+[connection signal="body_entered" from="HitboxPickax" to="." method="_on_hitbox_pickax_body_entered"]
 [connection signal="pressed" from="CanvasLayer/ButtonMenu" to="CanvasLayer/ButtonMenu" method="_on_pressed"]

@@ -49,7 +49,6 @@ func _physics_process(delta):
 		animP.play("Idle")
 	move_and_slide()	
 
-#спросить у гпт объяснение обе функции
 func update_slime_data():
 	var found = false 
 	for i in range(Global.slime_data.size()):

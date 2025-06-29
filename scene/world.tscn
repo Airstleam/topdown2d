@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=46 format=4 uid="uid://dxfxfrva3gtlg"]
 
 [ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/tile_map and sprites/decor_16x16.png" id="1_7ghph"]
 [ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://cex1dor1b5ub3" path="res://scene/rain.tscn" id="15_a0bac"]
 [ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://scene/player/inventory/inv_ui.tscn" id="16_hnm4a"]
 [ext_resource type="PackedScene" uid="uid://blm560rgtq60a" path="res://scene/shop.tscn" id="16_tmyho"]
+[ext_resource type="PackedScene" uid="uid://cgonl5u1ugp0m" path="res://scene/resource/tree.tscn" id="17_hnm4a"]
+[ext_resource type="PackedScene" uid="uid://b3f4104057sii" path="res://scene/resource/iron.tscn" id="18_e4vd1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0bac"]
 texture = ExtResource("1_7ghph")
@@ -1922,6 +1924,12 @@ horizontal_alignment = 1
 [node name="Shop" parent="." instance=ExtResource("16_tmyho")]
 z_index = 6
 position = Vector2(441, 290)
+
+[node name="Tree" parent="." instance=ExtResource("17_hnm4a")]
+position = Vector2(526, 279)
+
+[node name="Iron" parent="." instance=ExtResource("18_e4vd1")]
+position = Vector2(434, 235)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

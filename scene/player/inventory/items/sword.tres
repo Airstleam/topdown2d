@@ -1,14 +1,8 @@
-[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://cnnx7wxfwcd2y"]
+[gd_resource type="Resource" script_class="InvItem" load_steps=2 format=3 uid="uid://cnnx7wxfwcd2y"]
 
 [ext_resource type="Script" uid="uid://dpxqcank4js4u" path="res://scene/player/inventory/invantory_item.gd" id="1_bfv5h"]
-[ext_resource type="Texture2D" uid="uid://bri5mlku0tqq5" path="res://assets/used-png/InventoryItem.png" id="2_ly8s8"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ach73"]
-atlas = ExtResource("2_ly8s8")
-region = Rect2(215.005, 427.455, 42.909, 42.909)
 
 [resource]
 script = ExtResource("1_bfv5h")
-name = "sword"
-texture = SubResource("AtlasTexture_ach73")
+name = ""
 metadata/_custom_type_script = "uid://dpxqcank4js4u"
