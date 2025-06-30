@@ -15,7 +15,6 @@ enum{
 
 @export var inv: Inv
 
-
 var idle_dir = DOWN
 var can_move = true
 
@@ -77,8 +76,8 @@ func _physics_process(delta):
 	if !can_move:
 		return
 	
-	if Input.is_action_just_pressed("attack"):
-		pickax()
+	if Input.is_action_just_pressed("attack") and can_move:
+		use_active_item()
 	elif Input.is_action_pressed("up"):
 		up_move()
 	elif Input.is_action_pressed("down"):
@@ -176,59 +175,37 @@ func idle():
 				anim.flip_h = true
 				animP.play("Front_idle")
 				
-func attack():
-	can_move = false
-	velocity = Vector2.ZERO
-	if velocity == Vector2.ZERO:
-		match idle_dir:
-			DOWN:
-				animP.play("Attack_down")
-			UP:
-				animP.play("Attack_up")
-			RIGHT:
-				
-				animP.play("Attack_right")
-			LEFT:
-				animP.play("Attack_left")
-				
-	await animP.animation_finished
-	can_move = true
+func use_active_item():
+	if not Global.active_item :
+		return
 
-func ax():
-	can_move = false
-	velocity = Vector2.ZERO
-	if velocity == Vector2.ZERO:
-		match idle_dir:
-			DOWN:
-				animP.play("ax_down")
-			UP:
-				animP.play("ax_up")
-			RIGHT:
-				
-				animP.play("ax_right")
-			LEFT:
-				animP.play("ax_left")
-				
-	await animP.animation_finished
-	can_move = true
-	
-func pickax():
-	can_move = false
-	velocity = Vector2.ZERO
-	if velocity == Vector2.ZERO:
-		match idle_dir:
-			DOWN:
-				animP.play("pickax_down")
-			UP:
-				animP.play("pickax_up")
-			RIGHT:
-				
-				animP.play("pickax_right")
-			LEFT:
-				animP.play("pickax_left")
-				
-	await animP.animation_finished
-	can_move = true
+	# Только если нажата атака (а не просто выбран предмет)
+	if Input.is_action_just_pressed("attack") and Global.active_item.tool_id != "resource":
+		velocity = Vector2.ZERO
+		can_move = false
+
+		match Global.active_item.tool_id:
+			"ax":
+				match idle_dir:
+					DOWN: animP.play("ax_down")
+					UP: animP.play("ax_up")
+					RIGHT: animP.play("ax_right")
+					LEFT: animP.play("ax_left")
+			"pickax":
+				match idle_dir:
+					DOWN: animP.play("pickax_down")
+					UP: animP.play("pickax_up")
+					RIGHT: animP.play("pickax_right")
+					LEFT: animP.play("pickax_left")
+			"sword":
+				match idle_dir:
+					DOWN: animP.play("Attack_down")
+					UP: animP.play("Attack_up")
+					RIGHT: animP.play("Attack_right")
+					LEFT: animP.play("Attack_left")
+					
+		await animP.animation_finished
+		can_move = true
 
 func stats():
 	if Input.is_action_just_pressed("stats_text") and $CanvasLayer/speed.visible == false:

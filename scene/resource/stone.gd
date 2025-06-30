@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 
-var board = preload("res://scene/collactables/iron_ore.tscn")
+var stone = preload("res://scene/collactables/stone_ore.tscn")
 
 var health = 3
 
@@ -11,9 +11,9 @@ func _process(delta):
 		death()
 		
 func death():
-	var board_res = board.instantiate()
-	get_tree().current_scene.add_child(board_res)
-	board_res.global_position = global_position
+	var stone_res = stone.instantiate()
+	get_tree().current_scene.add_child(stone_res)
+	stone_res.global_position = global_position
 	queue_free()
 		
 func take_damage_ore():

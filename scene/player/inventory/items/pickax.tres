@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://cjmrexmw6gejt"]
+
+[ext_resource type="Script" uid="uid://dpxqcank4js4u" path="res://scene/player/inventory/invantory_item.gd" id="1_dfey8"]
+[ext_resource type="Texture2D" uid="uid://rahtg2ncdyeh" path="res://assets/used-png/InvItem.png" id="2_t27j7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwyh2"]
+atlas = ExtResource("2_t27j7")
+region = Rect2(301, 386, 40, 41)
+
+[resource]
+script = ExtResource("1_dfey8")
+name = "pickax"
+texture = SubResource("AtlasTexture_fwyh2")
+tool_id = "pickax"
+metadata/_custom_type_script = "uid://dpxqcank4js4u"

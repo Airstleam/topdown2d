@@ -1,5 +1,7 @@
 extends Node
 
+var active_item: InvItem = null
+var player_gold = 0
 var player_health = 100
 var max_health = 100
 var player_money = 100
@@ -13,7 +15,7 @@ var load = false
 var player_is_dead = false
 var player_damage_ax = 1
 var player_damage_pickax = 1
-var player_iron_ore = 0
+var player_stone_ore = 0
 var player_board = 0
 
 var slime_count = 0

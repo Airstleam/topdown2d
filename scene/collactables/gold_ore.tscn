@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://302ukqxjseci"]
+
+[ext_resource type="Script" uid="uid://dfwfncrfcnkas" path="res://scene/collactables/gold_ore.gd" id="1_12ai3"]
+[ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="1_ykd5x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ai3"]
+atlas = ExtResource("1_ykd5x")
+region = Rect2(32, 97, 16, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f34oa"]
+radius = 4.58707
+
+[node name="GoldOre" type="Node2D"]
+script = ExtResource("1_12ai3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.370242, 0.370242)
+texture = SubResource("AtlasTexture_12ai3")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.90735e-06, 0)
+scale = Vector2(1.09002, 1.04727)
+shape = SubResource("CircleShape2D_f34oa")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://colrm0rvkog1c"]
+
+[ext_resource type="Script" uid="uid://dpxqcank4js4u" path="res://scene/player/inventory/invantory_item.gd" id="1_fwyh2"]
+[ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="2_tqw7o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgr43"]
+atlas = ExtResource("2_tqw7o")
+region = Rect2(32, 65, 16, 15)
+
+[resource]
+script = ExtResource("1_fwyh2")
+name = "stone"
+texture = SubResource("AtlasTexture_dgr43")
+tool_id = "resource"
+metadata/_custom_type_script = "uid://dpxqcank4js4u"

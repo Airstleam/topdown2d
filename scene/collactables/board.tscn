@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvtcylcfal223"]
+[gd_scene load_steps=6 format=3 uid="uid://cvtcylcfal223"]
 
 [ext_resource type="Script" uid="uid://diwrardn2bxyb" path="res://scene/collactables/board.gd" id="1_53g5u"]
+[ext_resource type="Resource" uid="uid://c7lv24vihc5t3" path="res://scene/player/inventory/items/board.tres" id="2_ekarf"]
 [ext_resource type="Texture2D" uid="uid://rahtg2ncdyeh" path="res://assets/used-png/InvItem.png" id="2_vj5mj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_53g5u"]
@@ -12,6 +13,7 @@ radius = 9.2237
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_53g5u")
+item = ExtResource("2_ekarf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.370242, 0.370242)

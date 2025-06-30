@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://c8ai6matr17hc"]
+[gd_scene load_steps=118 format=3 uid="uid://c8ai6matr17hc"]
 
 [ext_resource type="Script" uid="uid://ccmp2430patir" path="res://scene/player/player.gd" id="1_hjaqi"]
 [ext_resource type="Resource" uid="uid://d13aog65ygr2d" path="res://scene/player/inventory/playerinv.tres" id="2_2fvbb"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://c5mbng1xiarti" path="res://assets/used-png/Sprite-0002 (1).png" id="5_hp4bs"]
 [ext_resource type="PackedScene" uid="uid://l4cx13q6b1fq" path="res://scene/UI/pause_menu.tscn" id="6_oh5ij"]
 [ext_resource type="Texture2D" uid="uid://dxebnulicn77j" path="res://assets/used-png/circle.png" id="7_hp4bs"]
+[ext_resource type="AudioStream" uid="uid://bqak1mrf6pw6r" path="res://assets/sounds/sword-sound-2-36274.mp3" id="10_1wtbu"]
+[ext_resource type="AudioStream" uid="uid://dmk2me7img3bp" path="res://assets/sounds/chopping-tree-root-212654.mp3" id="11_p3aiu"]
+[ext_resource type="AudioStream" uid="uid://b0mygad6qndwm" path="res://assets/sounds/pickaxe-blow-333695.mp3" id="12_f5r2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2fvbb"]
 atlas = ExtResource("3_g2vtq")
@@ -701,6 +704,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false, true]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Sword:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.139547, 0.141336),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_rf2qa"]
 length = 0.571429
@@ -751,6 +766,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(10, -15), Vector2(10, -15)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Sword:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.143125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_ko5ao"]
@@ -803,6 +830,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(-7, -15), Vector2(-7, -15)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Sword:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.141336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_w8280"]
 length = 0.571429
@@ -854,6 +893,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(8, -17), Vector2(8, -17)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Sword:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.143125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_0fmm8"]
 length = 0.571429
@@ -904,6 +955,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, -22), Vector2(0, -22)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Sword:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.144914),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_q7u3n"]
@@ -1119,6 +1182,42 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(1, -11)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sounds/Sword:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sounds/Ax:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sounds/Pickax:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_ec2ns"]
 length = 1.2
@@ -1226,6 +1325,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(1, -11)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Ax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_dm46t"]
 length = 0.666667
@@ -1276,6 +1387,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Ax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_4d8ul"]
@@ -1328,6 +1451,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(11, -16)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Ax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_5n4ea"]
 length = 0.666667
@@ -1378,6 +1513,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Ax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_2v114"]
@@ -1430,6 +1577,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(1, -11)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Pickax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_d3x55"]
 length = 0.666667
@@ -1480,6 +1639,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Pickax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_rd5ui"]
@@ -1532,6 +1703,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(11, -16)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Pickax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.338134),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_k3o1w"]
 length = 0.666667
@@ -1582,6 +1765,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, -27)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Pickax:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.332766),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8pv5j"]
@@ -1687,7 +1882,8 @@ inv = ExtResource("2_2fvbb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 10)
 sprite_frames = SubResource("SpriteFrames_l1uwf")
-animation = &"pickax_down"
+animation = &"pickax_up"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
@@ -1823,6 +2019,18 @@ libraries = {
 visible = false
 scale = Vector2(34.395, 34.395)
 texture = ExtResource("7_hp4bs")
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Sword" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("10_1wtbu")
+volume_db = -10.0
+
+[node name="Ax" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("11_p3aiu")
+
+[node name="Pickax" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("12_f5r2w")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
