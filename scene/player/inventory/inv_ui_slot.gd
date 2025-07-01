@@ -12,6 +12,9 @@ func update(slot: InvSlot):
 	else:
 		item_visual.visible = true
 		item_visual.texture = slot.item.texture
+		var tex_size = slot.item.texture.get_size()
+		var target_size = Vector2(35, 35)
+		item_visual.scale = target_size / tex_size
 		amount_text.visible = slot.amount > 1
 		amount_text.text = str(slot.amount)
 

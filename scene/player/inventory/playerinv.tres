@@ -42,7 +42,7 @@ metadata/_custom_type_script = "uid://cth38b0rp8ano"
 [sub_resource type="Resource" id="Resource_bwpcq"]
 script = ExtResource("2_g8gqn")
 item = ExtResource("8_lptgu")
-amount = 0
+amount = 2
 metadata/_custom_type_script = "uid://cth38b0rp8ano"
 
 [sub_resource type="Resource" id="Resource_gqx6p"]

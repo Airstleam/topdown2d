@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+@onready var anim = $AnimatedSprite2D
 
 var stone = preload("res://scene/collactables/stone_ore.tscn")
 
@@ -7,7 +8,13 @@ var health = 3
 
 	
 func _process(delta):
-	if health <= 0:
+	if health == 3:
+		anim.play("full")
+	elif health == 2:
+		anim.play("half_full")
+	elif health == 1:
+		anim.play("min_full")
+	elif health <= 0:
 		death()
 		
 func death():

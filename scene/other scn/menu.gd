@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	$AudioStreamPlayer.play()
+
 func _process(delta):
 	Engine.time_scale = 1
 	$AnimatedSprite2D.play("Down_idle")

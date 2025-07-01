@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhguov4e2q06x"]
+
+[ext_resource type="Script" uid="uid://bdtnm5w7sser2" path="res://scene/collactables/carrot.gd" id="1_4ka8e"]
+[ext_resource type="Resource" uid="uid://daln73rrh31bb" path="res://scene/player/inventory/items/carrot.tres" id="2_cp4n6"]
+[ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="2_m6gci"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp4n6"]
+atlas = ExtResource("2_m6gci")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dpiwe"]
+radius = 4.58707
+
+[node name="Carrot" type="Node2D"]
+script = ExtResource("1_4ka8e")
+item = ExtResource("2_cp4n6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.500846, 0.500846)
+texture = SubResource("AtlasTexture_cp4n6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.90735e-06, 0)
+scale = Vector2(1.09002, 1.04727)
+shape = SubResource("CircleShape2D_dpiwe")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

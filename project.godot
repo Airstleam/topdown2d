@@ -92,6 +92,7 @@ f={
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="tree"
 2d_physics/layer_5="ore"
+2d_physics/layer_6="eat"
 
 [rendering]
 

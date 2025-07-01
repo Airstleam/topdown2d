@@ -2,6 +2,9 @@ extends Node2D
 
 var outside = false
 
+func _ready():
+	$AudioStreamPlayer.play()
+
 func _physics_process(delta):
 	if outside and Input.is_action_just_pressed("E"):
 		get_tree().change_scene_to_file("res://scene/world.tscn")

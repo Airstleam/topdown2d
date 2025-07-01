@@ -6,7 +6,7 @@ var player = null
 func _on_area_2d_body_entered(body):
 	if body.name == "player":
 		player = body
-		Global.player_stone_ore += 1
+		Global.player_wheat += 1
 		playercollect()
 		queue_free()
 

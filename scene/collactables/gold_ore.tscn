@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://302ukqxjseci"]
+[gd_scene load_steps=6 format=3 uid="uid://302ukqxjseci"]
 
 [ext_resource type="Script" uid="uid://dfwfncrfcnkas" path="res://scene/collactables/gold_ore.gd" id="1_12ai3"]
 [ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="1_ykd5x"]
+[ext_resource type="Resource" uid="uid://bp52ba5fxc1sq" path="res://scene/player/inventory/items/gold_ore.tres" id="2_f34oa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12ai3"]
 atlas = ExtResource("1_ykd5x")
@@ -12,6 +13,7 @@ radius = 4.58707
 
 [node name="GoldOre" type="Node2D"]
 script = ExtResource("1_12ai3")
+item = ExtResource("2_f34oa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.370242, 0.370242)

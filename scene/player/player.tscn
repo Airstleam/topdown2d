@@ -1880,19 +1880,18 @@ script = ExtResource("1_hjaqi")
 inv = ExtResource("2_2fvbb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 10)
 sprite_frames = SubResource("SpriteFrames_l1uwf")
-animation = &"pickax_up"
-frame = 1
+animation = &"Down_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 11)
+visible = false
 shape = SubResource("CircleShape2D_hjaqi")
 
 [node name="Hitbox" type="Area2D" parent="."]
-position = Vector2(0, 27)
-collision_layer = 0
-collision_mask = 4
+visible = false
+position = Vector2(-1, 16)
+collision_layer = 128
+collision_mask = 36
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(1, -11)
@@ -1900,7 +1899,8 @@ shape = SubResource("CircleShape2D_fvtld")
 disabled = true
 
 [node name="HitboxAx" type="Area2D" parent="."]
-position = Vector2(0, 27)
+visible = false
+position = Vector2(-1, 16)
 collision_layer = 0
 collision_mask = 8
 
@@ -1910,7 +1910,8 @@ shape = SubResource("CircleShape2D_fvtld")
 disabled = true
 
 [node name="HitboxPickax" type="Area2D" parent="."]
-position = Vector2(0, 27)
+visible = false
+position = Vector2(-1, 16)
 collision_layer = 0
 collision_mask = 16
 

@@ -6,8 +6,7 @@ var player = null
 func _on_area_2d_body_entered(body):
 	if body.name == "player":
 		player = body
-		$Area2D/CollisionShape2D.disabled = true
-		Global.player_gold += 1
+		Global.player_gold_ore += 1
 		playercollect()
 		queue_free()
 

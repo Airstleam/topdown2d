@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://dspvlgx1yg5fn"]
+
+[ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="1_22csd"]
+[ext_resource type="Script" uid="uid://daxhhyxegvkjr" path="res://scene/resource/wheat_in_dirt.gd" id="1_e2xql"]
+[ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/tile_map and sprites/plains.png" id="2_56q40"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8l8b"]
+atlas = ExtResource("2_56q40")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2xql"]
+atlas = ExtResource("1_22csd")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56q40"]
+atlas = ExtResource("1_22csd")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie3ad"]
+atlas = ExtResource("1_22csd")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkq63"]
+atlas = ExtResource("1_22csd")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2xql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8l8b")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2xql")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56q40")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie3ad")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkq63")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_56q40"]
+radius = 8.30722
+
+[node name="WheatInDirt" type="StaticBody2D"]
+script = ExtResource("1_e2xql")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e2xql")
+animation = &"4"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+scale = Vector2(0.963017, 1)
+shape = SubResource("CircleShape2D_56q40")
+
+[node name="GrowTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

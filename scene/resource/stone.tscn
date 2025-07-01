@@ -1,25 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3f4104057sii"]
+[gd_scene load_steps=8 format=3 uid="uid://b3f4104057sii"]
 
 [ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="1_a17hx"]
 [ext_resource type="Script" uid="uid://d3mm33u3obiih" path="res://scene/resource/stone.gd" id="1_lstuu"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp1lh"]
+atlas = ExtResource("1_a17hx")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6q5u"]
+atlas = ExtResource("1_a17hx")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2uv8"]
+atlas = ExtResource("1_a17hx")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjqge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp1lh")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6q5u")
+}],
+"loop": true,
+"name": &"half_full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2uv8")
+}],
+"loop": true,
+"name": &"min_full",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k3vp"]
 size = Vector2(16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lstuu"]
-atlas = ExtResource("1_a17hx")
-region = Rect2(1, 48, 15, 16)
 
 [node name="Stone" type="StaticBody2D"]
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_lstuu")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bjqge")
+animation = &"min_full"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7k3vp")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("AtlasTexture_lstuu")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 16
