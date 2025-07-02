@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://c5uv8k1lptieh"]
+[gd_scene load_steps=28 format=4 uid="uid://c5uv8k1lptieh"]
 
 [ext_resource type="Texture2D" uid="uid://bpw68llbpnj7j" path="res://assets/tile_map and sprites/TopDownHouse_FloorsAndWalls.png" id="1_2813k"]
 [ext_resource type="Script" uid="uid://b4dh6b3c7oxvy" path="res://scene/other scn/house.gd" id="1_g7cke"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bgky5j1cssu47" path="res://assets/tile_map and sprites/TopDownHouse_FurnitureState2.png" id="5_1mg4w"]
 [ext_resource type="Texture2D" uid="uid://ci5m5uc7vfb8b" path="res://assets/tile_map and sprites/TopDownHouse_SmallItems.png" id="6_sgfgs"]
 [ext_resource type="PackedScene" uid="uid://c8ai6matr17hc" path="res://scene/player/player.tscn" id="8_66jkb"]
+[ext_resource type="AudioStream" uid="uid://ccsxwunnuang2" path="res://assets/sounds/gentle-lullaby-165122.mp3" id="10_igpxp"]
+[ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://scene/player/inventory/inv_ui.tscn" id="11_hkwoj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuyo6"]
 texture = ExtResource("1_2813k")
@@ -1339,7 +1341,9 @@ texture = ExtResource("5_1mg4w")
 11:6/0 = 0
 12:6/0 = 0
 0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:7/0 = 0
 2:7/0/z_index = 2
 3:7/0 = 0
@@ -1353,7 +1357,9 @@ texture = ExtResource("5_1mg4w")
 11:7/0 = 0
 12:7/0 = 0
 0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:8/0 = 0
 3:8/0 = 0
 4:8/0 = 0
@@ -1366,7 +1372,9 @@ texture = ExtResource("5_1mg4w")
 11:8/0 = 0
 12:8/0 = 0
 0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.07115, -8, 8, -8, 8, 0.179859, -3.04577, 0.203052)
 1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 3.9595, -8, 3.95257, 0, -8, -0.0839062)
 2:9/0 = 0
 3:9/0 = 0
 4:9/0 = 0
@@ -2221,6 +2229,9 @@ sources/3 = SubResource("TileSetAtlasSource_mj2rm")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1mg4w"]
 size = Vector2(30, 20)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hkwoj"]
+radius = 15.1327
+
 [node name="House" type="Node2D"]
 script = ExtResource("1_g7cke")
 
@@ -2234,7 +2245,7 @@ tile_set = SubResource("TileSet_55q24")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAKAAIAAAAGAAAAAAAKAAMAAAAGAAEAAAAKAAQAAAAGAAIAAAALAAIAAAAHAAAAAAALAAMAAAAHAAEAAAALAAQAAAAHAAIAAAAAAAIAAQACAAwAAAAAAAMAAQACAA0AAAAAAAQAAQACAA4AAAAAAAUAAQACAA8AAAABAAIAAQADAAwAAAABAAMAAQADAA0AAAABAAQAAQADAA4AAAABAAUAAQADAA8AAAACAAMAAQAEAAwAAAACAAQAAQAEAA0AAAACAAUAAQAEAA4AAAADAAMAAQAFAAwAAAADAAQAAQAFAA0AAAADAAUAAQAFAA4AAAAEAAMAAQAGAAwAAAAEAAQAAQAGAA0AAAAEAAUAAQAGAA4AAAAFAAMAAQAHAAwAAAAFAAQAAQAHAA0AAAAFAAUAAQAHAA4AAAAGAAMAAQAIAAwAAAAGAAQAAQAIAA0AAAAGAAUAAQAIAA4AAAAHAAMAAQAJAAwAAAAHAAQAAQAJAA0AAAAHAAUAAQAJAA4AAAAIAAMAAQALAAwAAAAIAAQAAQALAA0AAAAIAAUAAQALAA4AAAAIAAYAAQALAA8AAAAJAAMAAQAMAAwAAAAJAAQAAQAMAA0AAAAJAAUAAQAMAA4AAAAJAAYAAQAMAA8AAAANAAMAAQAHAAcAAAANAAQAAQAHAAgAAAANAAUAAQAHAAkAAAAOAAMAAQAIAAcAAAAOAAQAAQAIAAgAAAAOAAUAAQAIAAkAAAAAAAcAAQAAAA0AAAAAAAgAAQAAAA4AAAAAAAkAAQAAAA8AAAABAAcAAQABAA0AAAABAAgAAQABAA4AAAABAAkAAQABAA8AAAAAAAYAAQAAAAwAAAABAAYAAQABAAwAAAAMAAMAAgADAAcAAAAMAAQAAgADAAgAAAAMAAUAAgADAAkAAAALAAkAAgADABAAAAALAAoAAgADABEAAAAMAAkAAgAEABAAAAAMAAoAAgAEABEAAAACAAIAAQAEAA8AAAADAAIAAQAFAA8AAAAGAAIAAQAIAA8AAAAHAAIAAQAJAA8AAAAIAAIAAQAKAA8AAAAKAAUAAQAIAAMAAAALAAUAAQAJAAMAAAAHAAkAAQAFAAIAAAAHAAoAAQAFAAMAAAAGAAkAAQAJAAAAAAAGAAoAAQAJAAEAAAAIAAkAAQAGAAIAAAAIAAoAAQAGAAMAAAACAAcAAQAAAAQAAAACAAgAAQAAAAUAAAADAAcAAQABAAQAAAADAAgAAQABAAUAAAADAAkAAQABAAYAAAAEAAgAAQAJAAAAABAEAAkAAQAJAAEAABAEAAYAAQAJAAAAABAEAAcAAQAJAAEAABACAAkAAQAAAAYAAAAOAAgAAgACAAcAAAAOAAkAAgACAAgAAAAOAAoAAgACAAkAAAAMAAYAAQAKAAIAAAAMAAcAAQAKAAMAAAANAAYAAQALAAIAAAANAAcAAQALAAMAAAAOAAYAAQAMAAIAAAAOAAcAAQAMAAMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAIAAAAGAAAAAAAKAAMAAAAGAAEAAAAKAAQAAAAGAAIAAAALAAIAAAAHAAAAAAALAAMAAAAHAAEAAAALAAQAAAAHAAIAAAAAAAIAAQACAAwAAAAAAAMAAQACAA0AAAAAAAQAAQACAA4AAAAAAAUAAQACAA8AAAABAAIAAQADAAwAAAABAAMAAQADAA0AAAABAAQAAQADAA4AAAABAAUAAQADAA8AAAACAAMAAQAEAAwAAAACAAQAAQAEAA0AAAACAAUAAQAEAA4AAAADAAMAAQAFAAwAAAADAAQAAQAFAA0AAAADAAUAAQAFAA4AAAAEAAMAAQAGAAwAAAAEAAQAAQAGAA0AAAAEAAUAAQAGAA4AAAAFAAMAAQAHAAwAAAAFAAQAAQAHAA0AAAAFAAUAAQAHAA4AAAAGAAMAAQAIAAwAAAAGAAQAAQAIAA0AAAAGAAUAAQAIAA4AAAAHAAMAAQAJAAwAAAAHAAQAAQAJAA0AAAAHAAUAAQAJAA4AAAAIAAMAAQALAAwAAAAIAAQAAQALAA0AAAAIAAUAAQALAA4AAAAIAAYAAQALAA8AAAAJAAMAAQAMAAwAAAAJAAQAAQAMAA0AAAAJAAUAAQAMAA4AAAAJAAYAAQAMAA8AAAAAAAcAAQAAAA0AAAAAAAgAAQAAAA4AAAAAAAkAAQAAAA8AAAABAAcAAQABAA0AAAABAAgAAQABAA4AAAABAAkAAQABAA8AAAAAAAYAAQAAAAwAAAABAAYAAQABAAwAAAAMAAMAAgADAAcAAAAMAAQAAgADAAgAAAAMAAUAAgADAAkAAAALAAkAAgADABAAAAALAAoAAgADABEAAAAMAAkAAgAEABAAAAAMAAoAAgAEABEAAAACAAIAAQAEAA8AAAADAAIAAQAFAA8AAAAGAAIAAQAIAA8AAAAHAAIAAQAJAA8AAAAIAAIAAQAKAA8AAAAKAAUAAQAIAAMAAAALAAUAAQAJAAMAAAAHAAkAAQAFAAIAAAAHAAoAAQAFAAMAAAAGAAkAAQAJAAAAAAAGAAoAAQAJAAEAAAAIAAkAAQAGAAIAAAAIAAoAAQAGAAMAAAACAAcAAQAAAAQAAAACAAgAAQAAAAUAAAADAAcAAQABAAQAAAADAAgAAQABAAUAAAADAAkAAQABAAYAAAAEAAgAAQAJAAAAABAEAAkAAQAJAAEAABAEAAYAAQAJAAAAABAEAAcAAQAJAAEAABACAAkAAQAAAAYAAAAMAAYAAQAKAAIAAAAMAAcAAQAKAAMAAAANAAYAAQALAAIAAAANAAcAAQALAAMAAAAOAAYAAQAMAAIAAAAOAAcAAQAMAAMAAAANAAMAAgAAAAcAAAANAAQAAgAAAAgAAAANAAUAAgAAAAkAAAAOAAMAAgABAAcAAAAOAAQAAgABAAgAAAAOAAUAAgABAAkAAAA=")
 tile_set = SubResource("TileSet_00wbv")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
@@ -2242,12 +2253,13 @@ tile_map_data = PackedByteArray("AAAKAAIAAAAIAAAAAAAKAAMAAAAIAAEAAAAKAAQAAAAIAAI
 tile_set = SubResource("TileSet_k1uip")
 
 [node name="player" parent="." instance=ExtResource("8_66jkb")]
-position = Vector2(176, 70)
+position = Vector2(176, 80)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(3, 156, 21, 156, 21, 105, 0, 105, 0, 91, 27, 91, 139, 91, 139, 112, 160, 112, 160, 76, 194, 76, 194, 95, 240, 95, 240, 140, 224, 140, 224, 169, 240, 169, 240, 176, 204, 176, 179, 176, 139, 176, 139, 157, 117, 157, 117, 176, 111, 176, 111, 157, 96, 157, 96, 176, -3, 176, -19, 193, 283, 194, 279, -21, -39, -19, 0, 176, 0, 156)
+polygon = PackedVector2Array(3, 156, 21, 156, 21, 105, 0, 105, 0, 91, 27, 91, 139, 91, 139, 112, 160, 112, 160, 76, 194, 76, 194, 96, 207, 96, 207, 81, 240, 81, 240, 140, 224, 140, 224, 169, 240, 169, 240, 176, 204, 176, 179, 176, 139, 176, 139, 157, 117, 157, 117, 176, 111, 176, 111, 157, 96, 157, 96, 176, -3, 176, -19, 193, 283, 194, 279, -21, -39, -19, 0, 176, 0, 156)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(34, 112, 63, 112, 65, 112, 65, 109, 80, 109, 80, 122, 65, 122, 63, 122, 63, 141, 65, 141, 80, 141, 80, 154, 65, 154, 65, 148, 63, 148, 34, 148)
@@ -2276,6 +2288,43 @@ position = Vector2(121, 80)
 zoom = Vector2(3.035, 3.035)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_igpxp")
+
+[node name="Repository" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Repository"]
+position = Vector2(225, 85)
+shape = SubResource("CircleShape2D_hkwoj")
+
+[node name="Repository2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Repository2"]
+position = Vector2(80, 90)
+shape = SubResource("CircleShape2D_hkwoj")
+
+[node name="Repository3" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Repository3"]
+position = Vector2(15, 89)
+shape = SubResource("CircleShape2D_hkwoj")
+
+[node name="Inv_UI" parent="Repository3" instance=ExtResource("11_hkwoj")]
+
+[node name="PlayerInv" parent="Repository3/Inv_UI" index="0"]
+visible = false
+
+[node name="FridgeInv" parent="Repository3/Inv_UI" index="1"]
+offset_left = 5.0
+offset_top = 41.0
+offset_right = 167.0
+offset_bottom = 61.0
+scale = Vector2(0.131951, 1.0856)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Repository3" to="." method="_on_repository_3_body_entered"]
+[connection signal="body_exited" from="Repository3" to="." method="_on_repository_3_body_exited"]
+
+[editable path="Repository3/Inv_UI"]

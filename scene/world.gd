@@ -37,7 +37,7 @@ func _process(delta):
 
 	if house and Input.is_action_just_pressed("E"):
 		get_tree().change_scene_to_file("res://scene/other scn/house.tscn")
-		Global.player_position = Vector2(175.0, 69.0)
+		Global.player_position = Vector2(176.0, 80.0)
 		
 	
 

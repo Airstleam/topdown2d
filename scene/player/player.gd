@@ -34,9 +34,10 @@ func _ready():
 	Engine.time_scale = 1
 	position = Global.player_position
 	$CanvasLayer/PauseMenu.visible = false
+	$CanvasLayer.visible = true
 
 func _physics_process(delta):
-	
+	Global.player_position = position
 	money_text.text = str(Global.player_money) + "$"
 	#buttons
 	if Input.is_action_just_pressed("exit"):
@@ -203,6 +204,12 @@ func use_active_item():
 					UP: animP.play("Attack_up")
 					RIGHT: animP.play("Attack_right")
 					LEFT: animP.play("Attack_left")
+			"water":
+				match idle_dir:
+					DOWN: animP.play("water_down")
+					UP: animP.play("water_up")
+					RIGHT: animP.play("water_right")
+					LEFT: animP.play("water_left")
 					
 		await animP.animation_finished
 		can_move = true

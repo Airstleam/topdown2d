@@ -12,7 +12,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_f2u1w")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="PlayerInv" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_right = 162.0
 offset_bottom = 20.0
@@ -22,7 +22,7 @@ patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
 
-[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+[node name="GridContainer" type="GridContainer" parent="PlayerInv"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,26 +37,62 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 8
 
-[node name="inv_UI_slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot1" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot2" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot3" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot4" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot5" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot6" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot7" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
 
-[node name="inv_UI_slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_r1b7r")]
+[node name="inv_UI_slot8" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
+layout_mode = 2
+
+[node name="FridgeInv" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 162.0
+offset_bottom = 20.0
+scale = Vector2(0.310119, 2.52704)
+texture = ExtResource("2_dn3an")
+
+[node name="GridContainer" type="GridContainer" parent="FridgeInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.2378
+offset_top = -6.77264
+offset_right = 96.7622
+offset_bottom = 29.2274
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.20334, 0.37808)
+columns = 2
+
+[node name="inv_UI_slot1" parent="FridgeInv/GridContainer" instance=ExtResource("3_r1b7r")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="FridgeInv/GridContainer" instance=ExtResource("3_r1b7r")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="FridgeInv/GridContainer" instance=ExtResource("3_r1b7r")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="FridgeInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2

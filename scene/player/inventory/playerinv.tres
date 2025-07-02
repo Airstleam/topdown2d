@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Inv" load_steps=17 format=3 uid="uid://d13aog65ygr2d"]
+[gd_resource type="Resource" script_class="Inv" load_steps=18 format=3 uid="uid://d13aog65ygr2d"]
 
 [ext_resource type="Script" uid="uid://cth38b0rp8ano" path="res://scene/player/inventory/Inv_slot.gd" id="2_g8gqn"]
 [ext_resource type="Script" uid="uid://c4au23equyvwh" path="res://scene/player/inventory/inventory.gd" id="3_11wfs"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://c7lv24vihc5t3" path="res://scene/player/inventory/items/board.tres" id="6_a1l3a"]
 [ext_resource type="Resource" uid="uid://cjmrexmw6gejt" path="res://scene/player/inventory/items/pickax.tres" id="7_g5d6u"]
 [ext_resource type="Resource" uid="uid://bp52ba5fxc1sq" path="res://scene/player/inventory/items/gold_ore.tres" id="8_lptgu"]
+[ext_resource type="Resource" uid="uid://ctlo7ptct1c8b" path="res://scene/player/inventory/items/water.tres" id="9_r02fj"]
 
 [sub_resource type="Resource" id="Resource_f70d8"]
 script = ExtResource("2_g8gqn")
@@ -52,6 +53,7 @@ metadata/_custom_type_script = "uid://cth38b0rp8ano"
 
 [sub_resource type="Resource" id="Resource_rdwic"]
 script = ExtResource("2_g8gqn")
+item = ExtResource("9_r02fj")
 amount = 0
 metadata/_custom_type_script = "uid://cth38b0rp8ano"
 

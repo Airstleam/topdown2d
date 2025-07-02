@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://ctlo7ptct1c8b"]
+
+[ext_resource type="Script" uid="uid://dpxqcank4js4u" path="res://scene/player/inventory/invantory_item.gd" id="1_fwyh2"]
+[ext_resource type="Texture2D" uid="uid://rahtg2ncdyeh" path="res://assets/used-png/InvItem.png" id="2_5x0mu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5myj3"]
+atlas = ExtResource("2_5x0mu")
+region = Rect2(303, 434, 36, 33)
+
+[resource]
+script = ExtResource("1_fwyh2")
+name = "water can"
+texture = SubResource("AtlasTexture_5myj3")
+tool_id = "water"
+metadata/_custom_type_script = "uid://dpxqcank4js4u"

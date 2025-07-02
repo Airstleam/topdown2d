@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=44 format=4 uid="uid://dxfxfrva3gtlg"]
 
 [ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/tile_map and sprites/decor_16x16.png" id="1_7ghph"]
 [ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/tile_map and sprites/plains.png" id="9_e4vd1"]
 [ext_resource type="Texture2D" uid="uid://dxebnulicn77j" path="res://assets/used-png/circle.png" id="13_f345f"]
 [ext_resource type="PackedScene" uid="uid://dcx6b4mpg64cq" path="res://scene/enemy/fast_enemy.tscn" id="14_bqa5m"]
-[ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://scene/player/inventory/inv_ui.tscn" id="16_hnm4a"]
 [ext_resource type="PackedScene" uid="uid://blm560rgtq60a" path="res://scene/shop.tscn" id="16_tmyho"]
 [ext_resource type="PackedScene" uid="uid://cgonl5u1ugp0m" path="res://scene/resource/tree.tscn" id="17_hnm4a"]
 [ext_resource type="PackedScene" uid="uid://b3f4104057sii" path="res://scene/resource/stone.tscn" id="18_e4vd1"]
@@ -1481,14 +1480,6 @@ theme_override_font_sizes/font_size = 100
 text = "1 DAY"
 metadata/_edit_use_anchors_ = true
 
-[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("16_hnm4a")]
-z_index = 100
-offset_left = 382.0
-offset_top = 565.0
-offset_right = 422.0
-offset_bottom = 605.0
-scale = Vector2(2.77917, 2.75542)
-
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(441, 336)
 scale = Vector2(0.135, 0.135)
@@ -1644,7 +1635,7 @@ position = Vector2(181, 606)
 position = Vector2(857, 84)
 
 [node name="player" parent="Enviroment" instance=ExtResource("1_pjass")]
-position = Vector2(369, 314)
+position = Vector2(364, 282)
 collision_mask = 25
 
 [node name="Camera2D" type="Camera2D" parent="Enviroment/player"]
@@ -1684,6 +1675,7 @@ position = Vector2(119, 167)
 
 [node name="CarrotInDirt8" parent="Enviroment/Carrots" instance=ExtResource("19_a7xoa")]
 position = Vector2(136, 167)
+stage = 2
 
 [node name="CarrotInDirt9" parent="Enviroment/Carrots" instance=ExtResource("19_a7xoa")]
 position = Vector2(153, 167)
@@ -1717,6 +1709,7 @@ position = Vector2(136, 201)
 
 [node name="CarrotInDirt19" parent="Enviroment/Carrots" instance=ExtResource("19_a7xoa")]
 position = Vector2(153, 201)
+stage = 3
 
 [node name="CarrotInDirt20" parent="Enviroment/Carrots" instance=ExtResource("19_a7xoa")]
 position = Vector2(169, 201)
@@ -1738,6 +1731,7 @@ position = Vector2(169, 218)
 
 [node name="CarrotInDirt26" parent="Enviroment/Carrots" instance=ExtResource("19_a7xoa")]
 position = Vector2(102, 235)
+stage = 1
 
 [node name="CarrotInDirt27" parent="Enviroment/Carrots" instance=ExtResource("19_a7xoa")]
 position = Vector2(119, 235)
@@ -1789,6 +1783,7 @@ stage = 4
 
 [node name="WheatInDirt2" parent="Enviroment/Wheats" instance=ExtResource("22_vme25")]
 position = Vector2(298, 149)
+stage = 1
 
 [node name="WheatInDirt3" parent="Enviroment/Wheats" instance=ExtResource("22_vme25")]
 position = Vector2(282, 149)
@@ -1816,6 +1811,7 @@ position = Vector2(247, 166)
 
 [node name="WheatInDirt11" parent="Enviroment/Wheats" instance=ExtResource("22_vme25")]
 position = Vector2(229, 184)
+stage = 3
 
 [node name="WheatInDirt12" parent="Enviroment/Wheats" instance=ExtResource("22_vme25")]
 position = Vector2(298, 184)

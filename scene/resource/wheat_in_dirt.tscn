@@ -75,7 +75,7 @@ script = ExtResource("1_e2xql")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e2xql")
-animation = &"4"
+animation = &"0"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 32
