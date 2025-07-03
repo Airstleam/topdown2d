@@ -177,11 +177,11 @@ func idle():
 				animP.play("Front_idle")
 				
 func use_active_item():
-	if not Global.active_item :
+	if not Global.active_item:
 		return
 
 	# Только если нажата атака (а не просто выбран предмет)
-	if Input.is_action_just_pressed("attack") and Global.active_item.tool_id != "resource":
+	if Input.is_action_just_pressed("attack") and Global.active_item.tool_id != "resource" and Global.is_using_inventory == false:
 		velocity = Vector2.ZERO
 		can_move = false
 

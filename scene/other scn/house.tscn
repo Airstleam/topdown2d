@@ -2290,41 +2290,48 @@ zoom = Vector2(3.035, 3.035)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_igpxp")
 
-[node name="Repository" type="Area2D" parent="."]
+[node name="CommodeRepository" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Repository"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CommodeRepository"]
 position = Vector2(225, 85)
 shape = SubResource("CircleShape2D_hkwoj")
 
-[node name="Repository2" type="Area2D" parent="."]
+[node name="CupboardRepository" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Repository2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CupboardRepository"]
 position = Vector2(80, 90)
 shape = SubResource("CircleShape2D_hkwoj")
 
-[node name="Repository3" type="Area2D" parent="."]
+[node name="FridgeRepository" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Repository3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FridgeRepository"]
 position = Vector2(15, 89)
 shape = SubResource("CircleShape2D_hkwoj")
 
-[node name="Inv_UI" parent="Repository3" instance=ExtResource("11_hkwoj")]
+[node name="Inv_UI" parent="FridgeRepository" instance=ExtResource("11_hkwoj")]
 
-[node name="PlayerInv" parent="Repository3/Inv_UI" index="0"]
+[node name="PlayerInv" parent="FridgeRepository/Inv_UI" index="0"]
 visible = false
 
-[node name="FridgeInv" parent="Repository3/Inv_UI" index="1"]
-offset_left = 5.0
-offset_top = 41.0
-offset_right = 167.0
-offset_bottom = 61.0
-scale = Vector2(0.131951, 1.0856)
+[node name="FridgeInv" parent="FridgeRepository/Inv_UI" index="1"]
+visible = true
+offset_left = 4.0
+offset_top = 37.0
+offset_right = 166.0
+offset_bottom = 57.0
+scale = Vector2(0.149095, 1.31845)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Repository3" to="." method="_on_repository_3_body_entered"]
-[connection signal="body_exited" from="Repository3" to="." method="_on_repository_3_body_exited"]
+[connection signal="body_entered" from="CommodeRepository" to="." method="_on_commode_repository_body_entered"]
+[connection signal="body_exited" from="CommodeRepository" to="." method="_on_commode_repository_body_exited"]
+[connection signal="body_entered" from="CupboardRepository" to="." method="_on_cupboard_repository_body_entered"]
+[connection signal="body_exited" from="CupboardRepository" to="." method="_on_cupboard_repository_body_exited"]
+[connection signal="body_entered" from="FridgeRepository" to="." method="_on_fridge_repository_body_entered"]
+[connection signal="body_exited" from="FridgeRepository" to="." method="_on_fridge_repository_body_exited"]
 
-[editable path="Repository3/Inv_UI"]
+[editable path="player"]
+[editable path="player/CanvasLayer/Inv_UI"]
+[editable path="FridgeRepository/Inv_UI"]

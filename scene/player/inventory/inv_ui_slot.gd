@@ -2,37 +2,47 @@ extends Panel
 
 @onready var item_visual: Sprite2D = $CenterContainer/Panel/item_desplay
 @onready var amount_text: Label = $CenterContainer/Panel/Label
-@onready var player_inv: Inv = preload("res://scene/player/inventory/playerinv.tres")
-@onready var fridge_inv: Inv = preload("res://scene/player/inventory/fridgeinv.tres")
 
 var slot_data: InvSlot
 var is_from_player := true
 var inv_ui: Node
 
-func update(slot: InvSlot):
+	
+
+func init(slot: InvSlot, from_player: bool, ui: Node):
 	slot_data = slot
-	if !slot.item:
+	is_from_player = from_player
+	inv_ui = ui
+	update_visual()
+
+func update_visual():
+	if slot_data.item:
+		item_visual.visible = true
+		item_visual.texture = slot_data.item.texture
+		item_visual.scale = Vector2(35, 35) / slot_data.item.texture.get_size()
+		amount_text.text = str(slot_data.amount)
+		amount_text.visible = slot_data.amount > 1
+	else:
 		item_visual.visible = false
 		amount_text.visible = false
-	else:
-		item_visual.visible = true
-		item_visual.texture = slot.item.texture
-		var tex_size = slot.item.texture.get_size()
-		var target_size = Vector2(35, 35)
-		item_visual.scale = target_size / tex_size
-		amount_text.visible = slot.amount > 1
-		amount_text.text = str(slot.amount)
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if slot_data.item:
+		if Global.open_fridge:
+			transfer_item()
+		elif slot_data.item:
 			Global.active_item = slot_data.item
+			Global.is_using_inventory = true
+			await get_tree().create_timer(0.01).timeout
+			Global.is_using_inventory = false
 			
-			#move_item_to(fridge_inv.other_inv)
-		#else:
-			#move_item_to(player_inv.current_inv)
-
-func move_item_to(target_inv: Inv):
+			
+func transfer_item():
+	if not slot_data.item:
+		return
+	
+	var target_inv = inv_ui.fridge_inv if is_from_player else inv_ui.player_inv
+	
 	for slot in target_inv.slots:
 		if slot.item == null:
 			slot.item = slot_data.item
