@@ -7,7 +7,6 @@ var slot_data: InvSlot
 var is_from_player := true
 var inv_ui: Node
 
-	
 
 func init(slot: InvSlot, from_player: bool, ui: Node):
 	slot_data = slot
@@ -28,7 +27,7 @@ func update_visual():
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if Global.open_fridge:
+		if Global.is_open_some_inv:
 			transfer_item()
 		elif slot_data.item:
 			Global.active_item = slot_data.item
@@ -41,7 +40,11 @@ func transfer_item():
 	if not slot_data.item:
 		return
 	
-	var target_inv = inv_ui.fridge_inv if is_from_player else inv_ui.player_inv
+	var target_inv = inv_ui.other_inv if is_from_player else inv_ui.player_inv
+	
+	if target_inv == null:
+		print("❗ target_inv не установлен")
+		return
 	
 	for slot in target_inv.slots:
 		if slot.item == null:

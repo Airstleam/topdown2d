@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var fridge_inv = preload("res://scene/player/inventory/fridgeinv.tres")
+@onready var commode_inv = preload("res://scene/player/inventory/commode.tres")
+@onready var cupboard_inv = preload("res://scene/player/inventory/cupboard.tres")
+
+
 
 var outside = false
 
@@ -28,28 +32,36 @@ func _on_area_2d_body_exited(body):
 
 func _on_fridge_repository_body_entered(body):
 	if body.name == "player":
-		Global.open_fridge = true
-		$FridgeRepository/Inv_UI/FridgeInv.visible = true
+		$FridgeRepository/Inv_UI.set_other_inventory(fridge_inv)
+		$FridgeRepository/Inv_UI/OtherInv.visible = true
+		#Global.is_open_some_inv = true
+
 
 
 func _on_fridge_repository_body_exited(body):
 	if body.name == "player":
-		Global.open_fridge = false
-		$FridgeRepository/Inv_UI/FridgeInv.visible = false
-
+		$FridgeRepository/Inv_UI.other_inv = null
+		$FridgeRepository/Inv_UI/OtherInv.visible = false
 
 
 func _on_cupboard_repository_body_entered(body):
-	pass # Replace with function body.
-
+	if body.name == "player":
+		$CommodeRepository/Inv_UI.set_other_inventory(cupboard_inv)
+		$CupboardRepository/Inv_UI/OtherInv.visible = true
 
 func _on_cupboard_repository_body_exited(body):
-	pass # Replace with function body.
+	if body.name == "player":
+		$CommodeRepository/Inv_UI.other_inv = null
+		$CupboardRepository/Inv_UI/OtherInv.visible = false
 
 
 func _on_commode_repository_body_entered(body):
-	pass # Replace with function body.
+	if body.name == "player":
+		$CommodeRepository/Inv_UI/OtherInv.visible = true
+
 
 
 func _on_commode_repository_body_exited(body):
-	pass # Replace with function body.
+	if body.name == "player":
+		$CommodeRepository/Inv_UI.other_inv = null
+		$CommodeRepository/Inv_UI/OtherInv.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c5uv8k1lptieh"]
+[gd_scene load_steps=31 format=4 uid="uid://c5uv8k1lptieh"]
 
 [ext_resource type="Texture2D" uid="uid://bpw68llbpnj7j" path="res://assets/tile_map and sprites/TopDownHouse_FloorsAndWalls.png" id="1_2813k"]
 [ext_resource type="Script" uid="uid://b4dh6b3c7oxvy" path="res://scene/other scn/house.gd" id="1_g7cke"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://ci5m5uc7vfb8b" path="res://assets/tile_map and sprites/TopDownHouse_SmallItems.png" id="6_sgfgs"]
 [ext_resource type="PackedScene" uid="uid://c8ai6matr17hc" path="res://scene/player/player.tscn" id="8_66jkb"]
 [ext_resource type="AudioStream" uid="uid://ccsxwunnuang2" path="res://assets/sounds/gentle-lullaby-165122.mp3" id="10_igpxp"]
-[ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://scene/player/inventory/inv_ui.tscn" id="11_hkwoj"]
+[ext_resource type="Script" uid="uid://ciurqvvsknf3r" path="res://scene/player/inventory/inv_ui.gd" id="11_y2vb0"]
+[ext_resource type="Texture2D" uid="uid://c0i6hlmych3nr" path="res://assets/used-png/inventory-background.png" id="12_h0ft4"]
+[ext_resource type="PackedScene" uid="uid://cj320bfari7a7" path="res://scene/player/inventory/inv_ui_slot.tscn" id="13_7qtst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuyo6"]
 texture = ExtResource("1_2813k")
@@ -2232,6 +2234,10 @@ size = Vector2(30, 20)
 [sub_resource type="CircleShape2D" id="CircleShape2D_hkwoj"]
 radius = 15.1327
 
+[sub_resource type="GDScript" id="GDScript_h0ft4"]
+script/source = "extends InvForMoveItem
+"
+
 [node name="House" type="Node2D"]
 script = ExtResource("1_g7cke")
 
@@ -2291,16 +2297,202 @@ zoom = Vector2(3.035, 3.035)
 stream = ExtResource("10_igpxp")
 
 [node name="CommodeRepository" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CommodeRepository"]
 position = Vector2(225, 85)
 shape = SubResource("CircleShape2D_hkwoj")
 
+[node name="Inv_UI" type="Control" parent="CommodeRepository"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_h0ft4")
+
+[node name="PlayerInv" type="NinePatchRect" parent="CommodeRepository/Inv_UI"]
+visible = false
+layout_mode = 0
+offset_right = 162.0
+offset_bottom = 20.0
+texture = ExtResource("12_h0ft4")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="CommodeRepository/Inv_UI/PlayerInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -8.0
+offset_right = 78.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="inv_UI_slot1" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="CommodeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="OtherInv" type="NinePatchRect" parent="CommodeRepository/Inv_UI"]
+visible = false
+layout_mode = 0
+offset_left = 213.0
+offset_top = 52.0
+offset_right = 375.0
+offset_bottom = 72.0
+scale = Vector2(0.14175, 1.81044)
+texture = ExtResource("12_h0ft4")
+
+[node name="GridContainer" type="GridContainer" parent="CommodeRepository/Inv_UI/OtherInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.672
+offset_top = -8.34295
+offset_right = 117.328
+offset_bottom = 47.6571
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.815, 0.285436)
+
+[node name="inv_UI_slot1" parent="CommodeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="CommodeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="CommodeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
 [node name="CupboardRepository" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CupboardRepository"]
 position = Vector2(80, 90)
 shape = SubResource("CircleShape2D_hkwoj")
+
+[node name="Inv_UI" type="Control" parent="CupboardRepository"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_y2vb0")
+
+[node name="PlayerInv" type="NinePatchRect" parent="CupboardRepository/Inv_UI"]
+visible = false
+layout_mode = 0
+offset_right = 162.0
+offset_bottom = 20.0
+texture = ExtResource("12_h0ft4")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="CupboardRepository/Inv_UI/PlayerInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -8.0
+offset_right = 78.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="inv_UI_slot1" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="CupboardRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="OtherInv" type="NinePatchRect" parent="CupboardRepository/Inv_UI"]
+visible = false
+layout_mode = 0
+offset_left = 66.0
+offset_top = 66.0
+offset_right = 228.0
+offset_bottom = 86.0
+scale = Vector2(0.178043, 1.00348)
+texture = ExtResource("12_h0ft4")
+
+[node name="GridContainer" type="GridContainer" parent="CupboardRepository/Inv_UI/OtherInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.7668
+offset_top = -5.01734
+offset_right = 86.2332
+offset_bottom = 30.9827
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.82654, 0.646402)
+columns = 2
+
+[node name="inv_UI_slot1" parent="CupboardRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="CupboardRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
 
 [node name="FridgeRepository" type="Area2D" parent="."]
 collision_layer = 0
@@ -2310,18 +2502,101 @@ collision_mask = 2
 position = Vector2(15, 89)
 shape = SubResource("CircleShape2D_hkwoj")
 
-[node name="Inv_UI" parent="FridgeRepository" instance=ExtResource("11_hkwoj")]
+[node name="Inv_UI" type="Control" parent="FridgeRepository"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_y2vb0")
 
-[node name="PlayerInv" parent="FridgeRepository/Inv_UI" index="0"]
+[node name="PlayerInv" type="NinePatchRect" parent="FridgeRepository/Inv_UI"]
 visible = false
+layout_mode = 0
+offset_right = 162.0
+offset_bottom = 20.0
+texture = ExtResource("12_h0ft4")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
-[node name="FridgeInv" parent="FridgeRepository/Inv_UI" index="1"]
-visible = true
+[node name="GridContainer" type="GridContainer" parent="FridgeRepository/Inv_UI/PlayerInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -8.0
+offset_right = 78.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="inv_UI_slot1" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="FridgeRepository/Inv_UI/PlayerInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="OtherInv" type="NinePatchRect" parent="FridgeRepository/Inv_UI"]
+visible = false
+layout_mode = 0
 offset_left = 4.0
 offset_top = 37.0
 offset_right = 166.0
 offset_bottom = 57.0
 scale = Vector2(0.149095, 1.31845)
+texture = ExtResource("12_h0ft4")
+
+[node name="GridContainer" type="GridContainer" parent="FridgeRepository/Inv_UI/OtherInv"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.2378
+offset_top = -6.77264
+offset_right = 96.7622
+offset_bottom = 29.2274
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.20334, 0.37808)
+columns = 2
+
+[node name="inv_UI_slot1" parent="FridgeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="FridgeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="FridgeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="FridgeRepository/Inv_UI/OtherInv/GridContainer" instance=ExtResource("13_7qtst")]
+layout_mode = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
@@ -2334,4 +2609,3 @@ scale = Vector2(0.149095, 1.31845)
 
 [editable path="player"]
 [editable path="player/CanvasLayer/Inv_UI"]
-[editable path="FridgeRepository/Inv_UI"]

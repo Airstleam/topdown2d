@@ -1,10 +1,16 @@
 extends Control
+class_name InvForMoveItem
 
 @onready var player_inv: Inv = preload("res://scene/player/inventory/playerinv.tres")
-@onready var fridge_inv: Inv = preload("res://scene/player/inventory/fridgeinv.tres")
+var other_inv: Inv = null
 
 @onready var player_slots: Array = $PlayerInv/GridContainer.get_children()
-@onready var fridge_slots: Array = $FridgeInv/GridContainer.get_children()
+@onready var other_slots: Array = $OtherInv/GridContainer.get_children()
+
+func set_other_inventory(inv: Inv):
+	other_inv = inv
+	Global.is_open_some_inv = true
+
 
 func _process(delta):
 	update_slots()
@@ -15,9 +21,11 @@ func _process(delta):
 func update_slots():
 	for i in range(min(player_inv.slots.size(), player_slots.size())):
 		player_slots[i].init(player_inv.slots[i], true, self)
-	if Global.open_fridge:
-		for i in range(min(fridge_inv.slots.size(), fridge_slots.size())):
-			fridge_slots[i].init(fridge_inv.slots[i], false, self)
+		
+	if Global.is_open_some_inv and other_inv != null:
+		for i in range(min(other_inv.slots.size(), other_slots.size())):
+			other_slots[i].init(other_inv.slots[i], false, self)
+
 
 func select_item_by_index(index: int):
 	if index < player_inv.slots.size():
