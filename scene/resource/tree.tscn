@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1wtvg8oi0hv2" path="res://scene/resource/tree.gd" id="1_x3uog"]
 [ext_resource type="Texture2D" uid="uid://jvk17c18u7op" path="res://assets/tile_map and sprites/Oak_Tree.png" id="2_f4q1w"]
-[ext_resource type="AudioStream" uid="uid://bnyvrsiugbdjk" path="res://assets/sounds/lettuce-48162.mp3" id="3_f4q1w"]
+[ext_resource type="AudioStream" uid="uid://bnyvrsiugbdjk" path="res://assets/sounds/used/lettuce-48162.mp3" id="3_f4q1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k3vp"]
 size = Vector2(16, 14)

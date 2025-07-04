@@ -60,39 +60,3 @@ layout_mode = 2
 
 [node name="inv_UI_slot8" parent="PlayerInv/GridContainer" instance=ExtResource("3_r1b7r")]
 layout_mode = 2
-
-[node name="OtherInv" type="NinePatchRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 162.0
-offset_bottom = 20.0
-scale = Vector2(0.310119, 2.52704)
-texture = ExtResource("2_dn3an")
-
-[node name="GridContainer" type="GridContainer" parent="OtherInv"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -59.2378
-offset_top = -6.77264
-offset_right = 96.7622
-offset_bottom = 29.2274
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(3.20334, 0.37808)
-columns = 2
-
-[node name="inv_UI_slot1" parent="OtherInv/GridContainer" instance=ExtResource("3_r1b7r")]
-layout_mode = 2
-
-[node name="inv_UI_slot2" parent="OtherInv/GridContainer" instance=ExtResource("3_r1b7r")]
-layout_mode = 2
-
-[node name="inv_UI_slot3" parent="OtherInv/GridContainer" instance=ExtResource("3_r1b7r")]
-layout_mode = 2
-
-[node name="inv_UI_slot4" parent="OtherInv/GridContainer" instance=ExtResource("3_r1b7r")]
-layout_mode = 2

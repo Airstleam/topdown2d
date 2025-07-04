@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=45 format=4 uid="uid://dxfxfrva3gtlg"]
 
 [ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/tile_map and sprites/decor_16x16.png" id="1_7ghph"]
 [ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://rpux5geekd8w" path="res://assets/tile_map and sprites/Fences.png" id="2_na5tu"]
 [ext_resource type="Texture2D" uid="uid://wm0j5w4ccsao" path="res://assets/tile_map and sprites/grass.png" id="3_jsnws"]
 [ext_resource type="Texture2D" uid="uid://ctnphrxalwg7j" path="res://assets/tile_map and sprites/House.png" id="4_f345f"]
+[ext_resource type="AudioStream" uid="uid://c6js1fugm4xkc" path="res://assets/sounds/used/door-open-close-45475.mp3" id="4_vme25"]
 [ext_resource type="Texture2D" uid="uid://jvk17c18u7op" path="res://assets/tile_map and sprites/Oak_Tree.png" id="5_bqa5m"]
 [ext_resource type="Texture2D" uid="uid://bvoq0k2sejrx1" path="res://assets/tile_map and sprites/Oak_Tree_Small.png" id="6_a0bac"]
 [ext_resource type="Texture2D" uid="uid://grcfe5qmekeu" path="res://assets/tile_map and sprites/objects.png" id="7_tmyho"]
@@ -17,9 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://cgonl5u1ugp0m" path="res://scene/resource/tree.tscn" id="17_hnm4a"]
 [ext_resource type="PackedScene" uid="uid://b3f4104057sii" path="res://scene/resource/stone.tscn" id="18_e4vd1"]
 [ext_resource type="PackedScene" uid="uid://b2m5hif2mqmln" path="res://scene/resource/gold.tscn" id="18_ol7uo"]
-[ext_resource type="AudioStream" uid="uid://dacckmilyow4g" path="res://assets/sounds/game-music-loop-9-145494.mp3" id="19_1402k"]
+[ext_resource type="AudioStream" uid="uid://dacckmilyow4g" path="res://assets/sounds/used/game-music-loop-9-145494.mp3" id="19_1402k"]
 [ext_resource type="PackedScene" uid="uid://dn0un0icbpqra" path="res://scene/resource/carrot_in_dirt.tscn" id="19_a7xoa"]
-[ext_resource type="AudioStream" uid="uid://dyywm2er3mq5f" path="res://assets/sounds/relaxing-music-and-river-flowing-sounds-284491.mp3" id="20_ol7uo"]
+[ext_resource type="AudioStream" uid="uid://dyywm2er3mq5f" path="res://assets/sounds/used/relaxing-music-and-river-flowing-sounds-284491.mp3" id="20_ol7uo"]
 [ext_resource type="PackedScene" uid="uid://dspvlgx1yg5fn" path="res://scene/resource/wheat_in_dirt.tscn" id="22_vme25"]
 
 [sub_resource type="Animation" id="Animation_jsnws"]
@@ -1513,6 +1514,12 @@ theme_override_font_sizes/font_size = 100
 text = "Press \"E\"
 to go inside"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextHome"]
+stream = ExtResource("4_vme25")
+
+[node name="TimerOpen" type="Timer" parent="TextHome/AudioStreamPlayer"]
+wait_time = 0.55
 
 [node name="Enviroment" type="Node2D" parent="."]
 y_sort_enabled = true

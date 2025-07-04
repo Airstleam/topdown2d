@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="9_wbutu"]
 [ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/tile_map and sprites/plains.png" id="10_6i5tc"]
 [ext_resource type="Texture2D" uid="uid://j0thw16myu7j" path="res://assets/used-png/Player.png" id="11_6fejx"]
-[ext_resource type="AudioStream" uid="uid://c6odn2xmumsjg" path="res://assets/sounds/adventure-game-262423.mp3" id="12_k7v8c"]
+[ext_resource type="AudioStream" uid="uid://c6odn2xmumsjg" path="res://assets/sounds/used/adventure-game-262423.mp3" id="12_k7v8c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pci4"]
 texture = ExtResource("2_akoio")

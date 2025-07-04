@@ -360,8 +360,7 @@ script = ExtResource("1_vfjrj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hxgv2")
-animation = &"death"
-frame = 3
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.999998, 1)

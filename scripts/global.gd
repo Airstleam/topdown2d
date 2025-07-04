@@ -20,7 +20,11 @@ var player_carrot = 0
 var player_wheat = 0
 var player_gold_ore = 0
 var in_home = false
-var is_open_some_inv = false
+
+var is_open_fridge_inv = false
+var is_open_commode_inv = false
+var is_open_cupboard_inv = false
+
 var is_using_inventory = false
 var slime_count = 0
 var slime_data = []

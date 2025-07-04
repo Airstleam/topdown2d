@@ -27,30 +27,8 @@ func update_visual():
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if Global.is_open_some_inv:
-			transfer_item()
-		elif slot_data.item:
+		if slot_data.item:
 			Global.active_item = slot_data.item
 			Global.is_using_inventory = true
 			await get_tree().create_timer(0.01).timeout
 			Global.is_using_inventory = false
-			
-			
-func transfer_item():
-	if not slot_data.item:
-		return
-	
-	var target_inv = inv_ui.other_inv if is_from_player else inv_ui.player_inv
-	
-	if target_inv == null:
-		print("❗ target_inv не установлен")
-		return
-	
-	for slot in target_inv.slots:
-		if slot.item == null:
-			slot.item = slot_data.item
-			slot.amount = slot_data.amount
-			slot_data.item = null
-			slot_data.amount = 0
-			inv_ui.update_slots()
-			break

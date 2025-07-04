@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=3 uid="uid://c8ai6matr17hc"]
+[gd_scene load_steps=132 format=3 uid="uid://c8ai6matr17hc"]
 
 [ext_resource type="Script" uid="uid://ccmp2430patir" path="res://scene/player/player.gd" id="1_hjaqi"]
 [ext_resource type="Resource" uid="uid://d13aog65ygr2d" path="res://scene/player/inventory/playerinv.tres" id="2_2fvbb"]
@@ -10,9 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://l4cx13q6b1fq" path="res://scene/UI/pause_menu.tscn" id="6_oh5ij"]
 [ext_resource type="Texture2D" uid="uid://dxebnulicn77j" path="res://assets/used-png/circle.png" id="7_hp4bs"]
 [ext_resource type="PackedScene" uid="uid://dfekcebyy335b" path="res://scene/player/inventory/inv_ui.tscn" id="9_p3aiu"]
-[ext_resource type="AudioStream" uid="uid://bqak1mrf6pw6r" path="res://assets/sounds/sword-sound-2-36274.mp3" id="10_1wtbu"]
-[ext_resource type="AudioStream" uid="uid://dmk2me7img3bp" path="res://assets/sounds/chopping-tree-root-212654.mp3" id="11_p3aiu"]
-[ext_resource type="AudioStream" uid="uid://b0mygad6qndwm" path="res://assets/sounds/pickaxe-blow-333695.mp3" id="12_f5r2w"]
+[ext_resource type="AudioStream" uid="uid://bqak1mrf6pw6r" path="res://assets/sounds/used/sword-sound-2-36274.mp3" id="10_1wtbu"]
+[ext_resource type="AudioStream" uid="uid://dmk2me7img3bp" path="res://assets/sounds/used/chopping-tree-root-212654.mp3" id="11_p3aiu"]
+[ext_resource type="AudioStream" uid="uid://b0mygad6qndwm" path="res://assets/sounds/used/pickaxe-blow-333695.mp3" id="12_f5r2w"]
+[ext_resource type="AudioStream" uid="uid://bxjfkygj4bcp4" path="res://assets/sounds/unused/watercan.mp3" id="14_f5r2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2fvbb"]
 atlas = ExtResource("3_g2vtq")
@@ -2190,7 +2191,8 @@ inv = ExtResource("2_2fvbb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l1uwf")
-animation = &"water_up"
+animation = &"water_down"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hjaqi")
@@ -2360,6 +2362,9 @@ stream = ExtResource("11_p3aiu")
 
 [node name="Pickax" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("12_f5r2w")
+
+[node name="WaterCan" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("14_f5r2w")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

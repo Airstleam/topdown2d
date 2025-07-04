@@ -1,7 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://b0ef3gwairvw4"]
+[gd_scene load_steps=42 format=3 uid="uid://b0ef3gwairvw4"]
 
 [ext_resource type="Script" uid="uid://dvisnjv2d2rxp" path="res://scene/enemy/enemy.gd" id="1_nytjq"]
 [ext_resource type="Texture2D" uid="uid://bdj1sli0wiajr" path="res://assets/used-png/slime.png" id="1_yijav"]
+[ext_resource type="AudioStream" uid="uid://d17ydbnuy4gul" path="res://assets/sounds/used/slimejump-6913.mp3" id="3_dd7y5"]
 [ext_resource type="Texture2D" uid="uid://bdyf8vjkfnfgc" path="res://assets/used-png/Sprite-0003.png" id="3_tu2m7"]
 [ext_resource type="Texture2D" uid="uid://c5mbng1xiarti" path="res://assets/used-png/Sprite-0002 (1).png" id="4_dd7y5"]
 
@@ -402,6 +403,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(-13, -11)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/AudioStreamPlayer:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_epgpp"]
 length = 0.857143
@@ -441,6 +454,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-9, -11), Vector2(-9, -14), Vector2(-9, -15), Vector2(-9, -15), Vector2(-9, -13), Vector2(-9, -11)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.166667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_twglp"]
@@ -519,8 +544,7 @@ script = ExtResource("1_nytjq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o535o")
-animation = &"Attack"
-frame = 5
+animation = &"Walk"
 
 [node name="detector" type="Area2D" parent="."]
 visible = false
@@ -554,12 +578,15 @@ libraries = {
 &"": SubResource("AnimationLibrary_twglp")
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("3_dd7y5")
+
 [node name="hp_bar" type="TextureProgressBar" parent="."]
 visible = false
 z_index = 101
-offset_left = -13.0
+offset_left = -9.0
 offset_top = -11.0
-offset_right = 27.0
+offset_right = 31.0
 offset_bottom = 29.0
 scale = Vector2(0.447223, 0.162742)
 value = 50.0

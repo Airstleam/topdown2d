@@ -36,6 +36,9 @@ func _process(delta):
 		days.text = str(Global.days_count) + " DAY"
 
 	if house and Input.is_action_just_pressed("E"):
+		$TextHome/AudioStreamPlayer.play()
+		$TextHome/AudioStreamPlayer/TimerOpen.start()
+		await $TextHome/AudioStreamPlayer/TimerOpen.timeout
 		get_tree().change_scene_to_file("res://scene/other scn/house.tscn")
 		Global.player_position = Vector2(176.0, 80.0)
 		
