@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://blm560rgtq60a"]
+[gd_scene load_steps=15 format=3 uid="uid://blm560rgtq60a"]
 
 [ext_resource type="Script" uid="uid://1wnnv8b4pnjx" path="res://scene/shop.gd" id="1_4p3p6"]
 [ext_resource type="Texture2D" uid="uid://cjvtpmwgustad" path="res://assets/used-png/Idle Working.png" id="1_iuafe"]
+[ext_resource type="PackedScene" uid="uid://gmyb7kyegmh0" path="res://scene/shop_menu.tscn" id="3_phbgv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4p3p6"]
 atlas = ExtResource("1_iuafe")
@@ -97,70 +98,9 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_4p3p6")
 
-[node name="Texts" type="HBoxContainer" parent="."]
-z_index = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -32.0
-offset_right = 1230.0
-offset_bottom = 105.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0414158, 0.0679771)
-theme_override_constants/separation = 50
-
-[node name="Healt" type="Label" parent="Texts"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "Health"
-
-[node name="Stamina" type="Label" parent="Texts"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "Stamina"
-
-[node name="Attack" type="Label" parent="Texts"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "+Attack"
-
-[node name="Buttons" type="HBoxContainer" parent="."]
-z_index = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -23.0
-offset_right = 503.0
-offset_bottom = 122.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.0827649, 0.0676521)
-theme_override_constants/separation = 50
-
-[node name="Button_health" type="Button" parent="Buttons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "5$"
-
-[node name="Button_stamina" type="Button" parent="Buttons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "2$"
-
-[node name="Button_attack" type="Button" parent="Buttons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "10$"
+[node name="ShopMenu" parent="." instance=ExtResource("3_phbgv")]
+position = Vector2(-18, -39)
+scale = Vector2(0.221577, 0.250867)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="Buttons/Button_health" to="." method="_on_button_health_pressed"]
-[connection signal="pressed" from="Buttons/Button_stamina" to="." method="_on_button_stamina_pressed"]
-[connection signal="pressed" from="Buttons/Button_attack" to="." method="_on_button_attack_pressed"]
