@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=46 format=4 uid="uid://dxfxfrva3gtlg"]
 
 [ext_resource type="Texture2D" uid="uid://b4r4p53833utw" path="res://assets/tile_map and sprites/decor_16x16.png" id="1_7ghph"]
 [ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dn0un0icbpqra" path="res://scene/resource/carrot_in_dirt.tscn" id="19_a7xoa"]
 [ext_resource type="AudioStream" uid="uid://dyywm2er3mq5f" path="res://assets/sounds/used/relaxing-music-and-river-flowing-sounds-284491.mp3" id="20_ol7uo"]
 [ext_resource type="PackedScene" uid="uid://dspvlgx1yg5fn" path="res://scene/resource/wheat_in_dirt.tscn" id="22_vme25"]
+[ext_resource type="PackedScene" uid="uid://dm5imcjy3i21e" path="res://scene/enemy/boss_slime.tscn" id="23_oiypb"]
 
 [sub_resource type="Animation" id="Animation_jsnws"]
 length = 0.001
@@ -1917,6 +1918,9 @@ volume_db = -25.0
 [node name="RainMusic" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("20_ol7uo")
 volume_db = -20.0
+
+[node name="BossSlime" parent="." instance=ExtResource("23_oiypb")]
+position = Vector2(161, 339)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -16,10 +16,10 @@ script = ExtResource("1_xpdrw")
 item = ExtResource("2_llg57")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.500846, 0.500846)
 texture = SubResource("AtlasTexture_xpdrw")
 
 [node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.77852, 1.77852)
 collision_layer = 0
 collision_mask = 2
 

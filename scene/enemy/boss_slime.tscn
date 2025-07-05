@@ -345,7 +345,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vfjrj"]
-radius = 48.0
+radius = 72.8354
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6aenw"]
 radius = 114.004
@@ -372,16 +372,13 @@ libraries = {
 }
 
 [node name="Zone" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone"]
-visible = false
 shape = SubResource("CircleShape2D_vfjrj")
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 2
 
@@ -404,6 +401,9 @@ scale_amount_min = 2.0
 scale_amount_max = 4.0
 scale_amount_curve = SubResource("Curve_vfjrj")
 
+[node name="TimerCooldown" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Zone" to="." method="_on_zone_body_entered"]
 [connection signal="body_exited" from="Zone" to="." method="_on_zone_body_exited"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="timeout" from="TimerCooldown" to="." method="_on_timer_cooldown_timeout"]

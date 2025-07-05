@@ -209,6 +209,9 @@ func use_active_item():
 					UP: animP.play("water_up")
 					RIGHT: animP.play("water_right")
 					LEFT: animP.play("water_left")
+			#"eat":
+				#match idle_dir:
+					#
 					
 		await animP.animation_finished
 		can_move = true
@@ -254,7 +257,6 @@ func load_game():
 
 func collect(item):
 	inv.insert(item)
-
 
 func _on_hitbox_pickax_body_entered(body):
 	if body.has_method("take_damage_ore"):

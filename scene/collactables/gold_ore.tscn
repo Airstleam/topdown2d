@@ -6,17 +6,16 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12ai3"]
 atlas = ExtResource("1_ykd5x")
-region = Rect2(32, 97, 16, 15)
+region = Rect2(32, 96, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f34oa"]
-radius = 4.58707
+radius = 8.25673
 
 [node name="GoldOre" type="Node2D"]
 script = ExtResource("1_12ai3")
 item = ExtResource("2_f34oa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.370242, 0.370242)
 texture = SubResource("AtlasTexture_12ai3")
 
 [node name="Area2D" type="Area2D" parent="."]

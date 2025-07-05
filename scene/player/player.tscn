@@ -2249,7 +2249,6 @@ libraries = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="hp_bar" type="TextureProgressBar" parent="CanvasLayer"]
-visible = false
 offset_left = 6.0
 offset_top = 6.0
 offset_right = 137.0
@@ -2263,7 +2262,6 @@ tint_over = Color(0.996078, 0.682353, 0.203922, 1)
 tint_progress = Color(1, 0, 0, 0.733333)
 
 [node name="stamina_bar" type="TextureProgressBar" parent="CanvasLayer"]
-visible = false
 offset_left = -6.0
 offset_top = 40.0
 offset_right = 116.0
