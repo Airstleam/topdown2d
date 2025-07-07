@@ -345,7 +345,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vfjrj"]
-radius = 72.8354
+radius = 150.083
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6aenw"]
 radius = 114.004
@@ -360,7 +360,7 @@ script = ExtResource("1_vfjrj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hxgv2")
-animation = &"idle"
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.999998, 1)
@@ -402,8 +402,14 @@ scale_amount_max = 4.0
 scale_amount_curve = SubResource("Curve_vfjrj")
 
 [node name="TimerCooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="TimerTeleport" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 
 [connection signal="body_entered" from="Zone" to="." method="_on_zone_body_entered"]
 [connection signal="body_exited" from="Zone" to="." method="_on_zone_body_exited"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="timeout" from="TimerCooldown" to="." method="_on_timer_cooldown_timeout"]
+[connection signal="timeout" from="TimerTeleport" to="." method="_on_timer_teleport_timeout"]

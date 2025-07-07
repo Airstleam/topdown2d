@@ -3,6 +3,8 @@ extends Node2D
 @onready var animP = $AnimationPlayer
 @onready var days = $CanvasLayer/days
 
+@onready var boss = preload("res://scene/enemy/boss_slime.tscn")
+
 var last_position = 0
 var house = false
 var slime_preload = preload("res://scene/enemy/enemy.tscn")
@@ -14,7 +16,6 @@ func _ready():
 	animP.play("day-night")
 	animP.seek(Global.animation_position)
 	last_position = Global.animation_position
-	rain_event()
 	if raining == false:
 		$Music/MusicCommonDay.play()
 
@@ -23,6 +24,8 @@ func _process(delta):
 	if Global.end:
 		get_tree().change_scene_to_file("res://scene/other scn/death_scene.tscn")
 		Global.player_position = Vector2(997.0, 571.0)
+		return
+	
 	else:
 		animP.play("day-night")
 		
@@ -34,16 +37,20 @@ func _process(delta):
 		Global.animation_position = animP.current_animation_position
 		
 		days.text = str(Global.days_count) + " DAY"
-
+	
 	if house and Input.is_action_just_pressed("E"):
-		$TextHome/AudioStreamPlayer.play()
-		$TextHome/AudioStreamPlayer/TimerOpen.start()
-		await $TextHome/AudioStreamPlayer/TimerOpen.timeout
+		house = false
+		$Area2D/TextHome/AudioStreamPlayer.play()
+		$Area2D/TextHome/AudioStreamPlayer/TimerOpen.start()
+		await $Area2D/TextHome/AudioStreamPlayer/TimerOpen.timeout
+		house = true
 		get_tree().change_scene_to_file("res://scene/other scn/house.tscn")
 		Global.player_position = Vector2(176.0, 80.0)
-		
 	
-
+	if Global.days_count == 5:
+		boss_day()
+	elif Global.days_count == 3:
+		rain_event()
 	
 func slime_spawn():
 	var max_slimes = 5 * Global.days_count
@@ -75,13 +82,13 @@ func load_slime():
 
 func _on_area_2d_body_entered(body):
 	if body.name == "player":
-		$TextHome.visible = true
+		$Area2D/TextHome.visible = true
 		house = true
 
 
 func _on_area_2d_body_exited(body):
 	if body.name == "player":
-		$TextHome.visible = false
+		$Area2D/TextHome.visible = false
 		house = false
 
 func rain_event():
@@ -90,3 +97,8 @@ func rain_event():
 	var rain_event = rain.instantiate()
 	get_tree().current_scene.add_child(rain_event)
 	rain_event.global_position = Vector2.ZERO
+
+func boss_day():
+	var boss_instance = boss.instantiate()
+	get_tree().current_scene.call_deferred("add_child", boss_instance)
+	boss_instance.global_position = Vector2(1094.0, 261.0)

@@ -8,14 +8,14 @@ var wheat = preload("res://scene/collactables/wheat.tscn")
 
 @export var stage = 0  # текущая стадия роста
 
-var can_grows = true
+var can_grows = false
 
 func _ready():
 	anim.play(str(stage))
 	grow_timer.timeout.connect(_on_grow_timer_timeout)
 
 func _on_grow_timer_timeout():
-	if stage < 4 and can_grows == true:
+	if stage < 5 and can_grows == true:
 		stage += 1
 		anim.play(str(stage))
 		
@@ -28,9 +28,9 @@ func death():
 	anim.play("0")
 
 func _on_area_2d_area_entered(area):
-	if area.name == "Hitbox" and anim.animation == "4":
+	if area.name == "Hitbox" and anim.animation == "5":
 		death()
 	elif area.name == "HitboxWater" and anim.animation == "0":
-		print("was water")
+		anim.play("1")
 		can_grows = true
 		grow_timer.start()

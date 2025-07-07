@@ -18,7 +18,7 @@ func update_visual():
 	if slot_data.item:
 		item_visual.visible = true
 		item_visual.texture = slot_data.item.texture
-		item_visual.scale = Vector2(35, 35) / slot_data.item.texture.get_size()
+		item_visual.scale = Vector2(32, 32) / slot_data.item.texture.get_size()
 		amount_text.text = str(slot_data.amount)
 		amount_text.visible = slot_data.amount > 1
 	else:

@@ -126,8 +126,12 @@ func healing():
 	if Global.player_health < Global.max_health:
 		if Global.player_stamina >= 70:
 			await get_tree().create_timer(heal_interval).timeout
+			$Particles/ParticlesHeal.emitting = true
 			Global.player_health += heal_amount
+		else:
+			$Particles/ParticlesHeal.emitting = false
 	else:
+		$Particles/ParticlesHeal.emitting = false
 		Global.player_health = Global.max_health
 		
 	is_healing = false
@@ -209,9 +213,6 @@ func use_active_item():
 					UP: animP.play("water_up")
 					RIGHT: animP.play("water_right")
 					LEFT: animP.play("water_left")
-			#"eat":
-				#match idle_dir:
-					#
 					
 		await animP.animation_finished
 		can_move = true

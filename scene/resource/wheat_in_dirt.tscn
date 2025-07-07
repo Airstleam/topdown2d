@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dspvlgx1yg5fn"]
+[gd_scene load_steps=12 format=3 uid="uid://dspvlgx1yg5fn"]
 
 [ext_resource type="Texture2D" uid="uid://bvlvq5oqywsws" path="res://assets/tile_map and sprites/Outdoor_Decor_Free.png" id="1_22csd"]
 [ext_resource type="Script" uid="uid://daxhhyxegvkjr" path="res://scene/resource/wheat_in_dirt.gd" id="1_e2xql"]
 [ext_resource type="Texture2D" uid="uid://wwvem6g53e3r" path="res://assets/tile_map and sprites/plains.png" id="2_56q40"]
+[ext_resource type="Texture2D" uid="uid://b6tbmlvmttase" path="res://assets/tile_map and sprites/watergrass2.png" id="3_ie3ad"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8l8b"]
 atlas = ExtResource("2_56q40")
@@ -36,7 +37,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e2xql")
+"texture": ExtResource("3_ie3ad")
 }],
 "loop": true,
 "name": &"1",
@@ -44,7 +45,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_56q40")
+"texture": SubResource("AtlasTexture_e2xql")
 }],
 "loop": true,
 "name": &"2",
@@ -52,7 +53,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ie3ad")
+"texture": SubResource("AtlasTexture_56q40")
 }],
 "loop": true,
 "name": &"3",
@@ -60,10 +61,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bkq63")
+"texture": SubResource("AtlasTexture_ie3ad")
 }],
 "loop": true,
 "name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkq63")
+}],
+"loop": true,
+"name": &"5",
 "speed": 5.0
 }]
 
@@ -75,13 +84,14 @@ script = ExtResource("1_e2xql")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e2xql")
-animation = &"0"
+animation = &"1"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(0, -2)
 scale = Vector2(0.963017, 1)
 shape = SubResource("CircleShape2D_56q40")
