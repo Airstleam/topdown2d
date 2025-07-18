@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://dxfxfrva3gtlg"]
+[gd_scene load_steps=51 format=4 uid="uid://dxfxfrva3gtlg"]
 
 [ext_resource type="Script" uid="uid://ddsfxqj0xt13a" path="res://scene/world.gd" id="1_jsnws"]
 [ext_resource type="PackedScene" uid="uid://c8ai6matr17hc" path="res://scene/player/player.tscn" id="1_pjass"]
@@ -121,7 +121,7 @@ tracks/3/keys = {
 tracks/4/type = "method"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("player")
+tracks/4/path = NodePath("Enviroment/player")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1290,12 +1290,17 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_puhxk")
 sources/1 = SubResource("TileSetAtlasSource_x11oh")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qfj6m"]
+vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
+agent_radius = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spjrp"]
 texture = ExtResource("14_a81yy")
 0:1/size_in_atlas = Vector2i(3, 3)
 0:1/0 = 0
-0:1/0/y_sort_origin = -20
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-19, 1, 19, 1, 19, 12, -19, 12)
+0:1/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_qfj6m")
 0:0/size_in_atlas = Vector2i(3, 1)
 0:0/0 = 0
 3:1/size_in_atlas = Vector2i(3, 3)
@@ -1333,6 +1338,7 @@ texture = ExtResource("15_qfj6m")
 [sub_resource type="TileSet" id="TileSet_hb7oa"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
+navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_spjrp")
 sources/1 = SubResource("TileSetAtlasSource_lvrhu")
 
@@ -1434,7 +1440,7 @@ tile_set = SubResource("TileSet_tmyho")
 
 [node name="bridge" type="TileMapLayer" parent="Enviroment"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAhAAsAAAAAAAEAAAAjAAsAAAAAAAEAAAAlAAsAAAAAAAEAAAAnAAsAAAAAAAEAAAAgAAsAAQAAAAIAAAAiAAsAAQAAAAIAAAAkAAsAAQAAAAIAAAAmAAsAAQAAAAIAAAAoAAsAAQACAAIAAAA=")
+tile_map_data = PackedByteArray("AAAnAAsAAAAAAAEAAAAlAAsAAAAAAAEAAAAjAAsAAAAAAAEAAAAhAAsAAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_hb7oa")
 
 [node name="trees" type="Node2D" parent="Enviroment"]
@@ -1810,6 +1816,17 @@ position = Vector2(232, 121)
 [node name="WheatInDirt40" parent="Enviroment/Wheats" instance=ExtResource("22_vme25")]
 position = Vector2(216, 121)
 
+[node name="player" parent="Enviroment" instance=ExtResource("1_pjass")]
+position = Vector2(339, 185)
+collision_mask = 25
+
+[node name="Camera2D" type="Camera2D" parent="Enviroment/player"]
+zoom = Vector2(3.3, 3.3)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 650
+
 [node name="Music" type="Node2D" parent="."]
 
 [node name="MusicCommonDay" type="AudioStreamPlayer" parent="Music"]
@@ -1819,17 +1836,6 @@ volume_db = -25.0
 [node name="RainMusic" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("20_ol7uo")
 volume_db = -20.0
-
-[node name="player" parent="." instance=ExtResource("1_pjass")]
-position = Vector2(339, 185)
-collision_mask = 25
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(3.3, 3.3)
-limit_left = 0
-limit_top = 0
-limit_right = 1150
-limit_bottom = 650
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

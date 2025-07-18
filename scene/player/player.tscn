@@ -2185,6 +2185,7 @@ _data = {
 
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
+position = Vector2(0, -7)
 collision_layer = 2
 script = ExtResource("1_hjaqi")
 inv = ExtResource("2_2fvbb")
@@ -2254,7 +2255,7 @@ offset_left = 6.0
 offset_top = 6.0
 offset_right = 137.0
 offset_bottom = 41.0
-value = 50.0
+value = 65.0
 nine_patch_stretch = true
 texture_under = ExtResource("3_s4jxa")
 texture_over = ExtResource("4_oh5ij")
@@ -2263,11 +2264,11 @@ tint_over = Color(0.996078, 0.682353, 0.203922, 1)
 tint_progress = Color(1, 0, 0, 0.733333)
 
 [node name="stamina_bar" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = -6.0
-offset_top = 40.0
-offset_right = 116.0
-offset_bottom = 73.0
-scale = Vector2(1.25948, 0.961149)
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 124.0
+offset_bottom = 71.0
+scale = Vector2(1.14214, 1.05298)
 value = 100.0
 nine_patch_stretch = true
 texture_under = ExtResource("3_s4jxa")
